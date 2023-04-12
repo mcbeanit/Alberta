@@ -5,7 +5,7 @@ import re
 class ABPartiesSpider(scrapy.Spider):
     name = 'abpartiesspider'
 
-    pattern = '^<li class="accordion-navigation".+?>(.+?)<\/a><div class="content".+?<div.+?<\/p><\/div><div.+?<p>(.+?)<br \/>(.+?)<br \/>(.+?)<br \/>(.+?)<br \/>(.+?)<br \/><a href="(.+?)">(.+?)<\/a>.+<\/div><\/div><\/li>$'
+    pattern = '^<li class="accordion-navigation".+?>(.+?)<\/a><div class="content".+?<div.+?<\/p><\/div><div.+?<p>(.+?)<br>(.+?)<br>(.+?)<br>(.+?)<br>(.+?)<br><a href="(.+?)">(.+?)<\/a>.+<\/div><\/div><\/li>$'
 
     def start_requests(self):
         urls = {'https://www.elections.ab.ca/political-participants/parties/'}
@@ -20,8 +20,9 @@ class ABPartiesSpider(scrapy.Spider):
                 f.flush()
             f.close()
 
-    def parse_party(self, html, f):
-        html = html.replace('\n', "")
+    def parse_party(self, html: str, f):
+        html = str(html.replace("\n", ""))
+        html = str(html.replace("\r", ""))
         matches = re.match(self.pattern, html)
         if matches is not None:
             f.write(str(matches[1]))
@@ -34,6 +35,12 @@ class ABPartiesSpider(scrapy.Spider):
             f.write('\t')
             f.write(str(matches[5]))
             f.write('\t')
-            f.write(str(matches[6]))
+            city = str(matches[6])
+            city = city.replace("\xef\xbf\xbd", " ")
+            f.write(city)
             f.write('\t')
             f.write('\n')
+        else:
+            self.log('The pattern was not matched')
+            self.log(self.pattern)
+            self.log(html)
