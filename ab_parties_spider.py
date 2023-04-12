@@ -15,7 +15,7 @@ class ABPartiesSpider(scrapy.Spider):
 
     def parse(self, response):
         p = response.css('li[class="accordion-navigation"]').getall()
-        with open('test.html', 'wt') as f:
+        with open('ab_parties.csv', 'wt') as f:
             for party in p:
                 self.parse_party(party, f)
                 f.flush()
@@ -25,6 +25,16 @@ class ABPartiesSpider(scrapy.Spider):
         html = html.replace('\n', "")
         matches = re.match(self.pattern, html)
         if matches is not None:
+            f.write(str(matches[1]))
+            f.write('\t')
             f.write(str(matches[2]))
             f.write('\t')
-
+            f.write(str(matches[3]))
+            f.write('\t')
+            f.write(str(matches[4]))
+            f.write('\t')
+            f.write(str(matches[5]))
+            f.write('\t')
+            f.write(str(matches[6]))
+            f.write('\t')
+            f.write('\n')
