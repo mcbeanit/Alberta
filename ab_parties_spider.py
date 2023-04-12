@@ -5,8 +5,7 @@ import re
 class ABPartiesSpider(scrapy.Spider):
     name = 'abpartiesspider'
 
-    pattern = '^<li class=.+?><a href=.+?><p>(.+)<\/p><\/div>.+<p>(.+?)<br>(.+?)<br>(.+?)<br>(.+?)<br>(.+?)<br><a href=(' \
-              '.*)<\/a>.*<\/li>$'
+    pattern = '^<li class="accordion-navigation".+?>(.+?)<\/a><div class="content".+?<div.+?<\/p><\/div><div.+?<p>(.+?)<br \/>(.+?)<br \/>(.+?)<br \/>(.+?)<br \/>(.+?)<br \/><a href="(.+?)">(.+?)<\/a>.+<\/div><\/div><\/li>$'
 
     def start_requests(self):
         urls = {'https://www.elections.ab.ca/political-participants/parties/'}
