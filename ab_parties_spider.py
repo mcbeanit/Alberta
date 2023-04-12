@@ -1,12 +1,12 @@
 import scrapy
 import re
 
-pattern = '^<li class=.+?><a href=.+?><p>(.+)<\/p><\/div>.+<p>(.+?)<br>(.+?)<br>(.+?)<br>(.+?)<br>(.+?)<br><a href=(' \
-          '.*)<\/a>.*<\/li>$'
 
 class ABPartiesSpider(scrapy.Spider):
     name = 'abpartiesspider'
 
+    pattern = '^<li class=.+?><a href=.+?><p>(.+)<\/p><\/div>.+<p>(.+?)<br>(.+?)<br>(.+?)<br>(.+?)<br>(.+?)<br><a href=(' \
+              '.*)<\/a>.*<\/li>$'
 
     def start_requests(self):
         urls = {'https://www.elections.ab.ca/political-participants/parties/'}
@@ -17,6 +17,14 @@ class ABPartiesSpider(scrapy.Spider):
         p = response.css('li[class="accordion-navigation"]').getall()
         with open('test.html', 'wt') as f:
             for party in p:
-                f.write(f"{party}\n\n\n")
+                self.parse_party(party, f)
                 f.flush()
             f.close()
+
+    def parse_party(self, html, f):
+        html = html.replace('\n', "")
+        matches = re.match(self.pattern, html)
+        if matches is not None:
+            f.write(str(matches[2]))
+            f.write('\t')
+
