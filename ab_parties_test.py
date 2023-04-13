@@ -4,6 +4,12 @@ import re
 pattern = '^<li class="accordion-navigation".+?>(.+?)<\\/a><div class="content".+?<div.+?<\\/p><\\/div><div.+?<p>(.+?)<br>(.+?)<br>(.+?)<br>(.+?)<br>(.+?)<br><a href="(.+?)">(.+?)<\\/a>.+<\\/div><\\/div><\\/li>$'
 
 test1 = '<li class="accordion-navigation"><a href="#acc1" role="button" aria-controls="acc1" aria-expanded="false">Advantage Party of Alberta (APA)</a><div class="content" id="acc1"><div class="row collapse--sm"><div class="medium-4 large-4"><p><img width="250" height="90" src="https://www.elections.ab.ca/uploads/AlbertaAdvantageLogo-250x90.png" class="attachment-party-logo size-party-logo" alt="" decoding="async" loading="lazy" srcset="https://www.elections.ab.ca/uploads/./AlbertaAdvantageLogo-250x90.png 250w, https://www.elections.ab.ca/uploads/./AlbertaAdvantageLogo-400x144.png 400w, https://www.elections.ab.ca/uploads/./AlbertaAdvantageLogo-768x276.png 768w, https://www.elections.ab.ca/uploads/AlbertaAdvantageLogo.png 979w" sizes="(max-width: 250px) 100vw, 250px" /></p></div><div class="medium-8 large-8"><p>Marilyn Burns, Leader<br>Carol Nordlund Kinsey, President<br>Ron Malowany, Chief Financial Officer<br>559, 9768 170 Street<br>Edmonton, Alberta T5T 5L4<br><a href="https://albertaadvantageparty.ca" target="_blank" rel="noopener">https://albertaadvantageparty.ca</a></p><p><em>The Alberta Advantage Party made an application to the Chief Electoral Officer to change the party name to “Advantage Party of Alberta”. The request was received and approved, and the change was made effective February 9, 2022.</em></p></div></div></div></li>'
+test2 = '<li class="accordion-navigation"><a href="#acc5" role="button" aria-controls="acc5" aria-expanded="false">Communist Party - Alberta (CP - A)</a><div class="content" id="acc5"><div class="row collapse--sm"><div><p>Naomi Rankin, Leader<br>Blyth Nuttall, Chief Financial Officer<br><a href="http://www.communistparty-alberta.ca/" target="blank">www.communistparty-alberta.ca</a><br>Phone: (780) 934-7893<br>Email: <a href="mailto:naomirankin@shaw.ca">naomirankin@shaw.ca</a></p></div></div></div></li>'
+
+
+# ^<li class="accordion-navigation".+"false">(.+?)<\/a>.+?<div><p>(.+?)<br>(.+?)<br><a href="(.+?)".+?>(.+?)<\/a><br>(.+?)<br>(.+?)<a.+?<\/div><\/div><\/div><\/li>$
+
+
 
 def test_should_match():
     matches = re.match(pattern, test1)
