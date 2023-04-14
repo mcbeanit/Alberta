@@ -1,0 +1,10 @@
+{
+  "settings" : [
+
+    {
+       "pattern1" : "^<li class=\"accordion-navigation\".+?>(.+?)<\\/a><div class=\"content\".+?<div.+?<\\/p><\\/div><div.+?<p>(.+?)<br>(.+?)<br>(.+?)<br>(.+?)<br>(.+?)<br><a href=\"(.+?)\">(.+?)<\\/a>.+<\\/div><\\/div><\\/li>$"
+    }
+
+
+  ]
+}

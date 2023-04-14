@@ -1,5 +1,8 @@
 import pytest
 import re
+import json
+from openpyxl import load_workbook
+
 
 pattern = '^<li class="accordion-navigation".+?>(.+?)<\\/a><div class="content".+?<div.+?<\\/p><\\/div><div.+?<p>(.+?)<br>(.+?)<br>(.+?)<br>(.+?)<br>(.+?)<br><a href="(.+?)">(.+?)<\\/a>.+<\\/div><\\/div><\\/li>$'
 
@@ -22,10 +25,29 @@ def test_should_match():
         assert(f3 == 'Carol Nordlund Kinsey, President')
         f4 = str(matches[4])
         assert(f4 == 'Ron Malowany, Chief Financial Officer')
+        f5 = str(matches[5])
+        assert(f5 == '559, 9768 170 Street')
+        f6 = str(matches[6])
+        assert(f6 == 'Edmonton, Alberta T5T 5L4')
 
     else:
         pytest.fail('Pattern 1 not matched')
 
+def test_read_json():
+    f = open('settings.json')
+    settings = json.load(f)
+    f.close()
+    s = settings['settings']
+    p1 = s[0]
+    pattern = p1['pattern1']
+    assert(len(pattern) > 0)
+    assert(pattern.startswith('^'))
+
+def test_read_excel():
+    wb = load_workbook('C:\\Users\\owner\\OneDrive\\Alberta.xlsx')
+    sheet = wb.worksheets[0]
+    x = str(sheet['A2'].value)
+    print(x)
 
 
 
