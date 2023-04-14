@@ -8,6 +8,7 @@ The link to the spreadsheet on office.com(view only for now):
     https://1drv.ms/x/s!AjxE0-lM49G1g9EtCYTVfl4KcErOyw?e=vW0vr4
 
 
+
 Completed:
     Basic list of Alberta Ridings and current MLA.
 
