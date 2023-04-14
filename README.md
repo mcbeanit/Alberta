@@ -7,7 +7,6 @@ to validate and import the data into Excel.
 The link to the spreadsheet on office.com(view only for now):
     https://1drv.ms/x/s!AjxE0-lM49G1g9EtCYTVfl4KcErOyw?e=vW0vr4
 
-
 Completed:
     Basic list of Alberta Ridings and current MLA.
 
@@ -18,7 +17,7 @@ Future:
     Candidate list.
 
 
-File in project:
+Files in project:
     ab_parties_spider.py        Runs the scrapy spider to get the parties from Election Alberta.
     ab_parties.csv              validated csv listing the official parties.
     ab_parties.html             the extracted HTML of interest to produce the csv file.
