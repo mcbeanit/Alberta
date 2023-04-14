@@ -15,6 +15,10 @@ test2 = '<li class="accordion-navigation"><a href="#acc5" role="button" aria-con
 
 
 def test_should_match():
+    """
+    This test just checks if the typical html can be matched against the typical expression, and that
+    the expected captured fields are as expected.
+    """
     matches = re.match(pattern, test1)
     if matches is not None:
         f1 = str(matches[1])
@@ -34,6 +38,9 @@ def test_should_match():
         pytest.fail('Pattern 1 not matched')
 
 def test_read_json():
+    """
+    How to read the standard json settings file and get a typical setting.
+    """
     f = open('settings.json')
     settings = json.load(f)
     f.close()
@@ -43,7 +50,11 @@ def test_read_json():
     assert(len(pattern) > 0)
     assert(pattern.startswith('^'))
 
+
 def test_read_excel():
+    """
+    Use the openpyxl library to check we can read the Alberta spreadsheet.
+    """
     wb = load_workbook('C:\\Users\\owner\\OneDrive\\Alberta.xlsx')
     sheet = wb.worksheets[0]
     x = str(sheet['A2'].value)
