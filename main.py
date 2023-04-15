@@ -12,11 +12,12 @@ def parse_party_html(htmlfile='ab_parties.html', csvfile='ab_parties.csv'):
 
 def parse_fields(li:str):
     name_exp = '^<li><a href=.+?>(.+?)<\/a>'
+    short_name_exp = '\((.+?)\)$'
     logo_exp = '^<li>.+?src="(.+?)<\/p>'
     data_exp = '^<li>.+?<\/div><div><p>(.+)<br>'  # unstructured data fields, officers, city, phone etc
     data_exp_alt = '^<li>.+?<\/a>.+?<div><p>(.+)<br>'  # try a simpler exp for cases missing some markup
     city_postal_exp = '.+<br>(.+?), (AB|Alberta) .*?([A-Z][0-9][A-Z] [0-9][A-Z][0-9])$'
-    staff_ex[ = '^(.+?),\s?(Leader|Chief Financial Office|President|Interim Leader)$jj,,,,;;;;;ll'
+    staff_ex[ = '^(.+?),\s?(Leader|Chief Financial Officer|President|Interim Leader)$'
 
     matches = re.match(name_exp, li)
     if matches is not None:
@@ -24,7 +25,14 @@ def parse_fields(li:str):
         # print (name)
     else:
         name = ''
-        # print('The party name was not matched.')
+        
+
+    matches = re.match(short_name_exp, name)
+    if matches is not None:
+        short_name = str(matches[1])
+    else:
+        short_name = ''
+
 
     matches = re.match(logo_exp, li)
     if matches is not None:
