@@ -7,14 +7,16 @@ def parse_party_html(htmlfile='ab_parties.html', csvfile='ab_parties.csv'):
     with open(htmlfile, "rt") as h:
         for p in h.readlines():
             p = clean_html(p)
-            #print (p)
+            # print (p)
             parse_fields(p)
 
 def parse_fields(li:str):
     name_exp = '^<li><a href=.+?>(.+?)<\/a>'
     logo_exp = '^<li>.+?src="(.+?)<\/p>'
-    data_exp = '^<li>.+?<div><p>(.+)<br>'  # unstructured data fields, officers, city, phone etc
+    data_exp = '^<li>.+?<\/div><div><p>(.+)<br>'  # unstructured data fields, officers, city, phone etc
+    data_exp_alt = '^<li>.+?<\/a>.+?<div><p>(.+)<br>'  # try a simpler exp for cases missing some markup
     city_postal_exp = '.+<br>(.+?), (AB|Alberta) .*?([A-Z][0-9][A-Z] [0-9][A-Z][0-9])$'
+    staff_ex[ = '^(.+?),\s?(Leader|Chief Financial Office|President|Interim Leader)$jj,,,,;;;;;ll'
 
     matches = re.match(name_exp, li)
     if matches is not None:
@@ -35,28 +37,40 @@ def parse_fields(li:str):
     matches = re.match(data_exp, li)
     if matches is not None:
         data = str(matches[1])
-        print(data)
+        data_fields = data.split('<br>')
+        for f in data_fields:
+            print(f'Field: {f}')
+        # print(data)
     else:
-        print(li)
-        assert(False)
-        data = ''
+        matches = re.match(data_exp_alt, li)
+        if matches is not None:
+            data = str(matches[1])
+            data_fields = data.split('<br>')
+            for f in data_fields:
+                print(f'Field: {f}')
+        else:
+            data = ''
+            assert (False)
 
     matches = re.match(city_postal_exp, data)
     if matches is not None:
-        city = str(matches[1])
-        prov = str(matches[2])
-        pc =  str(matches[3])
+        pass
+        #city = str(matches[1])
+        #prov = str(matches[2])
+        #pc =  str(matches[3])
     else:
+        pass
+        # print(f"failed city match: {data}")
         city = ''
         pc = ''
         prov = ''
 
 
-    print(f'City: {city} Prov: {prov}  Postal: {pc}')
-    print('')
+    # print(f'City: {city} Prov: {prov}  Postal: {pc}')
+    # print('')
 
-    #print(f'{name}\t{logo}')
-    #print(f'\t{data}')
+    # print(f'{name}\t{logo}')
+    # print(f'\t{data}')
 def clean_html(p:str):
     """
     Clean yp the html string to make the regex matching easier
