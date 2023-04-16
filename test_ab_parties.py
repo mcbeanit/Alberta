@@ -69,3 +69,9 @@ def test_short_name():
     print(m)
     assert(str(m[0])=='NDP')
 
+def test_email():
+    exp = '^Email:.+<a href="mailto:(.+?)">(.+?)<\/a>$'
+    case = 'Email:�<a href="mailto:info@albertaNDP.ca">info@albertaNDP.ca</a>'
+
+    m = re.match(exp, case)
+    assert(m is not None)
