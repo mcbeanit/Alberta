@@ -9,7 +9,8 @@ def parse_party_html(htmlfile='ab_parties.html', csvfile='ab_parties.csv'):
         for p in h.readlines():
             p = clean_html(p)
             # print (p)
-            parse_fields(p)
+            party = parse_fields(p)
+            print(party)
 
 def parse_fields(li:str):
     name_exp = '^<li><a href=.+?>(.+?)<\/a>'
@@ -28,7 +29,7 @@ def parse_fields(li:str):
         name = ''
         # print('The party name was not matched.')
 
-    matches = re.match(short_name_exp, name)
+    matches = re.findall(short_name_exp,case)
     if matches is not None:
         short_name = str(matches[1])
     else:
@@ -63,25 +64,28 @@ def parse_fields(li:str):
                 position = str(matches[2])
                 people.append((short_name, person, position))
 
-    matches = re.match(city_postal_exp, data)
-    if matches is not None:
-        pass
-        #city = str(matches[1])
-        #prov = str(matches[2])
-        #pc =  str(matches[3])
-    else:
-        pass
-        # print(f"failed city match: {data}")
-        city = ''
-        pc = ''
-        prov = ''
+            matches = re.match(city_postal_exp, data)
+            if matches is not None:
+                city = str(matches[1])
+                prov = str(matches[2])
+                pc =  str(matches[3])
+                continue
 
-    print(people)
+            matches = ['Street','PO', 'PO Box']
+            if any([x in a_string for x in matches]):
+                address = f
+                continue
+    
+
+    # print(people)
     # print(f'City: {city} Prov: {prov}  Postal: {pc}')
     # print('')
 
     # print(f'{name}\t{logo}')
     # print(f'\t{data}')
+
+    return (name, short_name, logo, address, city, prov, pc, people)
+
 def clean_html(p:str):
     """
     Clean yp the html string to make the regex matching easier
