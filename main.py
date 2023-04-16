@@ -2,6 +2,7 @@ import re
 import json
 from openpyxl import load_workbook
 
+people = []
 def parse_party_html(htmlfile='ab_parties.html', csvfile='ab_parties.csv'):
 
     with open(htmlfile, "rt") as h:
@@ -12,12 +13,12 @@ def parse_party_html(htmlfile='ab_parties.html', csvfile='ab_parties.csv'):
 
 def parse_fields(li:str):
     name_exp = '^<li><a href=.+?>(.+?)<\/a>'
-    short_name_exp = '\((.+?)\)$'
+    short_name_exp = '\s\((.+?)\)$'
     logo_exp = '^<li>.+?src="(.+?)<\/p>'
     data_exp = '^<li>.+?<\/div><div><p>(.+)<br>'  # unstructured data fields, officers, city, phone etc
     data_exp_alt = '^<li>.+?<\/a>.+?<div><p>(.+)<br>'  # try a simpler exp for cases missing some markup
     city_postal_exp = '.+<br>(.+?), (AB|Alberta) .*?([A-Z][0-9][A-Z] [0-9][A-Z][0-9])$'
-    staff_ex[ = '^(.+?),\s?(Leader|Chief Financial Officer|President|Interim Leader)$'
+    staff_exp = '^(.+?),\s?(Leader|Chief Financial Officer|President|Interim Leader)$'
 
     matches = re.match(name_exp, li)
     if matches is not None:
@@ -25,14 +26,13 @@ def parse_fields(li:str):
         # print (name)
     else:
         name = ''
-        
+        # print('The party name was not matched.')
 
     matches = re.match(short_name_exp, name)
     if matches is not None:
         short_name = str(matches[1])
     else:
         short_name = ''
-
 
     matches = re.match(logo_exp, li)
     if matches is not None:
@@ -46,19 +46,22 @@ def parse_fields(li:str):
     if matches is not None:
         data = str(matches[1])
         data_fields = data.split('<br>')
-        for f in data_fields:
-            print(f'Field: {f}')
-        # print(data)
     else:
         matches = re.match(data_exp_alt, li)
         if matches is not None:
             data = str(matches[1])
             data_fields = data.split('<br>')
-            for f in data_fields:
-                print(f'Field: {f}')
         else:
             data = ''
             assert (False)
+
+    if len(data_fields):
+        for f in data_fields:
+            matches = re.match(staff_exp, f)
+            if matches is not None:
+                person = str(matches[1])
+                position = str(matches[2])
+                people.append((short_name, person, position))
 
     matches = re.match(city_postal_exp, data)
     if matches is not None:
@@ -73,7 +76,7 @@ def parse_fields(li:str):
         pc = ''
         prov = ''
 
-
+    print(people)
     # print(f'City: {city} Prov: {prov}  Postal: {pc}')
     # print('')
 

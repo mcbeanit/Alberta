@@ -60,5 +60,12 @@ def test_read_excel():
     x = str(sheet['A2'].value)
     print(x)
 
+def test_short_name():
+    exp = '\\s\\((.+?)\\)$'
+    case = 'Alberta New Democratic Party (NDP)'
 
+    m = re.findall(exp,case)
+    assert(m is not None)
+    print(m)
+    assert(str(m[0])=='NDP')
 
