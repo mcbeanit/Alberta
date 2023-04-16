@@ -3,6 +3,8 @@ import json
 from openpyxl import load_workbook
 
 people = []
+phone = []
+
 def parse_party_html(htmlfile='ab_parties.html', csvfile='ab_parties.csv'):
 
     with open(htmlfile, "rt") as h:
@@ -20,28 +22,29 @@ def parse_fields(li:str):
     data_exp_alt = '^<li>.+?<\/a>.+?<div><p>(.+)<br>'  # try a simpler exp for cases missing some markup
     city_postal_exp = '.+<br>(.+?), (AB|Alberta) .*?([A-Z][0-9][A-Z] [0-9][A-Z][0-9])$'
     staff_exp = '^(.+?),\s?(Leader|Chief Financial Officer|President|Interim Leader)$'
+    email_exp = '^Email:.+<a href="mailto:(.+?)">(.+?)<\/a>$'
+
+    name = ''
+    short_name = ''
+    logo = ''
+    address = ''
+    city = ''
+    prov = ''
+    pc = ''
 
     matches = re.match(name_exp, li)
     if matches is not None:
         name = str(matches[1])
         # print (name)
-    else:
-        name = ''
-        # print('The party name was not matched.')
 
-    matches = re.findall(short_name_exp,case)
+    matches = re.findall(short_name_exp, name)
     if matches is not None:
-        short_name = str(matches[1])
-    else:
-        short_name = ''
+        short_name = str(matches[0])
 
     matches = re.match(logo_exp, li)
     if matches is not None:
         logo = str(matches[1])
         # print (logo)
-    else:
-        logo = ''
-        # print('The logo file was not found')
 
     matches = re.match(data_exp, li)
     if matches is not None:
@@ -63,18 +66,32 @@ def parse_fields(li:str):
                 person = str(matches[1])
                 position = str(matches[2])
                 people.append((short_name, person, position))
+                continue
+            matches = ['Street', 'PO', 'PO Box']
+            if any([x in f for x in matches]):
+                address = f
+                continue
 
-            matches = re.match(city_postal_exp, data)
+            matches = re.match(city_postal_exp, f)
             if matches is not None:
                 city = str(matches[1])
                 prov = str(matches[2])
-                pc =  str(matches[3])
+                pc = str(matches[3])
                 continue
 
-            matches = ['Street','PO', 'PO Box']
-            if any([x in a_string for x in matches]):
-                address = f
+            matches = ['Phone:', 'Toll Free:', 'Fax:']
+            if any([x in f for x in matches]):
+                t = f.split(':')
+                phone.append((short_name, t[0], t[1]))
                 continue
+
+            matches = re.match(email_exp, f)
+            if matches is not None:
+                email_link = str(matches[1])
+                email_desc = str(matches[2])
+                continue
+
+
     
 
     # print(people)
