@@ -51,6 +51,7 @@ def test_read_json():
     assert(pattern.startswith('^'))
 
 
+@pytest.mark.filterwarnings('ignore::UserWarning')
 def test_read_excel():
     """
     Use the openpyxl library to check we can read the Alberta spreadsheet.
@@ -70,8 +71,23 @@ def test_short_name():
     assert(str(m[0])=='NDP')
 
 def test_email():
-    exp = '^Email:.+<a href="mailto:(.+?)">(.+?)<\/a>$'
+    exp = r'^Email:.+<a href="mailto:(.+?)">(.+?)<\/a>$'
     case = 'Email:�<a href="mailto:info@albertaNDP.ca">info@albertaNDP.ca</a>'
 
     m = re.match(exp, case)
     assert(m is not None)
+    addr = str(m[1])
+    assert(addr)
+    assert(len(addr) > 10)
+    desc = str(m[2])
+    assert(desc)
+    assert(len(desc) > 10)
+
+def text_web_url():
+    web_exp = r'^<a href="(.+)">(.+)<\/a>$'
+    case = '<a href="http://www.greenpartyofalberta.ca/">www.greenpartyofalberta.ca</a>'
+
+    matches = re.match(web_exp, case)
+    assert (matches is not None)
+    url = str(matches[1])
+    assert(url == 'http://www.greenpartyofalberta.ca/')
