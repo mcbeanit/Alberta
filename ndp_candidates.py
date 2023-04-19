@@ -2,7 +2,7 @@ import re
 import json
 
 candidate_exp = r'^<div><div><article><div><img data-src=\"(.+?)\"></div><h1>(.+?)</h1><h2>(.+?)</h2><a href=\"(.+?)\"><span>(.+?)</span></a>'
-def parse_candidates_html(htmlfile='ab_ndp_candidates.html', csvfile='ndp_candidates.csv'):
+def parse_candidates_html(htmlfile='ndp_candidates.html', csvfile='ndp_candidates.csv'):
     count = 0
     with open(htmlfile, "rt") as html, open(csvfile, 'wt') as csv:
         for c in html.readlines():
@@ -38,7 +38,7 @@ def parse_candidate(c: str):
         url = matches[4]
         url_desc = matches[5]
     else:
-        print (f'The htmo was not matched: {c}\n')
+        print (f'The html was not matched: {c}\n')
 
     return (headshot, name, riding, url, url_desc)
 

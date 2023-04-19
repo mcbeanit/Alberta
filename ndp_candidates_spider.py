@@ -14,7 +14,7 @@ class ABNDPCandidatesSpider(scrapy.Spider):
     # we want to find all the <div class="candidate-list-item">
     def parse(self, response):
         html = response.css('div[class="candidate-list-item"]').getall()
-        with open('ab_ndp_candidates.html', 'wt') as f:
+        with open('ndp_candidates.html', 'wt') as f:
             for c in html:
                 c = self.clean_html(c)
                 f.write(c);
