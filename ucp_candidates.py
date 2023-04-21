@@ -1,14 +1,19 @@
 import re
-import json
+import os
 
 csv_file =  'ucp_candidates.csv'
 html_file = 'ucp_candidates.html'
+not_running_file = 'ucp_not_running.csv'
+
 pattern = r'^<article><figure><a href=\"(.+?)\"><img src=\"(.+?)\"></a></figure><figcaption><h2>.+?>(.+?)</a></h2><p>(.+?)</p>'
 count = 0
 short_name = 'UCP'
 not_running = ['Leela Aheer', 'Richard Gotfried', 'Ron Orr', 'Pat Rehn', 'Roger Reid', 'Brad Rutherford', 'Mark Smith', 'Sonya Savage', 'Rajan Sawhney', 'Travis Toews', 'Tracy Allard']
-lost_nom = ['Tany Tao', 'Dave Hanson']
+lost_nom = ['Tany Yao', 'David Hanson', 'Dave Hanson']
+
 def parse_candidates_html():
+    if os.path.exists(not_running_file):
+        os.remove(not_running_file)
 
     with open(html_file, 'rt') as html, open(csv_file, 'wt') as csv:
         global count
@@ -16,8 +21,8 @@ def parse_candidates_html():
             count = count + 1
             c = clean(c)
             candidate = parse_candidate(c)
-            if not candidate[1] in not_running:
-                print(f'Creating csv for {candidate[1]}')
+            if (candidate[1] not in not_running) and (candidate[1] not in lost_nom):
+                # print(f'Creating csv for {candidate[1]}')
                 csv.write(f'{short_name}\t')
                 csv.write(f'{candidate[1]}\t')
                 csv.write(f'{candidate[2]}\t')
@@ -26,12 +31,21 @@ def parse_candidates_html():
                 csv.write(f'{candidate[4]}\n')
             else:
                 print(f"Not running: {candidate[1]}\n")
+                with open(not_running_file,'a') as nr:
+                    nr.write(f'{short_name}\t')
+                    nr.write(f'{candidate[1]}\t')
+                    nr.write(f'{candidate[2]}\t')
+                    nr.write('Yes\t\t')
+                    nr.write(f'{candidate[3]}\t')
+                    nr.write(f'{candidate[4]}\n')
+                    nr.close()
 
             csv.flush()
 
 
 def parse_candidate(c: str):
     matches = re.match(pattern, c)
+
     if matches is not None:
 
         headshot: str = ''
@@ -49,7 +63,6 @@ def parse_candidate(c: str):
     else:
         print ('The pattern was not matched: \n')
         print (f'{c}\n')
-
 
     return c
 
