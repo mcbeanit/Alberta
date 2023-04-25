@@ -13,21 +13,14 @@ def parse_candidates_html():
                 url = str(matches[0])
                 csv.write(f'{short_name}\t')
                 csv.write(f'{url}\t')
-                csv.write(f'')  # where the name would go if we had it
+                csv.write(f'')  # where the name would go if it was in their html.
                 csv.write('\n')
             else:
                 print('not matched')
 
         html.close()
         csv.close()
-
-
-
-
-
-
-
-
+        print(f'There were {count} candidates found. See gpa_candidates.csv ')
 
 
 if __name__ == '__main__':
