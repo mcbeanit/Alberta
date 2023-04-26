@@ -1,8 +1,8 @@
 import re
 import os
 
-csv_file =  'ucp_candidates.csv'
-html_file = 'ucp_candidates.html'
+csv_file = 'ucp_mlas.csv'
+html_file = 'ucp_mlas.html'
 not_running_file = 'ucp_not_running.csv'
 
 pattern = r'^<article><figure><a href=\"(.+?)\"><img src=\"(.+?)\"></a></figure><figcaption><h2>.+?>(.+?)</a></h2><p>(.+?)</p>'
