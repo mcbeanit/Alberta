@@ -10,10 +10,6 @@ test1 = '<li class="accordion-navigation"><a href="#acc1" role="button" aria-con
 test2 = '<li class="accordion-navigation"><a href="#acc5" role="button" aria-controls="acc5" aria-expanded="false">Communist Party - Alberta (CP - A)</a><div class="content" id="acc5"><div class="row collapse--sm"><div><p>Naomi Rankin, Leader<br>Blyth Nuttall, Chief Financial Officer<br><a href="http://www.communistparty-alberta.ca/" target="blank">www.communistparty-alberta.ca</a><br>Phone: (780) 934-7893<br>Email: <a href="mailto:naomirankin@shaw.ca">naomirankin@shaw.ca</a></p></div></div></div></li>'
 
 
-# ^<li class="accordion-navigation".+"false">(.+?)<\/a>.+?<div><p>(.+?)<br>(.+?)<br><a href="(.+?)".+?>(.+?)<\/a><br>(.+?)<br>(.+?)<a.+?<\/div><\/div><\/div><\/li>$
-
-
-
 def test_should_match():
     """
     This test just checks if the typical html can be matched against the typical expression, and that
