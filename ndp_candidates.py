@@ -1,11 +1,23 @@
 import re
 import json
 
+"""
+Read the html from the NDP Candidate list and extract relevant
+fields into a csv file.
+"""
+
+
 candidate_exp = r'^<div><div><article><div><img data-src=\"(.+?)\"></div><h1>(.+?)</h1><h2>(.+?)</h2><a href=\"(.+?)\"><span>(.+?)</span></a>'
 def parse_candidates_html(htmlfile='ndp_candidates.html', csvfile='ndp_candidates.csv'):
+    """
+    Read the html from the NDP Candidate list and extract relevant
+    fields into a csv file.
+    :param htmlfile:
+    :param csvfile:
+    :return:
+    """
     count = 0
     with open(htmlfile, "rt") as html, open(csvfile, 'wt') as csv:
-        for c in html.readlines():
             count = count + 1
             c = clean_html(c)
             candidate = parse_candidate(c)
