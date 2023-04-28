@@ -18,6 +18,7 @@ def parse_candidates_html(htmlfile='ndp_candidates.html', csvfile='ndp_candidate
     """
     count = 0
     with open(htmlfile, "rt") as html, open(csvfile, 'wt') as csv:
+        for c in html.readlines():
             count = count + 1
             c = clean_html(c)
             candidate = parse_candidate(c)
