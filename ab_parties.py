@@ -148,18 +148,19 @@ def clean_html(p: str):
     :param p: html string
     :return: cleaned string
     """
-    p = p.replace(' class="accordion-navigation"', '')
-    p = p.replace(' role="button"', '')
-    p = p.replace(' aria-expanded="false"', '')
-    # aria-controls="acc1"
-    # e.g. re.sub(r'(?is)</html>.+', '</html>', article)
-    p = re.sub(r'(?is) aria-controls="acc[0-9]{1,2}"', '', p)
-    p = re.sub(r'(?is) id="acc[0-9]{1,2}"', '', p)
-    p = p.replace(' class="content"', '')
-    p = p.replace(' class="row collapse--sm"', '')
-    p = p.replace(' class="medium-4 large-4"', '')
-    p = p.replace(' class="attachment-party-logo size-party-logo" alt="" decoding="async" loading="lazy"', '')
-    p = p.replace(' class="medium-8 large-8"', '')
+    p = re.sub(' class=".+?"',"", p)
+    p = re.sub(' id=".+?"', "", p)
+    p = re.sub('^<li\\s*?><button\\s.+?>', '<li><button>', p)
+    p = re.sub('width=".+?"', "", p)
+    p = re.sub('height=".+?"', "", p)
+
+    # p = re.sub(r'(?is) aria-controls="acc[0-9]{1,2}"', '', p)
+    # p = re.sub(r'(?is) id="acc[0-9]{1,2}"', '', p)
+    # p = p.replace(' class="content"', '')
+    # p = p.replace(' class="row collapse--sm"', '')
+    # p = p.replace(' class="medium-4 large-4"', '')
+    # p = p.replace(' class="attachment-party-logo size-party-logo" alt="" decoding="async" loading="lazy"', '')
+    # p = p.replace(' class="medium-8 large-8"', '')
     p = re.sub(r'(?is) srcset="(.+?)</p>', '</p>', p)
     p = p.replace(' target="_blank" rel="noopener"', '')
     p = p.replace('<strong>', '')

@@ -1,5 +1,4 @@
 import scrapy
-import re
 import json
 
 
@@ -12,7 +11,7 @@ class ABPartiesSpider(scrapy.Spider):
     f.close()
     s = settings['settings']
     p = s[0]
-    pattern = p['pattern1']
+    # pattern = p['pattern1']
 
     # pattern = '^<li class="accordion-navigation".+?>(.+?)<\/a><div class="content".+?<div.+?<\/p><\/div><div.+?<p>(.+?)<br>(.+?)<br>(.+?)<br>(.+?)<br>(.+?)<br><a href="(.+?)">(.+?)<\/a>.+<\/div><\/div><\/li>$'
 
