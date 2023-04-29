@@ -47,9 +47,14 @@ def parse_party_html(htmlfile='ab_parties.html', csvfile='ab_parties.csv'):
 
 
 def parse_fields(li: str):
-    name_exp = '^<li><a href=.+?>(.+?)<\/a>'
+    """
+    Parse an individual html node (<li>) that represents one political party. The data is 
+    inconsistent with an unpredictable number of party officials separated by <br> tags.
+    The party officer names get saved in a file called people.csv. (Will have to rename.)
+    """
+    name_exp = '^<li><button>(.+?)<\/button>'
     short_name_exp = '\s\((.+?)\)$'
-    logo_exp = '^<li>.+?src="(.+?)<\/p>'
+    logo_exp = '^<li><button>.+?\ssrc="(https:\/\/www.elections.ab.ca.+?\.png)"'
     data_exp = '^<li>.+?<\/div><div><p>(.+)<br>'  # unstructured data fields, officers, city, phone etc
     data_exp_alt = '^<li>.+?<\/a>.+?<div><p>(.+)<br>'  # try a simpler exp for cases missing some markup
     city_postal_exp = '.+<br>(.+?), (AB|Alberta) .*?([A-Z][0-9][A-Z] [0-9][A-Z][0-9])$'
@@ -69,15 +74,18 @@ def parse_fields(li: str):
     people = []
     phone = []
 
+    # full name e.g. Advantage Party of Alberta (APA)
     matches = re.match(name_exp, li)
     if matches is not None:
         name = str(matches[1])
         # print (name)
 
+    # short name or acronym e.g.  APA
     matches = re.findall(short_name_exp, name)
     if matches is not None:
         short_name = str(matches[0])
 
+    # party logo as a url to some image file
     matches = re.match(logo_exp, li)
     if matches is not None:
         logo = str(matches[1])
