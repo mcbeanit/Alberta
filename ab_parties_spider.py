@@ -45,9 +45,12 @@ class ABPartiesSpider(scrapy.Spider):
         html = re.sub('width=".+?"', "", html)
         html = re.sub('height=".+?"', "", html)
         html = re.sub(r'(?is) srcset="(.+?)</p>', '</p>', html)
+        html = re.sub(r'style=".+?"', "", html)
         html = html.replace('alt=""', "")
         html = html.replace('decoding="async"', "")
         html = html.replace('loading="lazy"', "")
+        html = re.sub('target=".+?"', "", html)
+        html = html.replace('rel="noopener"', "")
 
         f.write(f"{html}\n")
         f.flush()

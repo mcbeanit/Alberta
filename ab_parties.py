@@ -56,7 +56,7 @@ def parse_fields(li: str):
     logo_exp = r'^<li><button>.+?\ssrc="(https:\/\/www.elections.ab.ca.+?\.png)"'
     data_exp = r'^<li>.+?<\/div><div><p>(.+)<br>'  # unstructured data fields, officers, city, phone etc
     data_exp_alt = r'<li><button>.+?<\/button>.+?<p>(.+)<\/a><\/p>'  # try a simpler exp for cases missing some markup
-    city_postal_exp = '.+<br>(.+?), (AB|Alberta) .*?([A-Z][0-9][A-Z] [0-9][A-Z][0-9])$'
+    city_postal_exp = r'^(.+?), (AB|Alberta)\s([A-Z][0-9][A-Z] [0-9][A-Z][0-9])$'
     staff_exp = r'^(.+?),\s?(Leader|Chief Financial Officer|President|Interim Leader)$'
     email_exp = r'.+Email:.+<a href="(mailto:.+?)">(.+?)<\/a>.+?<\/li>$'  # prob one of the last fields
     web_exp = r'^<a href="(.+)">(.+)<\/a>$'
@@ -134,14 +134,7 @@ def parse_fields(li: str):
     matches = re.match(email_exp, li)
     if (matches is not None):
         email_link = str(matches[1])
-        # email_desc = str(matches[2])
 
-    # print(people)
-    # print(f'City: {city} Prov: {prov}  Postal: {pc}')
-    # print('')
-
-    # print(f'{name}\t{logo}')
-    # print(f'\t{data}')
 
     return name, short_name, logo, address, city, prov, pc, email_link, web_link, people, phone
 
@@ -152,23 +145,6 @@ def clean_html(p: str):
     :param p: html string
     :return: cleaned string
     """
-    # @p = re.sub(' class=".+?"',"", p)
-    # p = re.sub(' id=".+?"', "", p)
-    # p = re.sub('^<li\\s*?><button\\s.+?>', '<li><button>', p)
-    # p = re.sub('width=".+?"', "", p)
-    # p = re.sub('height=".+?"', "", p)
-
-    # p = re.sub(r'(?is) aria-controls="acc[0-9]{1,2}"', '', p)
-    # p = re.sub(r'(?is) id="acc[0-9]{1,2}"', '', p)
-    # p = p.replace(' class="content"', '')
-    # p = p.replace(' class="row collapse--sm"', '')
-    # p = p.replace(' class="medium-4 large-4"', '')
-    # p = p.replace(' class="attachment-party-logo size-party-logo" alt="" decoding="async" loading="lazy"', '')
-    # p = p.replace(' class="medium-8 large-8"', '')
-    # p = re.sub(r'(?is) srcset="(.+?)</p>', '</p>', p)
-    # p = p.replace(' target="_blank" rel="noopener"', '')
-    # p = p.replace('<strong>', '')
-    # p = p.replace(r'<\/strong>', '')
 
     return p
 
