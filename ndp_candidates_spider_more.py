@@ -20,12 +20,21 @@ class ABNDPCandidatesSpiderMore(scrapy.Spider):
         :return: None
         """
         urls = self.get_urls()
+        # print(urls)
         for url in urls:
+            print(url)
             yield scrapy.Request(url=url, callback=self.parse, errback=self.on_error)
+            break
 
 
     def parse(self, response):
-        pass
+        bio = response.css('div[class="about-person-holder"]').getall()
+        # should be only 1 section
+
+
+        for b in bio:
+            print(b)
+
 
     def on_error(self, failure):
         """
@@ -33,6 +42,8 @@ class ABNDPCandidatesSpiderMore(scrapy.Spider):
         :param failure: error information
         :return: None
         """
+        pass
+
     def get_urls(self):
         """
         build a list of the candidates urls.
@@ -40,12 +51,13 @@ class ABNDPCandidatesSpiderMore(scrapy.Spider):
         """
         urls = []
 
-        with open(self.csv_file, 'wt') as csv:
-            pass
-
+        with open(self.csv_file, 'rt') as csv:
+            for c in csv.readlines():
+                cols = c.split('\t')
+                url = f'https:{cols[3]}'
+                urls.append(url)
 
         return urls
-
 
 
 
