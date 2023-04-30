@@ -1,10 +1,4 @@
 import re
-import json
-
-"""
-Read the html from the NDP Candidate list and extract relevant
-fields into a csv file.
-"""
 
 
 candidate_exp = r'^<div><div><article><div><img data-src=\"(.+?)\"></div><h1>(.+?)</h1><h2>(.+?)</h2><a href=\"(.+?)\"><span>(.+?)</span></a>'
@@ -57,11 +51,6 @@ def parse_candidate(c: str):
 
 def clean_html(c: str):
     return c
-
-
-
-
-
 
 
 if __name__ == '__main__':

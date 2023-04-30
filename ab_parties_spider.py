@@ -1,5 +1,6 @@
 import scrapy
 import json
+import re
 
 
 class ABPartiesSpider(scrapy.Spider):
@@ -33,7 +34,20 @@ class ABPartiesSpider(scrapy.Spider):
         pass
 
     def parse_party(self, html: str, f):
+
         html = str(html.replace("\n", ""))
         html = str(html.replace("\r", ""))
+        html = str(html.replace('\t', ""))
+
+        html = re.sub(' class=".+?"', "", html)
+        html = re.sub(' id=".+?"', "", html)
+        html = re.sub('^<li\\s*?><button\\s.+?>', '<li><button>', html)
+        html = re.sub('width=".+?"', "", html)
+        html = re.sub('height=".+?"', "", html)
+        html = re.sub(r'(?is) srcset="(.+?)</p>', '</p>', html)
+        html = html.replace('alt=""', "")
+        html = html.replace('decoding="async"', "")
+        html = html.replace('loading="lazy"', "")
+
         f.write(f"{html}\n")
         f.flush()
