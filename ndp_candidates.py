@@ -1,14 +1,18 @@
 import re
 
+"""
+Read the ndp candidate list html (ndp_candidates.html) and turn it into
+a csv file (tab-delimited).
+"""
 
 candidate_exp = r'^<div><div><article><div><img data-src=\"(.+?)\"></div><h1>(.+?)</h1><h2>(.+?)</h2><a href=\"(.+?)\"><span>(.+?)</span></a>'
 def parse_candidates_html(htmlfile='ndp_candidates.html', csvfile='ndp_candidates.csv'):
     """
     Read the html from the NDP Candidate list and extract relevant
     fields into a csv file.
-    :param htmlfile:
-    :param csvfile:
-    :return:
+    :param htmlfile: The name of the input html file (default = ndp_candidates.html)
+    :param csvfile:  The name of the output csv file (default = ndp_candidates.csv)
+    :return: None
     """
     count = 0
     with open(htmlfile, "rt") as html, open(csvfile, 'wt') as csv:

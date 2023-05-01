@@ -1,6 +1,7 @@
 import scrapy
 import re
-import csv
+import time
+import os
 
 class ABNDPCandidatesSpiderMore(scrapy.Spider):
     """
@@ -12,6 +13,13 @@ class ABNDPCandidatesSpiderMore(scrapy.Spider):
     """
     name = 'abndbcandidatesspidermore'
     csv_file = 'ndp_candidates.csv'
+    html_file = 'ndp_candidates_more.html'
+    csv_file_more = 'ndp_candidates_more.csv'
+
+    if os.path.exists(csv_file_more):
+        os.remove(csv_file_more)
+    if os.path.exists(html_file):
+        os.remove(html_file)
 
     def start_requests(self):
         """
@@ -24,16 +32,40 @@ class ABNDPCandidatesSpiderMore(scrapy.Spider):
         for url in urls:
             print(url)
             yield scrapy.Request(url=url, callback=self.parse, errback=self.on_error)
-            break
+            time.sleep(2)
 
 
     def parse(self, response):
         bio = response.css('div[class="about-person-holder"]').getall()
-        # should be only 1 section
+        name = response.css('h1[class="hero-fullname"]::text').get()
+        riding = response.css('h2[class="hero-ridingname"]::text').get()
+        print(f'Name: {name} - {riding}\n')
+        about = response.xpath('//div[@class="about-bio abndp-home2022/text-style"]/p').getall();
+        nice = ''
+        # print(about)
+        for p in about:
+            s = str(p)
+            s = str(s.replace('\\r', ''))
+            s = str(s.replace('\\n', ''))
 
+            s = s.replace('\t', '')
+            s = s.replace('<p>', '')
+            s = re.sub('<\\/p>', '', s)
 
+            nice = nice + s
+
+        assert(nice is not None)
+        assert(name is not None)
+        assert(riding is not None)
+        assert(bio is not None)
         for b in bio:
-            print(b)
+            b = b.replace('\n', '')
+            b = b.replace('\r', '')
+            b = b.replace('\t', '')
+            with open(self.csv_file_more, 'at') as f:  # will have to append here
+                f.write(f'{name}\t{riding}\t{nice}\n')
+                f.flush()
+            f.close()
 
 
     def on_error(self, failure):
@@ -56,13 +88,7 @@ class ABNDPCandidatesSpiderMore(scrapy.Spider):
                 cols = c.split('\t')
                 url = f'https:{cols[3]}'
                 urls.append(url)
+            csv.close()
 
         return urls
 
-
-
-
-
-
-if __name__ == '__main__':
-    parse_candidates_more()
