@@ -6,7 +6,7 @@ class ALPCandidatesSpider(scrapy.Spider):
     """
     Use scrapy to visit the Alberta Liberal Party candidates page and extract
     the relevant html to build a candidates list. (alp_candidates.csv)
-    See also:  alp_candidates.py, alp_candidates_more.py
+    See also:  alp_candidates.py, alp_candidates_spider_more.py
     """
     name = 'alpcandidatesspider'
 

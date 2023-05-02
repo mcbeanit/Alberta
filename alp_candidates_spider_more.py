@@ -3,6 +3,7 @@ import re
 import os
 import time
 
+
 class ALPCandidatesSpiderMore(scrapy.Spider):
     """
     Use the candidates url to navigate into more information about
@@ -63,9 +64,9 @@ class ALPCandidatesSpiderMore(scrapy.Spider):
             print('there is no bio here')
             assert False
 
-
     def on_error(self, failure):
         pass
+
     def get_urls(self):
         urls = []
 
@@ -77,4 +78,3 @@ class ALPCandidatesSpiderMore(scrapy.Spider):
             csv.close()
 
         return urls
-
