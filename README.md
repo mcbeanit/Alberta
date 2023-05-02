@@ -54,7 +54,7 @@ Completed:
 
 * *gpa_candidates_spider.py*    Get the relevant candidate html with scrapy 
 * *gpa_candidates.csv*          Green Party of Alberta List of Candidates
-* *gpa_candidates.py            Green Party of Alberta create the csv from html
+* *gpa_candidates.py*           Green Party of Alberta create the csv from html
 
 * *ndp_candidates_more.csv*     NDP candidates bios and sm links
 * *ndp_candidates_spider_more.py*    Scrapy follow candidate links into bio and extract html
@@ -78,10 +78,6 @@ Completed:
 * *ucp_mlas.csv*                UCP MLAs from their list
 * *ucp_mlas.html*               UCP MLAs extracted html
 * *ucp_not_running.csv*         List of UCP MLAs not running again.
-
-
-
-    
 
 
 How to run (typical example)
