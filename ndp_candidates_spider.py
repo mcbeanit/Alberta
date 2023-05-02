@@ -2,7 +2,6 @@ import scrapy
 import json
 import re
 
-
 class ABNDPCandidatesSpider(scrapy.Spider):
     name = 'abndbcandidatesspider'
 
