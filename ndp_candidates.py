@@ -15,6 +15,7 @@ def parse_candidates_html(htmlfile='ndp_candidates.html', csvfile='ndp_candidate
     :return: None
     """
     count = 0
+    expected_count = 87
     with open(htmlfile, "rt") as html, open(csvfile, 'wt') as csv:
         for c in html.readlines():
             count = count + 1
@@ -31,7 +32,7 @@ def parse_candidates_html(htmlfile='ndp_candidates.html', csvfile='ndp_candidate
     html.close()
     csv.close()
 
-    print(f'There are {count} candidates. \n')
+    print(f'NDP: There are {count} candidates and {expected_count} expected. \n')
 
 
 def parse_candidate(c: str):
