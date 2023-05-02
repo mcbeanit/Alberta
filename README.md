@@ -84,10 +84,9 @@ Completed:
     
 
 
-How to run (so far)
+How to run (typical example)
 
 `scrapy runspider ab_ridings_spider.py`
+`python ab_ridings.py`
 
-`scrapy runspider ab_parties_spider.py`
-
-`python main.py`               
+          
