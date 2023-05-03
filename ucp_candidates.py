@@ -17,11 +17,10 @@ def parse_candidates_html():
         for c in html.readlines():
             count = count + 1
             c = parse_candidate(c)
-
-            csv.write(f'{c[0]}\t')
             csv.write(f'{c[1]}\t')
             csv.write(f'{c[2]}\t')
-            csv.write(f'{c[3]}\n')
+            csv.write(f'{c[3]}\t')
+            csv.write(f'{c[0]}\n')
             csv.flush()
         print(f"There were {count} candidates found and {expected_count} expected.")
     html.close()

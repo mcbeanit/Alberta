@@ -2,6 +2,8 @@ import scrapy
 import os
 import time
 import csv
+import gender_guesser
+
 
 class UCPCandidateSpiderMore(scrapy.Spider):
     name = 'ucpcandidatesspidermore'
@@ -15,8 +17,7 @@ class UCPCandidateSpiderMore(scrapy.Spider):
         urls = self.get_candidate_urls()
         for url in urls:
             yield scrapy.Request(url=url, callback=self.parse, errback=self.on_error)
-            time.sleep(3)
-
+            time.sleep(2)
 
     def parse(self, response, **kwargs):
         name: str = response.css('h1::text').get()
@@ -31,14 +32,11 @@ class UCPCandidateSpiderMore(scrapy.Spider):
             p = p.replace('\r', '')
             p = p.replace('\t', '')
             bio = bio + p
-            print(bio)
+            gender = gender_guesser.guess(bio)
 
         with open(self.csv_more_file, 'at') as f:
-            f.write(f'UCP\t{name}\t{riding}\t{bio}')
+            f.write(f'UCP\t{name}\t{riding}\t{gender}\t{bio}\n')
             f.close()
-
-
-
 
     def on_error(self, failure):
         pass
@@ -55,6 +53,5 @@ class UCPCandidateSpiderMore(scrapy.Spider):
             count = count + 1
             url = str(row[3])
             urls.append(url)
-
 
         return urls
