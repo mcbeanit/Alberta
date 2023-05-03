@@ -51,7 +51,7 @@ class UCPCandidateSpiderMore(scrapy.Spider):
 
         for row in data:
             count = count + 1
-            url = str(row[3])
+            url = str(row[2])
             urls.append(url)
 
         return urls
