@@ -4,6 +4,7 @@ import re
 def parse_candidates_html():
     with open('gpa_candidates.html', 'rt') as html, open('gpa_candidates.csv', 'wt') as csv:
         count = 0
+        expected_count = 32
         pattern = 'src=.(https.+png)'
         short_name = 'gpa'
         for c in html.readlines():
@@ -20,7 +21,7 @@ def parse_candidates_html():
 
         html.close()
         csv.close()
-        print(f'There were {count} candidates found. See gpa_candidates.csv ')
+        print(f'GPA: There were {count} candidates found. Expected: {expected_count}')
 
 
 if __name__ == '__main__':
