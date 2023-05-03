@@ -2,6 +2,7 @@ import scrapy
 import re
 import time
 import os
+import gender_guesser
 
 class ABNDPCandidatesSpiderMore(scrapy.Spider):
     """
@@ -34,37 +35,32 @@ class ABNDPCandidatesSpiderMore(scrapy.Spider):
             yield scrapy.Request(url=url, callback=self.parse, errback=self.on_error)
             time.sleep(2)
 
-
     def parse(self, response):
-        bio = response.css('div[class="about-person-holder"]').getall()
-        name = response.css('h1[class="hero-fullname"]::text').get()
+        bio_html = response.css('div[class="about-person-holder"]').getall()
+        candidate_name = response.css('h1[class="hero-fullname"]::text').get()
         riding = response.css('h2[class="hero-ridingname"]::text').get()
-        print(f'Name: {name} - {riding}\n')
+        gender = ''
         about = response.xpath('//div[@class="about-bio abndp-home2022/text-style"]/p').getall();
-        nice = ''
-        # print(about)
+        bio = ''
+
         for p in about:
             s = str(p)
-            s = str(s.replace('\\r', ''))
-            s = str(s.replace('\\n', ''))
-
-            s = s.replace('\t', '')
-            s = s.replace('<p>', '')
+            s = str(s.replace('\r', ''))
+            s = str(s.replace('\n', ''))
+            s = str(s.replace('\t', ''))
+            s = str(s.replace('<p>', ''))
             s = re.sub('<\\/p>', '', s)
+            s = s.replace('<br>', '')
+            bio = bio + s
+            gender = gender_guesser.guess(bio)
 
-            nice = nice + s
-
-        assert(nice is not None)
-        assert(name is not None)
-        assert(riding is not None)
         assert(bio is not None)
-        for b in bio:
-            b = b.replace('\n', '')
-            b = b.replace('\r', '')
-            b = b.replace('\t', '')
-            with open(self.csv_file_more, 'at') as f:  # will have to append here
-                f.write(f'{name}\t{riding}\t{nice}\n')
-                f.flush()
+        assert(candidate_name is not None)
+        assert(riding is not None)
+        assert(bio_html is not None)
+        with open(self.csv_file_more, 'at') as f:  # will have to append here
+            f.write(f'{candidate_name}\t{riding}\t{gender}\t{bio}\n')
+            f.flush()
             f.close()
 
 
@@ -74,7 +70,8 @@ class ABNDPCandidatesSpiderMore(scrapy.Spider):
         :param failure: error information
         :return: None
         """
-        pass
+        with open('error.log', 'a') as err:
+            err.write(f'{self.name},{failure}\n')
 
     def get_urls(self):
         """
