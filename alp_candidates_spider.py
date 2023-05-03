@@ -20,6 +20,10 @@ class ALPCandidatesSpider(scrapy.Spider):
         html = response.xpath('//div[@class="dropdown-menu"]/a').getall()
         with open('alp_candidates.html', 'wt') as h:
             for a in html:
+                # note that the first line selected is not a candidate, but a header
+                # and should be ignored.
+                if a.__contains__('>Candidates<'):
+                    continue
                 a = a.replace('\\n', '')
                 a = a.replace('\\r', '')
                 a = a.replace('\\t', '')

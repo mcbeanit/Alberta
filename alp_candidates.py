@@ -17,8 +17,6 @@ def parse_candidates_html():
         for can in html.readlines():
             # skip the first line should not be tagged as data. should be a header.
             count = count + 1
-            if count == 1:
-                continue
             matches = re.match(pattern, can)
             if matches is not None:
                 url = matches[1]
@@ -31,8 +29,7 @@ def parse_candidates_html():
             csv.write(f'ALP\t{name}\t{riding}\t{url}\t{headshot}\n')
             csv.flush()
         csv.close()
-
-
+        print(f'ALP: There were {count} candidates found. Expected {expected_count}')
 
 
 def clean_html(c: str):
