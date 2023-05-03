@@ -5,7 +5,7 @@ Read the ndp candidate list html (ndp_candidates.html) and turn it into
 a csv file (tab-delimited).
 """
 
-candidate_exp = r'^<div><div><article><div><img data-src=\"(.+?)\"></div><h1>(.+?)</h1><h2>(.+?)</h2><a href=\"(.+?)\"><span>(.+?)</span></a>'
+candidate_exp = r'^<div><div><article><div><img data-src=\"(.*?)\"></div><h1>(.+?)</h1><h2>(.+?)</h2><a href=\"(.+?)\"><span>(.+?)</span></a>'
 def parse_candidates_html(htmlfile='ndp_candidates.html', csvfile='ndp_candidates.csv'):
     """
     Read the html from the NDP Candidate list and extract relevant
