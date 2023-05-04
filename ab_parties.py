@@ -4,7 +4,7 @@ from openpyxl import load_workbook
 
 
 def parse_party_html(htmlfile='ab_parties.html', csvfile='ab_parties.csv'):
-    with open(htmlfile, "rt") as h, open(csvfile, "wt") as csv, open('people.csv', 'wt') as ppl:
+    with open(htmlfile, "rt") as h, open(csvfile, "wt") as csv, open('ab_parties_officers.csv', 'wt') as ppl:
         count = 0
         expected_count = 12
         for p in h.readlines():
