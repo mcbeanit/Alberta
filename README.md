@@ -1,7 +1,7 @@
 # Alberta
 Alberta election 2023 data sets
 
-Using scrapy to extract dataset from varous sources, and further processing
+Using scrapy to extract data from varous sources, and further processing
 to validate and import the data into Excel. 
 
 The link to the spreadsheet on office.com(view only for now):
@@ -19,7 +19,7 @@ Completed:
 
 ## Future:
     Master list of official candidates from Elections Alberta
-    
+    Detail election results, and comparisons.
 
 ## Notes on file names and conventions
 * Files ending in py are python scripts that can just be run from a command line

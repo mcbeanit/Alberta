@@ -1,4 +1,6 @@
 import scrapy
+import re
+
 
 class GPACandidatesSpider(scrapy.Spider):
     name = 'GPACandidatesSpider'
@@ -20,16 +22,11 @@ class GPACandidatesSpider(scrapy.Spider):
                 c = c.replace('\n', "")
                 c = c.replace('\r', "")
                 c = c.replace('\t', "")
-                c = c.replace("  "," ")
+                c = c.replace("  ", " ")
+                c = re.sub(f'>\\s+?<', '><', c)
                 f.write(f'{c}\n')
                 f.flush()
             f.close()
-
-
-
-
-
-
 
         print(f'There were {count} candidates found\n')
         print(f'Expected {self.expected_count} candidates\n')
