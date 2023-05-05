@@ -20,13 +20,14 @@ def parse_candidates_html(htmlfile='official_candidates.html', csvfile='official
                 body = matches[1]
                 body = re.sub('</tr>', '</tr>\n', body)
                 body = body.strip().split('\n')
-                count = 0
+
                 for b in body:
-                    count = count + 1
+
                     matched = re.match(exp_fields, b)
                     if matched is not None:
                         name = matched[1].title()
                         if name not in duplicates:
+                            count = count + 1
                             csv.write(f'{name}\t{matched[2].title()}\t{matched[3].title()}\n')
                             duplicates.append(name)
             else:
@@ -35,6 +36,7 @@ def parse_candidates_html(htmlfile='official_candidates.html', csvfile='official
 
         html.close()
         csv.close()
+        print(f'There were {count} officially registered candidated\n')
 
 if __name__ == '__main__':
     parse_candidates_html()

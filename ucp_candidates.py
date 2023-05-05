@@ -22,7 +22,7 @@ def parse_candidates_html():
             csv.write(f'{c[3]}\t')
             csv.write(f'{c[0]}\n')
             csv.flush()
-        print(f"There were {count} candidates found and {expected_count} expected.")
+        print(f"UCP: There were {count} candidates found and {expected_count} expected.")
     html.close()
     csv.close()
 
