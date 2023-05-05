@@ -21,7 +21,6 @@ def parse_candidates_html(htmlfile='ndp_candidates.html', csvfile='ndp_candidate
             count = count + 1
             c = clean_html(c)
             candidate = parse_candidate(c)
-            print(f'{candidate[1]}')
             csv.write('NDP\t')
             csv.write(f'{candidate[1]}\t')
             csv.write(f'{candidate[2]}\t')
