@@ -49,8 +49,6 @@ def parse_candidates_html():
                     name: str = var[0]
                     riding: str = var[1]
                     out.write(f'AP\t{name}\t{riding}\t{candidate_url}\t{candidate_headshot}\r{gender}')
-
-
                 else:
                     print('ap_candidates.py: The pattern is not matched,')
                     assert False
