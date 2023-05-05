@@ -29,13 +29,13 @@ Completed:
 ## Files in project:
 
 * *ab_candidates.csv*           Master list of candidates
-* *ab_nominated_counts.csv      Summary count of nominees by party and gender
+* *ab_nominated_counts.csv*     Summary count of nominees by party and gender
 
 * *ab_parties_spider.py*        Runs the scrapy spider to get the parties from Election Alberta.
 * *ab_parties.csv*              validated csv listing the official parties.
 * *ab_parties.html*             the extracted HTML of interest to produce the csv file
 * *ab_parties.py*               product the list of parties
-* *ab_parties_officers.csv    party executives from elections alberta and other sources
+* *ab_parties_officers.csv*     party executives from elections alberta and other sources
 * *ab_ridings.spider.py*        Runs the scrapy spider to get the list of ridings from Wikipedia
 * *ab_ridings.csv*              Validated csv listing of alberta ridings.
 * *ab_ridings.html*             Extracted HTML of interest to produce the csv file.  
@@ -43,7 +43,7 @@ Completed:
 * *alp_candidates.csv*          Alberta Liberal Party list of candidates(csv)
 * *alp_candidates,html*         Relevant html found by scrapy
 * *alp_candidates.py*           Product csv list from html
-* *alp_candidate_more.csv       More info, bio, social links.
+* *alp_candidate_more.csv*      More info, bio, social links.
 * *alp_candidates_spider.py*    Alberta Liberal Party list of candidates(html)
 * *alp_candidates_spider_more.py*   Alberta Liberal Party candidate bios.
 
@@ -70,7 +70,7 @@ Completed:
 
 * *test_ab_parties.py*          PyTest: test suite for ab partoes
 * *test_json.py*                Pytest: How python can read json files
-* *test_official_camdidates.py  Pytest: official candidates test
+* *test_official_camdidates.py* Pytest: official candidates test
 * *test_ucp_candidates.py*      PYTest: test suite
 
 * *ucp_candidates_spider_more.py*    UCP Candidates bios with scrapy.
@@ -88,5 +88,8 @@ How to run (typical example)
 
 `scrapy runspider ab_ridings_spider.py`
 `python ab_ridings.py`
+
+Or, run the PS script for all updates
+`.\run_all.ps1`
 
           
