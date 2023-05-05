@@ -4,6 +4,7 @@ import re
 
 class OfficialCandidatesSpider(scrapy.Spider):
     name = 'officialcandidatesspider'
+    exp_tbody = r'^<table.+?<tbody>(.+>)<\/tbody>'
     exp_rows = r'^<table.+?(<tr>(.*?><td.+?<\/td>)<\/tr>)+'
     # exp_riding = r'^<div.+?id=\"(.+?)\">'  if we need to get the riding id
 
@@ -19,7 +20,6 @@ class OfficialCandidatesSpider(scrapy.Spider):
         riding = ''
 
         with open('official_candidates.html', 'wt') as data:
-            data.write(f'riding\tdata\n')
             for c in table:
                 c = c.replace('\n', '')
                 c = c.replace('\r', '')
