@@ -5,6 +5,7 @@ htmlfile = 'alp_candidates.html'
 csvfile = 'alp_candidates.csv'
 pattern = r'^<a class=.+?\shref=\"(.+?)\">(.+?)\|(.+?)<\/a>'
 
+
 def parse_candidates_html():
     headshot: str = ''
     name: str = ''
@@ -34,6 +35,7 @@ def parse_candidates_html():
 
 def clean_html(c: str):
     return c
+
 
 if __name__ == '__main__':
     parse_candidates_html()

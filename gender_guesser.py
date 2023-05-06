@@ -1,5 +1,5 @@
-male_words = ['he', 'him', 'his', 'husband', 'father', 'dad']
-female_words = ['she', 'her', 'hers', 'wife', 'mother', 'mom', 'mum']
+male_words = ['he', 'him', 'his', 'husband', 'father', 'dad', 'mr.']
+female_words = ['she', 'her', 'hers', 'wife', 'mother', 'mom', 'mum','mrs.']
 
 
 def guess(text: str):
