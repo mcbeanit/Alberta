@@ -46,18 +46,28 @@ class ALPCandidatesSpiderMore(scrapy.Spider):
             assert False
 
         # print(f'Data: {name} <> {riding}\n')
-        bio_html = response.xpath('//div[@class="col-lg-6"]/p/span/text()').getall()
+        bio_html = response.xpath('//div[@class="col-lg-6"]').getall()
+        # get the candidate name and riding to associate with the bio'
+        # e.g. h1 class="entry-title mt-3 mb-1">Zarnab Zafar </h1><span> Calgary-Beddington</span>
+        # name_riding = ''
+        # name_riding = response.xpath('//h1[@class="entry-title mt-3 mb-1"]/span')
+        # if name_riding is not None:
+            # name_riding = name_riding.replace('\n', '')
+            # name_riding = name_riding.replace('\r', '')
+            # name_riding = name_riding.replace('\t', '')
+
         bio = ''
         if bio_html is not None:
             if len(bio_html) == 0:
                 print('This bio was not found')
             for bio_line in bio_html:
-                bio_line = bio_line.replace('\\n', '')
-                bio_line = bio_line.replace('\\r', '')
-                bio_line = bio_line.replace('\\t', '')
-                bio = bio + bio_line
-            with open(self.csv_file_more, 'at') as f:  # will have to append here
-                f.write(f'ALP\t{name}\t{riding}\t{bio}\t{headshot}\n')
+                bio_line = bio_line.replace('\n', '')
+                bio_line = bio_line.replace('\r', '')
+                bio_line = bio_line.replace('\t', '')
+                # bio = bio + bio_line
+            with open(self.html_file, 'at') as f:  # will have to append here
+                # f.write(f'ALP\t{name}\t{riding}\t{bio}\t{headshot}\n')
+                f.write(f'{name}\t{riding}\t{bio_line}\n')
                 f.flush()
             f.close()
         else:
