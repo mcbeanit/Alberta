@@ -149,6 +149,6 @@ def clean_html(p: str):
     return p
 
 
-# Press the green button in the gutter to run the script.
+
 if __name__ == '__main__':
     parse_party_html()
