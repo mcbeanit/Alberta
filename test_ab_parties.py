@@ -54,8 +54,13 @@ def test_read_excel():
     """
     wb = load_workbook('C:\\Users\\owner\\OneDrive\\Alberta.xlsx')
     sheet = wb.worksheets[0]
-    x = str(sheet['A2'].value)
-    print(x)
+    # x = str(sheet['A2:I88'])
+    # print(f'\n# of cells: {len(x)}\n')
+
+    data = [sheet.cell(row=2, column=i).value for i in range(1, 10)]
+    print(data)
+
+
 
 def test_short_name():
     exp = '\\s\\((.+?)\\)$'
@@ -63,7 +68,6 @@ def test_short_name():
 
     m = re.findall(exp,case)
     assert(m is not None)
-    print(m)
     assert(str(m[0])=='NDP')
 
 def test_email():
@@ -82,7 +86,6 @@ def test_email():
 def text_web_url():
     web_exp = r'^<a href="(.+)">(.+)<\/a>$'
     case = '<a href="http://www.greenpartyofalberta.ca/">www.greenpartyofalberta.ca</a>'
-
     matches = re.match(web_exp, case)
     assert (matches is not None)
     url = str(matches[1])
