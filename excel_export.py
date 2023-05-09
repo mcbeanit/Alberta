@@ -23,7 +23,7 @@ def export_ab_candidates(location=workbook_location, column_headers=True):
     delim = ','
     with open('ab_candidates.csv', 'wt') as csv_out:
         count = 0
-        for row in range(2,333):
+        for row in range(1,333):
             count = count + 1
             data = [sheet.cell(row=row, column=i).value for i in range(1, 12)]
 

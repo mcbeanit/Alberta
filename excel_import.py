@@ -30,15 +30,15 @@ def import_official_candidates():
         registered = data[5] if data[5] is not None else 'No'
         name = f'{data[1]} {data[2]}'
         if name in official and registered != 'Yes':
-            # print(f'{name} should be listed')
+            print(f'{name} should be listed')
             count = count + 1
-            sheet.cell(row=row, column=6).value = 'Yes'
+            # sheet.cell(row=row, column=6).value = 'Yes'
 
 
     print(f'There are {count} candidates that should be listed\n')
-    print('Saving the workbook')
-    wb.save(workbook_location)
-    print('done')
+    # print('Saving the workbook')
+    # wb.save(workbook_location)
+    # print('done')
 
 
 
