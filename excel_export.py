@@ -23,7 +23,7 @@ def export_ab_candidates(location=workbook_location, column_headers=True):
     delim = ','
     with open('ab_candidates.csv', 'wt') as csv_out:
         count = 0
-        for row in range(1,333):
+        for row in range(1,400):
             count = count + 1
             data = [sheet.cell(row=row, column=i).value for i in range(1, 12)]
 
@@ -44,8 +44,21 @@ def export_ab_candidates(location=workbook_location, column_headers=True):
             csv_out.flush()
         csv_out.close()
 
+def export_candidates_social(location = workbook_location, column_headers=True):
+    wb = load_workbook(workbook_location)
+    sheet = wb.worksheets[5]
+    count = 0
+    with open('ab_candidates_social.csv',  'wt') as csv_out:
+        for row in range(2,300):
+            count = count + 1
+            data = [sheet.cell(row=row, column=i).value for i in range(1, 10)]
+            # csv_out.write(f'{count}\t{data[2]}\t{data[3]}\t{data[4]}\t{data[5]}\t{data[7]}\t{data[8]}\n')
+            if data[0] is not None:
+                csv_out.write(f'{data[0]}\t{data[1]}\t{data[2]}\t{data[3]}\f{data[4]}\n')
+        csv_out.close()
 
 
 if __name__ == '__main__':
     # export_ab_ridings()
     export_ab_candidates()
+    export_candidates_social()

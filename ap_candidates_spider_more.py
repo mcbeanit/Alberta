@@ -27,8 +27,8 @@ class APCamdidatesSpiderMore(scrapy.Spider):
     def start_requests(self):
         urls = self.get_urls()
         for url in urls:
-            print(f"requesting url: {url}\n")
             yield scrapy.Request(url=url, callback=self.parse, errback=self.on_error)
+            time.sleep(3)
 
     def parse(self, response, **kwargs):
         name_riding = ''
@@ -52,6 +52,7 @@ class APCamdidatesSpiderMore(scrapy.Spider):
         # and find the one that has the bio text.  they don't have any id attribute that
         # can distinguish them. also the html is broken in place
         # we probably want the first one, but this has to be tested.
+        # also getting the social media links in this section(new)
 
         divs = response.css('div[class="row"]').getall()
         assert divs

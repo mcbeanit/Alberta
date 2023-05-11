@@ -3,7 +3,10 @@ import csv
 
 social_html = 'ndp_candidates_social.html'
 csv_file = 'ndp_candidates_social.csv'
-social_exp = r'^<li class=\"follow-link-item\">.+?href=\"(https://.+?)\"'
+social_exp = r'^<li class=\"follow-link-item\">.+?href=\"((https|http)://.+?)\"'
+short_name = 'NDP'
+
+
 def parse_candidates_html():
     file = open(social_html, newline='')
     reader = csv.reader(file, delimiter='\t')
@@ -12,7 +15,7 @@ def parse_candidates_html():
     file.close()
 
     with open(csv_file, 'wt') as csv_out:
-        for html in  data:
+        for html in data:
             name = html[0]
             riding = html[1]
             li = html[2]
@@ -26,21 +29,11 @@ def parse_candidates_html():
                     platform = "Twitter"
                 if 'instagram' in link:
                     platform = 'Instagram'
-                if 'facebook'  in link:
+                if 'facebook' in link:
                     platform = 'Facebook'
             else:
                 print(f'{name}: links were not found')
-            csv_out.write(f'{name}\t{riding}\t{platform}\t{link}\n')
-
-
-
-
-
-
-
-
-
-
+            csv_out.write(f'{short_name}\t{name}\t{riding}\t{platform}\t{link}\n')
 
 
 if __name__ == '__main__':

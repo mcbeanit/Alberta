@@ -31,7 +31,7 @@ class ALPCandidatesSpiderMore(scrapy.Spider):
         name = ''
         riding = ''
         headshot = ''
-        name_riding = response.css('title::text').get()
+        c
         assert name_riding
 
         # e.g. Jacob Stacey | Sherwood Park - Alberta Liberal Party

@@ -12,14 +12,16 @@ class ABNDPCandidatesSpider(scrapy.Spider):
 
     # we want to find all the <div class="candidate-list-item">
     def parse(self, response):
+        count = 0
         html = response.css('div[class="candidate-list-item"]').getall()
         with open('ndp_candidates.html', 'wt') as f:
             for c in html:
                 c = self.clean_html(c)
                 f.write(c);
                 f.write('\n')
-
+                count = count + 1
         f.close()
+        print (f'NDP: Crawler found {count} candidates')
 
     def on_error(self, failure):
         pass

@@ -4,7 +4,7 @@ import csv
 
 csv_file = 'ap_candidates_more.csv'
 html_file = 'ap_candidates_more.html'
-
+social_file = 'ap_candidates_social.html'
 
 def parse_candidates_html():
     file = open(html_file, newline='')

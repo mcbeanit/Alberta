@@ -4,6 +4,7 @@ import time
 import os
 import gender_guesser
 
+
 class ABNDPCandidatesSpiderMore(scrapy.Spider):
     """
     Read the csv file of candidates and load the links into the candidate's bio
@@ -16,11 +17,14 @@ class ABNDPCandidatesSpiderMore(scrapy.Spider):
     csv_file = 'ndp_candidates.csv'
     html_file = 'ndp_candidates_more.html'
     csv_file_more = 'ndp_candidates_more.csv'
+    html_social = 'ndp_candidates_social.html'
 
     if os.path.exists(csv_file_more):
         os.remove(csv_file_more)
     if os.path.exists(html_file):
         os.remove(html_file)
+    if os.path.exists(html_social):
+        os.remove(html_social)
 
     def start_requests(self):
         """
@@ -33,14 +37,16 @@ class ABNDPCandidatesSpiderMore(scrapy.Spider):
         for url in urls:
             print(url)
             yield scrapy.Request(url=url, callback=self.parse, errback=self.on_error)
-            time.sleep(2)
+            time.sleep(3)
 
     def parse(self, response):
         bio_html = response.css('div[class="about-person-holder"]').getall()
         candidate_name = response.css('h1[class="hero-fullname"]::text').get()
         riding = response.css('h2[class="hero-ridingname"]::text').get()
+        social = response.xpath('//ul[@class="follow-links"]/li').getall()
+        # assert social
         gender = ''
-        about = response.xpath('//div[@class="about-bio abndp-home2022/text-style"]/p').getall();
+        about = response.xpath('//div[@class="about-bio abndp-home2022/text-style"]/p').getall()
         bio = ''
 
         for p in about:
@@ -49,20 +55,29 @@ class ABNDPCandidatesSpiderMore(scrapy.Spider):
             s = str(s.replace('\n', ''))
             s = str(s.replace('\t', ''))
             s = str(s.replace('<p>', ''))
-            s = re.sub('<\\/p>', '', s)
+            s = re.sub('</p>', '', s)
             s = s.replace('<br>', '')
             bio = bio + s
             gender = gender_guesser.guess(bio)
 
-        assert(bio is not None)
-        assert(candidate_name is not None)
-        assert(riding is not None)
-        assert(bio_html is not None)
+        assert (bio is not None)
+        assert (candidate_name is not None)
+        assert (riding is not None)
+        assert (bio_html is not None)
         with open(self.csv_file_more, 'at') as f:  # will have to append here
             f.write(f'{candidate_name}\t{riding}\t{gender}\t{bio}\n')
-            f.flush()
             f.close()
 
+        if social is not None:
+            with open(self.html_social, 'at') as f:
+                for l in social:
+                    l = l.replace('\n', '')
+                    l = l.replace('\r', '')
+                    l = l.replace('\t', '')
+                    f.write(f'{candidate_name}\t{riding}\t{l}\n')
+                f.close()
+        else:
+            print(f'{candidate_name}: No social links found.\n')
 
     def on_error(self, failure):
         """
@@ -88,4 +103,3 @@ class ABNDPCandidatesSpiderMore(scrapy.Spider):
             csv.close()
 
         return urls
-

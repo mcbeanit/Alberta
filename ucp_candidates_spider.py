@@ -6,7 +6,7 @@ class UCPCandidatesSpider(scrapy.Spider):
 
     def start_requests(self):
         # urls = {'https://www.unitedconservative.ca/nominated-candidates/'}
-        urls = {'file:///C:/Users/owner/PycharmProjects/alberta/Nominated Candidates–UCP.html'}
+        urls = {'file:///C:/Users/owner/downloads/Nominated Candidates – The United Conservative Party.html'}
         for url in urls:
             yield scrapy.Request(url=url, callback=self.parse)
 
