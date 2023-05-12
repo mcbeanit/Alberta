@@ -20,7 +20,7 @@ class UCPCandidatesSpider(scrapy.Spider):
                 # section tags. may have to adjust these counts but probably not.  sections
                 # for each candidate are sorted by riding name.  (airdrie->yellowhead)
                 # there should be a full list of 87 now.
-                if count < 3 or count > 80:
+                if count < 3 or count > 89:
                     continue
                 c = c.replace('\n',"")
                 c = c.replace('\r',"")
