@@ -54,7 +54,7 @@ def export_candidates_social(location = workbook_location, column_headers=True):
             data = [sheet.cell(row=row, column=i).value for i in range(1, 10)]
             # csv_out.write(f'{count}\t{data[2]}\t{data[3]}\t{data[4]}\t{data[5]}\t{data[7]}\t{data[8]}\n')
             if data[0] is not None:
-                csv_out.write(f'{data[0]}\t{data[1]}\t{data[2]}\t{data[3]}\f{data[4]}\n')
+                csv_out.write(f'{data[0]}\t{data[1]}\t{data[2]}\t{data[3]}\t{data[4]}\n')
         csv_out.close()
 
 def export_ab_parties(location = workbook_location, column_headers=True):
@@ -67,10 +67,21 @@ def export_ab_parties(location = workbook_location, column_headers=True):
             data = [sheet.cell(row=row, column=i).value for i in range(1, 10)]
             # csv_out.write(f'{count}\t{data[2]}\t{data[3]}\t{data[4]}\t{data[5]}\t{data[7]}\t{data[8]}\n')
             if data[0] is not None:
-                csv_out.write(f'{data[0]}\t{data[1]}\t{data[2]}\t{data[3]}\f{data[4]}\f{data[5]}\f{data[6]}\f{data[7]}\f{data[8]}\n')
+                csv_out.write(f'{data[0]}\t{data[1]}\t{data[2]}\t{data[3]}\t{data[4]}\t{data[5]}\t{data[6]}\t{data[7]}\t{data[8]}\n')
         csv_out.close()
 
 
+def export_ab_candidates_nominated_counts(location = workbook_location, column_headers=True):
+    wb = load_workbook(workbook_location, data_only=True)
+    sheet = wb.worksheets[4]
+    count = 0
+    with open('ab_candidates_nominated_counts.csv', 'wt') as csv_out:
+        for row in range(1, 15):
+            count = count + 1
+            data = [sheet.cell(row=row, column=i).value for i in range(1, 10)]
+            if data[0] is not None:
+                csv_out.write(f'{data[0]},{data[1]},{data[2]},{data[3]},{data[4]},{data[5]},{data[6]},{data[7]}\n')
+        csv_out.close()
 
 
 
@@ -79,3 +90,4 @@ if __name__ == '__main__':
     export_ab_parties();
     export_ab_candidates()
     export_candidates_social()
+    export_ab_candidates_nominated_counts()
