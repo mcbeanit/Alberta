@@ -37,8 +37,14 @@ def parse_candidates_html():
                 candidate_url:str = matches[1]
                 candidate_headshot: str = matches[2]
                 var = matches[3].split(' for ')
-                name: str = var[0]
-                riding: str = var[1]
+                if len(var)==2:
+                    name: str = var[0]
+                    riding: str = var[1]
+                else:
+                    # in this edge case the riding is not stated in the H3 heading. We'll
+                    # pick it up later in the "more" processing
+                    name: str = var[0]
+                    riding = ''
                 out.write(f'AP\t{name}\t{riding}\t{candidate_url}\t{candidate_headshot}\r{gender}')
             else:
                 matches = re.match(pattern2, div)
