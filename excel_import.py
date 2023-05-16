@@ -1,10 +1,8 @@
 import csv
-import json
 from openpyxl import load_workbook
 
 workbook_location = 'C:\\Users\\owner\\OneDrive\\Alberta.xlsx'
 official_candidates = 'official_candidates.csv'
-
 
 def import_official_candidates():
     """
