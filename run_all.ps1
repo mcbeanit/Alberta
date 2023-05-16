@@ -9,7 +9,7 @@ scrapy runspider alp_candidates_spider.py --nolog
 scrapy runspider alp_candidates_spider_more.py --nolog
 
 scrapy runspider ap_candidates_spider.py --nolog
-scrapy runspider apghgh_candidates_spider_more.py --nolog
+scrapy runspider ap_candidates_spider_more.py --nolog
 
 scrapy runspider gpa_candidates_spider.py --nolog
 scrapy runspider gpa_candidates_spider_more.py --nolog
@@ -22,13 +22,13 @@ scrapy runspider ucp_candidates_spider_more.py --nolog
 
 scrapy runspider official_candidates_spider.py --nolog
 
-# scripts to extract data of interest from the htnl saved by the crawler
+# scripts to extract data of interest from the html saved by the crawler
 # and create the csv files.
 
 python ab_parties.py
 
 python alp_candidates.py
-pythin alp_candidates_more.py
+python alp_candidates_more.py
 
 python ap_candidates.py
 python ap_candidates_more.py
