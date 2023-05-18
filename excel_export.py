@@ -1,5 +1,3 @@
-import csv
-import json
 from openpyxl import load_workbook
 
 workbook_location = 'C:\\Users\\owner\\OneDrive\\Alberta.xlsx'
@@ -49,7 +47,7 @@ def export_candidates_social(location = workbook_location, column_headers=True):
     sheet = wb.worksheets[5]
     count = 0
     with open('ab_candidates_social.csv',  'wt') as csv_out:
-        for row in range(2,300):
+        for row in range(2,400):
             count = count + 1
             data = [sheet.cell(row=row, column=i).value for i in range(1, 10)]
             # csv_out.write(f'{count}\t{data[2]}\t{data[3]}\t{data[4]}\t{data[5]}\t{data[7]}\t{data[8]}\n')
