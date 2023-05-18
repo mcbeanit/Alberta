@@ -19,7 +19,7 @@
 19	NDP	Caitlyn	Blake	Bonnyville-Cold Lake-St. Paul	No	Yes	F			//caitlynblake.albertandp.ca
 20	UCP	Scott	Cyr	Bonnyville-Cold Lake-St. Paul	Yes	Yes	M			
 21	NDP	Gwendoline	Dirk	Brooks-Medicine Hat	No	Yes	F			//gwendolinedirk.albertandp.ca
-22	AP	Barry	Morishita	Brooks-Medicine Hat	No	Yes	M			
+22	AP	Barry	Morishita	Brooks-Medicine Hat	No	Yes	M			https://www.albertaparty.ca/barry_morishita
 23	UCP	Danielle	Smith	Brooks-Medicine Hat	Yes	Yes	F			/danielle-smith/
 24	NDP	Diana	Batten	Calgary-Acadia	No	Yes	F			//dianabatten.albertandp.ca
 25	GPA	Paul	Bechtold	Calgary-Acadia	No	Yes	M			
@@ -31,7 +31,7 @@
 31	AP	Wayne	Jackson	Calgary-Beddington	No	Yes	M			
 32	UCP	Josephine	Pon	Calgary-Beddington	Yes	Yes	F			/josephine-pon/
 33	WLC	Maxime	Viens	Calgary-Beddington	No	No	M			
-34	LIB	Zarnab	Zafar	Calgary-Beddington	No	Yes	F			
+34	LIB	Zarnab	Zafar	Calgary-Beddington	No	Yes	F			https://www.albertaliberal.com/zarnab_zafar_beddington
 35	UCP	Amanpreet Singh	Gill	Calgary-Bhullar-McCall	No	Yes	M			
 36	NDP	Irfan	Sabir	Calgary-Bhullar-McCall	Yes	Yes	M			//irfansabir.albertandp.ca
 37	NDP	Druh	Farrell	Calgary-Bow	No	Yes	F			//druhfarrell.albertandp.ca
@@ -48,9 +48,9 @@
 48	NDP	Gurinder Singh	Gill	Calgary-Cross	No	Yes	M			//gurindersinghgill.albertandp.ca
 49	SM	Kathryn	Lapp	Calgary-Cross	No	Yes	F			
 50	GPA	Aman	Sandhu	Calgary-Cross	No	Yes	M			
-51	AP	Jason	Avramenko	Calgary-Currie	no	Yes	M			
+51	AP	Jason	Avramenko	Calgary-Currie	no	Yes	M			http://www.javramenko.com/
 52	NDP	Janet	Eremenko	Calgary-Currie	no	Yes	F			//janeteremenko.albertandp.ca
-53	LIB	Leila	Keith	Calgary-Currie	No	Yes	F			
+53	LIB	Leila	Keith	Calgary-Currie	No	Yes	F			https://www.albertaliberal.com/leila_keith_currie
 54	UCP	Nicholas	Milliken	Calgary-Currie	Yes	Yes	M			/nicholas-miliken/
 55	SM	Dawid	Pawlowski	Calgary-Currie	No	Yes	M			
 56	GPA	Lane	Robson	Calgary-Currie	no	Yes	M			https://www.greenpartyofalberta.ca/calgary_currie
@@ -62,9 +62,9 @@
 62	WLC	Nan	Barron	Calgary-Edgemont	No	Yes	F			
 63	NDP	Julia	Hayter	Calgary-Edgemont	no	Yes	F			//juliahayter.albertandp.ca
 64	UCP	Prasad	Panda	Calgary-Edgemont	Yes	Yes	M			/prasad-panda/
-65	AP	Allen	Schultz	Calgary-Edgemont	No	Yes	M			
+65	AP	Allen	Schultz	Calgary-Edgemont	No	Yes	M			https://sites.google.com/albertaparty.ca/calgary-edgemont/home
 66	SM	Miles	Williams	Calgary-Edgemont	No	Yes	M			
-67	AP	Kerry	Cundal	Calgary-Elbow	no	Yes	F			
+67	AP	Kerry	Cundal	Calgary-Elbow	no	Yes	F			https://www.teamcundal.com/
 68	UCP	Christopher	Davis	Calgary-Elbow	No	Yes	M			
 69	NDP	Samir	Kayande	Calgary-Elbow	No	Yes	M			//samirkayande.albertandp.ca
 70	SM	Artur	Pawlowski	Calgary-Elbow	No	Yes	M			
@@ -74,7 +74,7 @@
 74	UCP	Devinder	Toor	Calgary-Falconridge	Yes	Yes	M			/devinder-toor/
 75	SM	Evan	Wilson	Calgary-Falconridge	No	Yes	M			
 76	NDP	Rebecca	Bounsall	Calgary-Fish Creek	no	Yes	F			//rebeccabounsall.albertandp.ca
-77	LIB	Charlie	Heater	Calgary-Fish Creek	No	Yes	M			
+77	LIB	Charlie	Heater	Calgary-Fish Creek	No	Yes	M			https://www.albertaliberal.com/charlieheater
 78	SM	Dave	Hughes	Calgary-Fish Creek	No	Yes	M			
 79	UCP	Myles	McDougall	Calgary-Fish Creek	No	Yes	M			
 80	SM	Kami	Dass	Calgary-Foothills	No	Yes	F			
@@ -97,12 +97,12 @@
 97	UCP	Eric	Bouchard	Calgary-Lougheed	No	Yes	M			
 98	SM	Nathaniel	Pawlowski	Calgary-Lougheed	No	Yes	M			
 99	NDP	Venkat	Ravulaparthi	Calgary-Lougheed	No	Yes	M			//venkatravulaparthi.albertandp.ca/
-100	LIB	John	Roggeveen	Calgary-Lougheed	No	Yes	M			
+100	LIB	John	Roggeveen	Calgary-Lougheed	No	Yes	M			https://www.albertaliberal.com/john_roggeveen_leader
 101	NDP	Kathleen	Ganley	Calgary-Mountain View	Yes	Yes	F			//kathleenganley.albertandp.ca
 102	PAPA	Lucas	Hernandez	Calgary-Mountain View	No	Yes	M			
 103	UCP	Pamela	Rath	Calgary-Mountain View	No	Yes	F			
 104	SM	Christopher	Wedick	Calgary-Mountain View	No	Yes	M			
-105	LIB	Frances	Woytkiw	Calgary-Mountain View	No	Yes	F			/frances_woytkiw_hays
+105	LIB	Frances	Woytkiw	Calgary-Mountain View	No	Yes	F			https://www.albertaliberal.com/frances_woytkiw_mountainview
 106	NDP	Rajesh	Angral	Calgary-North	No	Yes	M			//rajeshangral.albertandp.ca
 107	UCP	Muhammad	Yaseen	Calgary-North	Yes	Yes	M			/muhammad-yaseen/
 108	NDP	Gurinder	Brar	Calgary-North East	No	Yes	M			//gurinderbrar.albertandp.ca
@@ -113,7 +113,7 @@
 113	NDP	Michael	Lisboa-Smith	Calgary-North West	no	Yes	M			//michaellisboasmith.albertandp.ca
 114	UCP	Rajan	Sawhney	Calgary-North West	no	Yes	F			
 115	IND	Serena	Thomsen	Calgary-North West	No	Yes	F			
-116	AP	Jennifer	Yerimiy	Calgary-North West	No	Yes	F			
+116	AP	Jennifer	Yerimiy	Calgary-North West	No	Yes	F			https://www.albertaparty.ca/jenny_yeremiy
 117	UCP	Tanya	Fir	Calgary-Peigan	Yes	Yes	F			/tanya-fir/
 118	GPA	Shaun	Pulsifer	Calgary-Peigan	No	Yes	M			https://www.greenpartyofalberta.ca/calgary_peigan
 119	NDP	Denis	Ram	Calgary-Peigan	No	Yes	M			//denisram.albertandp.ca
@@ -144,7 +144,7 @@
 144	IPA	Terry	Wolsey	Cardston-Siksika	No	Yes	M			
 145	IPA	Rodney	Bowen	Central Peace-Notley	No	Yes	M			
 146	NDP	Megan	Ciurysek	Central Peace-Notley	No	Yes	F			//meganciurysek.albertandp.ca
-147	AP	Lynn	Lekisch	Central Peace-Notley	No	Yes	M			
+147	AP	Lynn	Lekisch	Central Peace-Notley	No	Yes	M			https://www.albertaparty.ca/lynn_lekisch
 148	UCP	Todd	Loewen	Central Peace-Notley	Yes	Yes	M			
 149	SM	Nancy	O'Neill	Central Peace-Notley	No	Yes	M			
 150	WLC	Brandon	Ralph	Central Peace-Notley	No	No	M			
@@ -173,7 +173,7 @@
 173	NDP	Peggy	Wright	Edmonton-Beverly-Clareview	No	Yes	F			//peggywright.albertandp.ca
 174	UCP	Jon	Dziadyk	Edmonton-Castle Downs	No	Yes	M			
 175	NDP	Nicole	Goehring	Edmonton-Castle Downs	Yes	Yes	F			//nicolegoehring.albertandp.ca
-176	AP	Patrick	Stewart	Edmonton-Castle Downs	No	Yes	F			
+176	AP	Patrick	Stewart	Edmonton-Castle Downs	No	Yes	F			https://patrick-stewart.ca/
 177	GPA	David	Clark	Edmonton-City Centre	No	Yes	M			
 178	WLC	Brennan	Mclay	Edmonton-City Centre	No	No	M			
 179	NDP	David	Shepherd	Edmonton-City Centre	Yes	Yes	M			//davidshepherd.albertandp.ca
@@ -181,8 +181,8 @@
 181	UCP	Sayid	Ahmed	Edmonton-Decore	Yes	Yes	M			/nominated-candidates/sayid-ahmed/
 182	NDP	Sharif	Haji	Edmonton-Decore	No	Yes	M			//sharifhaji.albertandp.ca
 183	WLC	Darryl	Morin	Edmonton-Decore	No	No	M			
-184	LIB	Don	Slater	Edmonton-Decore	No	Yes	M			
-185	AP	Brent	Tyson	Edmonton-Decore	No	Yes	M			
+184	LIB	Don	Slater	Edmonton-Decore	No	Yes	M			https://www.albertaliberal.com/don_slater_decore
+185	AP	Brent	Tyson	Edmonton-Decore	No	Yes	M			http://brenttyson2023.com/
 186	UCP	Ranjit	Bath	Edmonton-Ellerslie	No	Yes	M			
 187	NDP	Rod	Loyola	Edmonton-Ellerslie	Yes	Yes	M			//rodloyola.albertandp.ca
 188	WLC	Angela	Stretch	Edmonton-Elleslie	No	Yes	F			
@@ -223,7 +223,7 @@
 223	NDP	David	Eggen	Edmonton-North West	Yes	Yes	M			//davideggen.albertandp.ca
 224	WLC	Russel	Gwozdz	Edmonton-North West	No	No	M			
 225	UCP	Ali	Haymour	Edmonton-North West	No	Yes	M			
-226	LIB	Eric	Champagne	Edmonton-Riverview	No	Yes	M			
+226	LIB	Eric	Champagne	Edmonton-Riverview	No	Yes	M			https://www.albertaliberal.com/eric_champagne_riverview
 227	GPA	Robin	George	Edmonton-Riverview	No	Yes	M			https://www.greenpartyofalberta.ca/edmonton_riverview
 228	WLC	Joanne	Gwozdz	Edmonton-Riverview	No	No	F			
 229	NDP	Lori	Sigurdson	Edmonton-Riverview	Yes	Yes	F			//lorisigurdson.albertandp.ca
@@ -246,7 +246,7 @@
 246	WLC	Robert	Nielsen	Edmonton-Strathcona	No	Yes	M			
 247	NDP	Rachel	Notley	Edmonton-Strathcona	Yes	Yes	F			
 248	NDP	Brooks	Arcand-Paul	Edmonton-West Henday	No	Yes	M			//brooksarcandpaul.albertandp.ca
-249	Lib	Dan	Bildhauer	Edmonton-West Henday	No	Yes	M			
+249	Lib	Dan	Bildhauer	Edmonton-West Henday	No	Yes	M			https://www.albertaliberal.com/dan_bildhauer
 250	WLC	Paul	Brake	Edmonton-West Henday	No	No	M			
 251	UCP	Slava	Cravcenko	Edmonton-West Henday	No	Yes	M			
 252	GPA	Kristina	Howard	Edmonton-West Henday	No	Yes	F			https://www.greenpartyofalberta.ca/edmonton_west_henday
@@ -254,13 +254,13 @@
 254	WLC	Patricia	Hozak	Edmonton-Whitemud	No	No	F			
 255	NDP	Rakhi	Pancholi	Edmonton-Whitemud	Yes	Yes	F			//rakhipancholi.albertandp.ca
 256	UCP	Raj	Sherman	Edmonton-Whitemud	No	Yes	M			
-257	LIB	Donna	Wilson	Edmonton-Whitemud	No	Yes	F			
+257	LIB	Donna	Wilson	Edmonton-Whitemud	No	Yes	F			https://www.albertaliberal.com/donnawilson
 258	NDP	Calen	Hobbs	Fort McMurray-Lac La Biche	No	Yes	M			//calanhobbs.albertandp.ca
 259	UCP	Brian	Jean	Fort McMurray-Lac La Biche	Yes	Yes	M			/brian-jean/
 260	WLC	Kyle	Melin	Fort McMurray-Lac La Biche	No	No	M			
 261	IND	Funke	Banjoko	Fort McMurray-Wood Buffalo	No	Yes	F			
 262	NDP	Tanika	Chaisson	Fort McMurray-Wood Buffalo	No	Yes	F			//tanikachaisson.albertandp.ca
-263	AP	Brad	Friesen	Fort McMurray-Wood Buffalo	No	Yes	M			
+263	AP	Brad	Friesen	Fort McMurray-Wood Buffalo	No	Yes	M			https://www.albertaparty.ca/brad_friesen
 264	IND	Zulkifl	Mujahid	Fort McMurray-Wood Buffalo	No	Yes	M			
 265	WLC	Chris	Proskow	Fort McMurray-Wood Buffalo	No	No	M			
 266	UCP	Tany	Yao	Fort McMurray-Wood Buffalo	Yes	Yes	M			
@@ -294,9 +294,9 @@
 294	NDP	Oneil	Carlier	Lac Ste. Anne-Parkland	No	Yes	M			//oneilcarlier.albertandp.ca
 295	GPA	Vanessa	Diehl	Lac Ste. Anne-Parkland	No	Yes	F			Not listed
 296	UCP	Shane	Getson	Lac Ste. Anne-Parkland	Yes	Yes	M			/shane-getson/
-297	AP	Janet	Jabush	Lac Ste. Anne-Parkland	No	Yes	F			/janet_jabush
+297	AP	Janet	Jabush	Lac Ste. Anne-Parkland	No	Yes	F			https://www.teamjabush.ca/
 298	WLC	Kennedy	Orr	Lac Ste. Anne-Parkland	No	No	M			
-299	AP	Myles	Chykerda	Lacombe-Ponoka	No	Yes	M			
+299	AP	Myles	Chykerda	Lacombe-Ponoka	No	Yes	M			https://www.albertaparty.ca/myles_chykerda
 300	NDP	Dave	Dale	Lacombe-Ponoka	Yes	Yes	M			//davedale.albertandp.ca
 301	WLC	Daniel	Jeffries	Lacombe-Ponoka	No	Yes	M			
 302	UCP	Jennifer	Johnson	Lacombe-Ponoka	No	Yes	F			
@@ -312,17 +312,17 @@
 312	SM	Bert	Seatter	Lesser Slave Lake	No	Yes	M			
 313	UCP	scott	Sinclair	Lesser Slave Lake	No	Yes	M			
 314	WLC	William	Tufts	Lesser Slave Lake	No	No	M			
-315	LIB	Helen	McMenamin	Lethbridge-East	No	Yes	F			
+315	LIB	Helen	McMenamin	Lethbridge-East	No	Yes	F			https://www.albertaliberal.com/helen_mcmenamin_lethbridge_east
 316	NDP	Rob	Miyashiro	Lethbridge-East	No	Yes	M			//robmiyashiro.albertandp.ca
 317	UCP	Nathan	Neudorf	Lethbridge-East	Yes	Yes	M			/nathan-neudorf/
-318	Lib	Patricia	Chizek	Lethbridge-West	No	Yes	F			
+318	Lib	Patricia	Chizek	Lethbridge-West	No	Yes	F			https://www.albertaliberal.com/patchizek
 319	AP	Braham	Luddu	Lethbridge-West	No	Yes	M			
 320	NDP	Shannon	Phillips	Lethbridge-West	Yes	Yes	F			//shannonphillips.albertandp.ca
 321	UCP	Cheryl	Seaborn	Lethbridge-West	No	Yes	F			
 322	IND	Erik	Abildgaard	Livingstone-Macleod	No	Yes	M			
-323	LIB	Dylin	Hauser	Livingstone-MacLeod	No	Yes	M			
+323	LIB	Dylin	Hauser	Livingstone-MacLeod	No	Yes	M			https://www.albertaliberal.com/dylin_hauser
 324	UCP	Chelsae	Petrovic	Livingstone-Macleod	No	Yes	F			
-325	AP	Kevin	Todd	Livingstone-Macleod	No	Yes	M			
+325	AP	Kevin	Todd	Livingstone-Macleod	No	Yes	M			https://www.albertaparty.ca/kevin_todd
 326	IPA	Corrie	Toone	Livingstone-Macleod	No	Yes	F			
 327	NDP	Kevin	Van Tighem	Livingstone-Macleod	No	Yes	M			//kevinvantighem.albertandp.ca
 328	GPA	Justin	Fuss	Maskwacis-Wetaskiwin	No	Yes	M			
@@ -364,8 +364,8 @@
 364	WLC	Tami	Tatlock	Rimbey-Rocky Mountain House-Sundre	No	Yes	F			
 365	WLC	Mark	Johnson	Sherwood Park	No	No	M			
 366	NDP	Kyle	Kasawski	Sherwood Park	No	Yes	M			//kylekasawski.albertandp.ca
-367	LIB	Jacob	Stacey	Sherwood Park	No	Yes	M			
-368	AP	Sue	Timanson	Sherwood Park	No	Yes	F			
+367	LIB	Jacob	Stacey	Sherwood Park	No	Yes	M			https://www.albertaliberal.com/jacobstacey
+368	AP	Sue	Timanson	Sherwood Park	No	Yes	F			https://www.albertaparty.ca/sue_timanson
 369	UCP	Jordan	Walker	Sherwood Park	Yes	Yes	M			/jordan-walker/
 370	GPA	Daniel	Birrell	Spruce Grove-Stony Plain	No	Yes	M			https://www.greenpartyofalberta.ca/spruce_grove_stony_plain
 371	SM	Darlene	Clarke	Spruce Grove-Stony Plain	No	Yes	F			
@@ -385,7 +385,7 @@
 385	UCP	Grant	Hunter	Taber-Warner	Yes	Yes	M			/grant-hunter/
 386	IPA	Frank	Kast	Taber-Warner	No	Yes	M			
 387	GPA	Tigra-Lee	Campbell	Vermilion-Lloydminster-Wainwright	No	Yes	F			https://www.greenpartyofalberta.ca/vermilion_lloydminster_wainwright
-388	AP	Darrel	Dunn	Vermilion-Lloydminster-Wainwright	No	Yes	M			
+388	AP	Darrel	Dunn	Vermilion-Lloydminster-Wainwright	No	Yes	M			https://www.albertaparty.ca/darrell_dunn
 389	NDP	Dawn	Flaata	Vermilion-Lloydminster-Wainwright	No	Yes	F			//dawnflaata.albertandp.ca
 390	WLC	Danny	Hozak	Vermilion-Lloydminster-Wainwright	No	Yes	M			
 391	IND	Matthew	Powell	Vermilion-Lloydminster-Wainwright	No	Yes	M			
