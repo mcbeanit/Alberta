@@ -1,5 +1,4 @@
 import re
-import json
 
 htmlfile = 'alp_candidates.html'
 csvfile = 'alp_candidates.csv'

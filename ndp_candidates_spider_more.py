@@ -33,9 +33,7 @@ class ABNDPCandidatesSpiderMore(scrapy.Spider):
         :return: None
         """
         urls = self.get_urls()
-        # print(urls)
         for url in urls:
-            print(url)
             yield scrapy.Request(url=url, callback=self.parse, errback=self.on_error)
             time.sleep(3)
 
@@ -44,7 +42,6 @@ class ABNDPCandidatesSpiderMore(scrapy.Spider):
         candidate_name = response.css('h1[class="hero-fullname"]::text').get()
         riding = response.css('h2[class="hero-ridingname"]::text').get()
         social = response.xpath('//ul[@class="follow-links"]/li').getall()
-        # assert social
         gender = ''
         about = response.xpath('//div[@class="about-bio abndp-home2022/text-style"]/p').getall()
         bio = ''
