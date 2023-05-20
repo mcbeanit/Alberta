@@ -36,7 +36,7 @@ def parse_candidates_html(htmlfile='official_candidates.html', csvfile='official
 
         html.close()
         csv.close()
-        print(f'There were {count} officially registered candidated\n')
+        print(f'There were {count} officially registered candidates\n')
 
 if __name__ == '__main__':
     parse_candidates_html()
