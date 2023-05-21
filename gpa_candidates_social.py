@@ -22,7 +22,7 @@ def compare_to_excel():
     sheet = wb.worksheets[5]
     count = 0
 
-    for row in range(2, 400):
+    for row in range(2, 500):
         count = count + 1
         data = [sheet.cell(row=row, column=i).value for i in range(1, 10)]
         party = data[0]

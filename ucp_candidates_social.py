@@ -27,7 +27,7 @@ def compare_to_excel():
     count = 0
 
 
-    for row in range(2, 400):
+    for row in range(2, 500):
         count = count + 1
         data = [sheet.cell(row=row, column=i).value for i in range(1, 10)]
         party = data[0]
