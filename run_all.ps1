@@ -35,11 +35,13 @@ python ap_candidates_more.py
 
 python gpa_candidates.py
 python gpa_candidates_more.py
+python gpa_candidates_social.py
 
 python ndp_candidates.py
 python ndp_candidates_social.py
 
 python ucp_candidates.py
+python ucp_candidates_social.py
 
 python official_candidates.py
 
