@@ -1,14 +1,14 @@
 Name,Party,Nominated,M,F,Registered,%,%F
 UCP,United Conservative Party of Alberta (UCP),87,64,18,87,1,0.20689655172413793
 NDP,Alberta New Democratic Party (NDP),87,43,44,87,1,0.5057471264367817
-WLC,Wildrose Loyalty Coalition (WLC),54,33,20,15,0.2777777777777778,0.37037037037037035
 GPA,Green Party of Alberta (GPA),43,31,12,41,0.9534883720930233,0.27906976744186046
-AP,Alberta Party (AP),21,14,7,19,0.9047619047619048,0.3333333333333333
+SM,Solidarity Movement of Alberta (SM),38,27,10,31,0.8157894736842105,0.2631578947368421
 IND,Independent,22,15,5,21,0.9545454545454546,0.22727272727272727
+AP,Alberta Party (AP),21,14,7,19,0.9047619047619048,0.3333333333333333
+WLC,Wildrose Loyalty Coalition (WLC),54,33,20,15,0.2777777777777778,0.37037037037037035
 LIB,Alberta Liberal Party (LIB),16,10,6,13,0.8125,0.375
 IPA,The Independence Party of Alberta (TIP),14,6,8,13,0.9285714285714286,0.5714285714285714
 APA,Advantage Party of Alberta (APA),4,2,2,3,0.75,0.5
 CP-A,Communist Party - Alberta (CP - A),3,1,2,3,1,0.6666666666666666
 WIPA,Wildrose Independence Party of Alberta (WIPA),2,2,0,2,1,0
 BPA,The Buffalo Party of Alberta (BPA),1,1,0,1,1,0
-PAPA,Pro-Life Alberta Political Association (PAPA),1,1,0,1,1,0
