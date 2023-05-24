@@ -51,10 +51,10 @@ def compare_to_excel():
     # first read in the links from excel.
     excel_links = []
     wb = load_workbook(workbook_location)
-    sheet = wb.worksheets[5]
+    sheet = wb.worksheets[6]
     count = 0
 
-    for row in range(2, 400):
+    for row in range(2, 500):
         count = count + 1
         data = [sheet.cell(row=row, column=i).value for i in range(1, 10)]
         party = data[0]
@@ -65,7 +65,7 @@ def compare_to_excel():
         else:
             continue
 
-    print(excel_links)
+    # print(excel_links)
 
     file = open(csv_file, newline='')
     reader = csv.reader(file, delimiter='\t')
@@ -79,7 +79,7 @@ def compare_to_excel():
         # print(f'checking: {url}')
         if url in excel_links:
             pass
-            print(f'Ok: {url}')
+            # print(f'Ok: {url}')
         else:
             print(f'Missing: {url}')
 

@@ -6,7 +6,7 @@ pattern = r'^<div\sclass=\"plank-container-inner\">.+?<a href=\"(.+?)\".+?<img.+
 def parse_candidates_html():
     with open('gpa_candidates.html', 'rt') as html, open('gpa_candidates.csv', 'wt') as csv:
         count = 0
-        expected_count = 32
+        expected_count = 41
         short_name = 'gpa'
         for c in html.readlines():
             count = count + 1
@@ -26,7 +26,7 @@ def parse_candidates_html():
 
         html.close()
         csv.close()
-        print(f'GPA: There were {count} candidates found. Expected: {expected_count}')
+        print(f'gpa_candidates.py: There were {count} candidates found. Expected: {expected_count}')
 
 
 if __name__ == '__main__':

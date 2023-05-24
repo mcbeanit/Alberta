@@ -25,7 +25,7 @@ class APCandidatesSpider(scrapy.Spider):
                 if len(candidate) > 0:
                     f.write(f'{candidate}\n');
         f.close()
-        print(f'The AP crawler found {count} candidates')
+        print(f'ap_candidates_spider.py: found {count} candidates')
 
     def on_error(self, failure):
         pass

@@ -8,7 +8,7 @@ def parse_candidates_html():
     parse the fields of interest and save to a csv file.
     :return: None
     """
-    expected_count = 87
+    expected_count = 86
     htmlfile = "ucp_candidates.html"
     csvfile = "ucp_candidates.csv"
 
@@ -22,7 +22,7 @@ def parse_candidates_html():
             csv.write(f'{c[3]}\t')
             csv.write(f'{c[0]}\n')
             csv.flush()
-        print(f"UCP: There were {count} candidates found and {expected_count} expected.")
+        print(f"ucp_candidates.py: There were {count} candidates found and {expected_count} expected.")
     html.close()
     csv.close()
 

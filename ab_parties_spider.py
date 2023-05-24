@@ -22,14 +22,15 @@ class ABPartiesSpider(scrapy.Spider):
             yield scrapy.Request(url=url, callback=self.parse, errback=self.on_error)
 
     def parse(self, response):
-
+        count = 0
         p = response.css('li[class="accordion-navigation"]').getall()
         with open('ab_parties.html', 'wt') as f:
             for party in p:
+                count = count + 1
                 self.parse_party(party, f)
                 f.flush()
             f.close()
-
+        print(f'ab_parties_spider.py: There were {count} parties found.')
     def on_error(self, failure):
         pass
 

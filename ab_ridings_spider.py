@@ -1,6 +1,7 @@
 import scrapy
 import re
 
+
 class ABRidingsSpider(scrapy.Spider):
     name = 'abridingsspider'
     pattern = '^<tr><td>([0-9]+?)<\/td><td>(.+?)<\/td><td>([0-9\*]{4,5})<\/td><td>(.+?)<\/td><td bgcolor=\"(' \
@@ -17,7 +18,8 @@ class ABRidingsSpider(scrapy.Spider):
     def parse(self, response):
         # print(response)
         l = response.css('table').getall()
-        filename = "ridings.html"
+        filename = "ab_ridings.html"
+
         with open(filename, 'wt') as f:
             tbl: str = l[0]
             # try to take out random line feeds, and only place them after </tr>
@@ -28,7 +30,7 @@ class ABRidingsSpider(scrapy.Spider):
             f.flush()
         f.close()
 
-        count:int = 0
+        count: int = 0
         with open(filename, 'rt') as f:
             with open("alberta_ridings.csv", "wt") as w:
                 for row in f:
@@ -71,4 +73,5 @@ class ABRidingsSpider(scrapy.Spider):
             w.close()
         f.close()
 
-        assert(count==self.ridingCount)
+        print(f'ab_ridings_spider.py: There were {count} ridings found')
+        assert (count == self.ridingCount)

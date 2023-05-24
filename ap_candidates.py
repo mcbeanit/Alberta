@@ -12,7 +12,7 @@ parsing to get a csv list.
 # format for name e.g. 'Barry Morishita for Brooks-Medicine Hat'
 # the headshot link could be empty. check for None.
 pattern1 = r'^<div><div><div><a href=\"(.*?)\"><img src=\"(.+?)\">.+?<h3>(.+?)<\/h3>'
-# the html has no href for the candidated url
+# the html has no href for the candidates url
 pattern2 = r'^<div><div><div><img src=\"(.+?)\">.+?<h3>(.+?)<\/h3>'
 # 1 = candidates headshot, 2 = candidate and riding (as above)
 html_file = 'ap_candidates.html'
@@ -21,7 +21,7 @@ csv_file = 'ap_candidates.csv'
 def parse_candidates_html():
     with open(html_file,'rt') as html, open(csv_file, 'wt') as out:
         count = 0
-        expected_count = 18
+        expected_count = 19
 
         for div in html.readlines():
             div = clean_html(div)
@@ -62,7 +62,7 @@ def parse_candidates_html():
         html.close()
         out.close()
 
-    print(f'AP: There were {count} candidates and {expected_count} expected.')
+    print(f'ap_candidates.py: There were {count} candidates and {expected_count} expected.')
 
 def clean_html(div:str):
     div = re.sub('class=".+?"', "", div)

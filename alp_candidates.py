@@ -12,7 +12,7 @@ def parse_candidates_html():
     url: str = ''
 
     count = 0
-    expected_count = 12
+    expected_count = 13
     with open(htmlfile, "rt") as html, open(csvfile, 'wt') as csv:
         for can in html.readlines():
             # skip the first line should not be tagged as data. should be a header.
@@ -29,7 +29,7 @@ def parse_candidates_html():
             csv.write(f'ALP\t{name}\t{riding}\t{url}\t{headshot}\n')
             csv.flush()
         csv.close()
-        print(f'ALP: There were {count} candidates found. Expected {expected_count}')
+        print(f'alp_candidates.py: There were {count} candidates found. Expected {expected_count}')
 
 
 def clean_html(c: str):

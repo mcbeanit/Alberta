@@ -24,10 +24,12 @@ def parse_candidates_html():
             b = str(h[2])
             b = clean_html(b)
             gender = gender_guesser.guess((b))
+            count = count + 1
             csv_out.write(f'{name}\t{riding}\t{gender}\t{b}\n')
 
         file.close()
         csv_out.close()
+        print(f'alp_candidate_more.py: there were {count} candidates found')
 
 
 def clean_html(c: str):

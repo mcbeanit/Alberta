@@ -31,7 +31,9 @@ class ALPCandidatesSpiderMore(scrapy.Spider):
         name = ''
         riding = ''
         headshot = ''
-        c
+
+        name_riding = response.css('title::text').get()
+
         assert name_riding
 
         # e.g. Jacob Stacey | Sherwood Park - Alberta Liberal Party
@@ -42,8 +44,14 @@ class ALPCandidatesSpiderMore(scrapy.Spider):
             name = matches[1]
             riding = matches[2]
         else:
-            print('title was not matched')
-            assert False
+            # try and alternate match
+            matches = re.match(r'^(.+?)\s\|\s(.+?)$', name_riding)
+            if matches is not None:
+                name = matches[1]
+                riding = matches[2]
+            else:
+                print(f'title was not matched: {name_riding}')
+                assert False
 
         # print(f'Data: {name} <> {riding}\n')
         bio_html = response.xpath('//div[@class="col-lg-6"]').getall()
@@ -52,9 +60,9 @@ class ALPCandidatesSpiderMore(scrapy.Spider):
         # name_riding = ''
         # name_riding = response.xpath('//h1[@class="entry-title mt-3 mb-1"]/span')
         # if name_riding is not None:
-            # name_riding = name_riding.replace('\n', '')
-            # name_riding = name_riding.replace('\r', '')
-            # name_riding = name_riding.replace('\t', '')
+        # name_riding = name_riding.replace('\n', '')
+        # name_riding = name_riding.replace('\r', '')
+        # name_riding = name_riding.replace('\t', '')
 
         bio = ''
         if bio_html is not None:

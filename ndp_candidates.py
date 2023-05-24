@@ -31,7 +31,7 @@ def parse_candidates_html(htmlfile='ndp_candidates.html', csvfile='ndp_candidate
     html.close()
     csv.close()
 
-    print(f'NDP: There are {count} candidates and {expected_count} expected. \n')
+    print(f'ndp_candidates.py: There are {count} candidates and {expected_count} expected. \n')
 
 
 def parse_candidate(c: str):

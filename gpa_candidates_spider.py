@@ -4,7 +4,7 @@ import re
 
 class GPACandidatesSpider(scrapy.Spider):
     name = 'GPACandidatesSpider'
-    expected_count = 23
+    expected_count = 41
     pattern = '(src=)'  # (https:..assets.+?png)'
 
     def start_requests(self):
@@ -28,8 +28,7 @@ class GPACandidatesSpider(scrapy.Spider):
                 f.flush()
             f.close()
 
-        print(f'There were {count} candidates found\n')
-        print(f'Expected {self.expected_count} candidates\n')
+        print(f'gpa_candidates_spider.py: There were {count} candidates found. Expected {self.expected_count}')
 
     def on_error(self, failure):
         pass

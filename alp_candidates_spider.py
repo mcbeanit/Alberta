@@ -18,17 +18,20 @@ class ALPCandidatesSpider(scrapy.Spider):
     def parse(self, response, **kwargs):
         assert(response is not None)
         html = response.xpath('//div[@class="dropdown-menu"]/a').getall()
+        count = 0
         with open('alp_candidates.html', 'wt') as h:
             for a in html:
                 # note that the first line selected is not a candidate, but a header
                 # and should be ignored.
                 if a.__contains__('>Candidates<'):
                     continue
+                count = count + 1
                 a = a.replace('\\n', '')
                 a = a.replace('\\r', '')
                 a = a.replace('\\t', '')
                 h.write(f'{a}\n')
             h.close()
+        print(f'alp_candidates_spider.py: There were {count} candidates found')
 
     def on_error(self, failure):
         pass

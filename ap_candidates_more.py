@@ -12,6 +12,7 @@ def parse_candidates_html():
     data = [row for row in reader]
     assert data
     file.close()
+    count = 0
     with open(csv_file, 'wt') as csv_out:
         for row in data:
             short_name = row[0]
@@ -21,8 +22,9 @@ def parse_candidates_html():
             bio = clean_html(bio_html)
             csv_out.write(f'{short_name}\t{name}\t{riding}\t{bio}\n')
             csv_out.flush()
+            count = count + 1
         csv_out.close()
-
+    print(f'ap_candidated_more.py: there were {count} candidates found')
 
 
 # e.g.

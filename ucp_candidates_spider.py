@@ -14,13 +14,14 @@ class UCPCandidatesSpider(scrapy.Spider):
         html = response.css('section').getall()
         with open('ucp_candidates.html', 'wt') as f:
             count = 0
+            row_count = 0
             for c in html:
-                count = count + 1
                 # ignore the <section> tags that come before or after list of candidates with
                 # section tags. may have to adjust these counts but probably not.  sections
                 # for each candidate are sorted by riding name.  (airdrie->yellowhead)
                 # there should be a full list of 87 now.
-                if count < 3 or count > 89:
+                row_count = row_count + 1
+                if row_count < 3 or row_count > 88:
                     continue
                 c = c.replace('\n',"")
                 c = c.replace('\r',"")
@@ -28,9 +29,11 @@ class UCPCandidatesSpider(scrapy.Spider):
                 c = self.clean_html(c)
                 f.write(f'{c}\n')
                 f.flush()
+                count = count + 1
 
 
         f.close()
+        print (f'ucp_candidates_spider.py: There were {count} candidates found')
 
     def clean_html(self, c):
 
