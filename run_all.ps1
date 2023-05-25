@@ -3,7 +3,7 @@ Set-ExecutionPolicy -Scope CurrentUser ByPass
 # scrapers using the scrapy application get the relevant html and save
 # it to various html files.
 scrapy runspider ab_parties_spider.py --nolog
-scrapy runspider pyth --nolog
+scrapy runspider ab_ridings_spider.py --nolog
 
 scrapy runspider alp_candidates_spider.py --nolog
 scrapy runspider alp_candidates_spider_more.py --nolog
