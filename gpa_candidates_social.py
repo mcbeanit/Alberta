@@ -19,7 +19,7 @@ def compare_to_excel():
     # first read in the links from excel.
     excel_links = []
     wb = load_workbook(workbook_location)
-    sheet = wb.worksheets[5]
+    sheet = wb.worksheets[6]
     count = 0
 
     for row in range(2, 500):
