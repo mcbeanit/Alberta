@@ -1,15 +1,443 @@
-UCP	United Conservative Party of Alberta (UCP)	=COUNTIF(Candidates!$A$2:$A$406,NominatedCounts!A2)	=COUNTIFS(Candidates!$A$2:$A$400,A2, Candidates!$G$2:$G$400,"=M")	=COUNTIFS(Candidates!$A$2:$A$400,A2, Candidates!$G$2:$G$400,"=F")
-NDP	Alberta New Democratic Party (NDP)	=COUNTIF(Candidates!$A$2:$A$406,NominatedCounts!A3)	=COUNTIFS(Candidates!$A$2:$A$400,A3, Candidates!$G$2:$G$400,"=M")	=COUNTIFS(Candidates!$A$2:$A$400,A3, Candidates!$G$2:$G$400,"=F")
-GPA	Green Party of Alberta (GPA)	=COUNTIF(Candidates!$A$2:$A$406,NominatedCounts!A4)	=COUNTIFS(Candidates!$A$2:$A$400,A4, Candidates!$G$2:$G$400,"=M")	=COUNTIFS(Candidates!$A$2:$A$400,A4, Candidates!$G$2:$G$400,"=F")
-SM	Solidarity Movement of Alberta (SM)	=COUNTIF(Candidates!$A$2:$A$406,NominatedCounts!A5)	=COUNTIFS(Candidates!$A$2:$A$400,A5, Candidates!$G$2:$G$400,"=M")	=COUNTIFS(Candidates!$A$2:$A$400,A5, Candidates!$G$2:$G$400,"=F")
-IND	Independent	=COUNTIF(Candidates!$A$2:$A$406,NominatedCounts!A6)	=COUNTIFS(Candidates!$A$2:$A$400,A6, Candidates!$G$2:$G$400,"=M")	=COUNTIFS(Candidates!$A$2:$A$400,A6, Candidates!$G$2:$G$400,"=F")
-AP	Alberta Party (AP)	=COUNTIF(Candidates!$A$2:$A$406,NominatedCounts!A7)	=COUNTIFS(Candidates!$A$2:$A$400,A7, Candidates!$G$2:$G$400,"=M")	=COUNTIFS(Candidates!$A$2:$A$400,A7, Candidates!$G$2:$G$400,"=F")
-WLC	Wildrose Loyalty Coalition (WLC)	=COUNTIF(Candidates!$A$2:$A$406,NominatedCounts!A8)	=COUNTIFS(Candidates!$A$2:$A$400,A8, Candidates!$G$2:$G$400,"=M")	=COUNTIFS(Candidates!$A$2:$A$400,A8, Candidates!$G$2:$G$400,"=F")
-LIB	Alberta Liberal Party (LIB)	=COUNTIF(Candidates!$A$2:$A$406,NominatedCounts!A9)	=COUNTIFS(Candidates!$A$2:$A$400,A9, Candidates!$G$2:$G$400,"=M")	=COUNTIFS(Candidates!$A$2:$A$400,A9, Candidates!$G$2:$G$400,"=F")
-IPA	The Independence Party of Alberta (TIP)	=COUNTIF(Candidates!$A$2:$A$406,NominatedCounts!A10)	=COUNTIFS(Candidates!$A$2:$A$400,A10, Candidates!$G$2:$G$400,"=M")	=COUNTIFS(Candidates!$A$2:$A$400,A10, Candidates!$G$2:$G$400,"=F")
-APA	Advantage Party of Alberta (APA)	=COUNTIF(Candidates!$A$2:$A$406,NominatedCounts!A11)	=COUNTIFS(Candidates!$A$2:$A$400,A11, Candidates!$G$2:$G$400,"=M")	=COUNTIFS(Candidates!$A$2:$A$400,A11, Candidates!$G$2:$G$400,"=F")
-CP-A	Communist Party - Alberta (CP - A)	=COUNTIF(Candidates!$A$2:$A$406,NominatedCounts!A12)	=COUNTIFS(Candidates!$A$2:$A$400,A12, Candidates!$G$2:$G$400,"=M")	=COUNTIFS(Candidates!$A$2:$A$400,A12, Candidates!$G$2:$G$400,"=F")
-WIPA	Wildrose Independence Party of Alberta (WIPA)	=COUNTIF(Candidates!$A$2:$A$406,NominatedCounts!A13)	=COUNTIFS(Candidates!$A$2:$A$400,A13, Candidates!$G$2:$G$400,"=M")	=COUNTIFS(Candidates!$A$2:$A$400,A13, Candidates!$G$2:$G$400,"=F")
-BPA	The Buffalo Party of Alberta (BPA)	=COUNTIF(Candidates!$A$2:$A$406,NominatedCounts!A14)	=COUNTIFS(Candidates!$A$2:$A$400,A14, Candidates!$G$2:$G$400,"=M")	=COUNTIFS(Candidates!$A$2:$A$400,A14, Candidates!$G$2:$G$400,"=F")
-PAPA	Pro-Life Alberta Political Association (PAPA)	=COUNTIF(Candidates!$A$2:$A$406,NominatedCounts!A15)	=COUNTIFS(Candidates!$A$2:$A$400,A15, Candidates!$G$2:$G$400,"=M")	=COUNTIFS(Candidates!$A$2:$A$400,A15, Candidates!$G$2:$G$400,"=F")
-REF	Reform Party of Alberta (REF)	=COUNTIF(Candidates!$A$2:$A$406,NominatedCounts!A16)	=COUNTIFS(Candidates!$A$2:$A$400,A16, Candidates!$G$2:$G$400,"=M")	=COUNTIFS(Candidates!$A$2:$A$400,A16, Candidates!$G$2:$G$400,"=F")
+UCP	Sayid	Ahmed	Edmonton-Decore	Facebook	https://www.facebook.com/SayidAhmedforDecore/
+UCP	Sayid	Ahmed	Edmonton-Decore	Instagram	https://www.instagram.com/SayidAhmed_Decore/
+UCP	Sayid	Ahmed	Edmonton-Decore	LinkedIn	https://www.linkedin.com/in/sayid-ahmed-7b0a463a/
+NDP	Nagwan	Al-Guneid	Calgary-Glenmore	Twitter	https://twitter.com/NagwanYYC
+NDP	Nagwan	Al-Guneid	Calgary-Glenmore	Facebook	https://www.facebook.com/NagwanYYC
+NDP	Nagwan	Al-Guneid	Calgary-Glenmore	Instagram	https://www.instagram.com/nagwanyyc/
+UCP	Mickey	Al-Guneid	Calgary-Cross	Facebook	https://www.facebook.com/MickeyAmeryCalgaryCross
+UCP	Mickey	Amery	Calgary-Cross	Instagram	https://www.instagram.com/mickeyamery_ucp/?hl=en
+UCP	Mickey	Amery	Calgary-Cross	Twitter	https://twitter.com/mickeyamery
+UCP	Mickey	Amery	Calgary-Cross	Instagram	https://www.instagram.com/mickeyamery_ucp/?hl=en
+UCP	Mickey	Amery	Calgary-Cross	Website	https://mickeyamery.ca/
+UCP	Mickey	Amery	Calgary-Cross	Wikipedia	https://en.wikipedia.org/wiki/Mickey_Amery
+UCP	Joseph	Amery	Edmonton-South	Facebook	https://www.facebook.com/UnitedConservativePartyAlberta/
+UCP	Joseph	Angeles	Edmonton-South	Instagram	http://instagram.com/alberta_ucp
+UCP	Joseph	Angeles	Edmonton-South	Twitter	https://twitter.com/JoeAngelesYEG
+NDP	Rajesh	Angeles	Calgary-North	Twitter	https://twitter.com/Rajesh4YYCNorth
+NDP	Rajesh	Angral	Calgary-North	Instagram	https://www.instagram.com/rajesh4yycnorth/
+NDP	Rajesh	Angral	Calgary-North	Facebook	https://www.facebook.com/sabrangradio/
+NDP	Brooks	Angral	Edmonton-West Henday	Twitter	https://twitter.com/sipiysis
+NDP	Brooks	Arcand-Paul	Edmonton-West Henday	Facebook	https://www.facebook.com/BrooksArcandPaul
+NDP	Brooks	Arcand-Paul	Edmonton-West Henday	Instagram	https://www.instagram.com/sipiysis/
+NDP	Brooks	Arcand-Paul	Edmonton-West Henday	TikTok	https://www.tiktok.com/@sipiysis
+UCP	Jackie	Arcand-Paul	Fort Saskatchewan-Vegreville	Facebook	https://www.facebook.com/JackieAHomeniuk
+UCP	Jackie	Armstrong-Homeniuk	Fort Saskatchewan-Vegreville	Instagram	https://www.instagram.com/jackiearmstronghomeniuk.mla/
+UCP	Jackie	Armstrong-Homeniuk	Fort Saskatchewan-Vegreville	Wikipedia	https://en.wikipedia.org/wiki/Jackie_Armstrong-Homeniuk
+UCP	Jackie	Armstrong-Homeniuk	Fort Saskatchewan-Vegreville	LinkedIn	https://ca.linkedin.com/in/jackie-armstrong-homeniuk-137b02194
+UCP	Jackie	Armstrong-Homeniuk	Fort Saskatchewan-Vegreville	Twitter	https://twitter.com/HomeniukJ
+UCP	Jackie	Armstrong-Homeniuk	Fort Saskatchewan-Vegreville	LeadingInfluence	https://leadinginfluence.com/mla-jackie-armstrong-homeniuk-fort-saskatchewan-vegreville-10/
+UCP	Raman	Armstrong-Homeniuk	Edmonton-Mill Woods	Facebook	https://www.facebook.com/profile.php?id=100088480372838
+UCP	Raman	Athwal	Edmonton-Mill Woods	Instagram	https://www.instagram.com/alberta_ucp/
+UCP	Raman	Athwal	Edmonton-Mill Woods	LinkedIn	https://ca.linkedin.com/in/raman-athwal-29ba09269
+UCP	Raman	Athwal	Edmonton-Mill Woods	Instagram	https://www.instagram.com/_u/athwal.ramandeep
+AP	Jason	Athwal	Calgary-Currie	Facebook	https://www.facebook.com/jason.avramenko/
+AP	Jason	Avramenko	Calgary-Currie	Twitter	https://twitter.com/jasonavramenko
+AP	Jason	Avramenko	Calgary-Currie	Instagram	https://www.instagram.com/jasonpublack/
+AP	Jason	Avramenko	Calgary-Currie	YouTube	https://www.youtube.com/channel/UC66Q2zdtMXjM37AXLfvOuXQ
+NDP	Michelle	Avramenko	Red Deer-South	Twitter	https://twitter.com/MichelleBaerNDP
+NDP	Michelle	Baer	Red Deer-South	Facebook	https://www.facebook.com/michellebaerndp
+NDP	Michelle	Baer	Red Deer-South	Instagram	https://www.instagram.com/michelle_rdsouth/
+NDP	Michelle	Baer	Red Deer-South	LinkedIn	https://ca.linkedin.com/in/michelle-baer-8a862a117
+GPA	Jayden	Baer	Calgary-East	Twitter	https://twitter.com/Jay_Baldonado
+GPA	Jayden	Baldonado	Calgary-East	Facebook	https://www.instagram.com/jayden_baldonado/
+GPA	Jayden	Baldonado	Calgary-East	Instagram	https://www.instagram.com/jayden_baldonado/
+UCP	Ranjit	Baldonado	Edmonton-Ellerslie	Facebook	https://www.facebook.com/VoteRanjitBath
+UCP	Ranjit	Bath	Edmonton-Ellerslie	Instagram	https://www.instagram.com/vote4ranjitbath/
+UCP	Ranjit	Bath	Edmonton-Ellerslie	Twitter	https://twitter.com/ranjitbath
+UCP	Ranjit	Bath	Edmonton-Ellerslie	TikTok	https://www.tiktok.com/@bath4ellerslie
+NDP	Diana	Bath	Calgary-Acadia 	Twitter	https://twitter.com/DianaBatten_
+NDP	Diana	Batten	Calgary-Acadia 	Facebook	https://www.facebook.com/people/Diana-Batten/100081858334855/
+NDP	Diana	Batten	Calgary-Acadia 	Instagram	https://www.instagram.com/dianabatten_/
+NDP	Diana	Batten	Calgary-Acadia 	LinkedIn	https://www.linkedin.com/in/diana-batten-97804622
+UCP	Miles	Batten	Edmonton-Gold Bar	Facebook	https://www.facebook.com/profile.php?id=100091291963834
+UCP	Miles	Berry	Edmonton-Gold Bar	Instagram	https://www.instagram.com/alberta_ucp/
+GPA	Daniel	Berry	Spruce Grove-Stony Plain	Facebook	https://www.facebook.com/StylishPuma
+GPA	Daniel	Birrell	Spruce Grove-Stony Plain	Twitter	https://twitter.com/DBirrellAB
+UCP	Andrew	Birrell	Drayton Valley-Devon	Facebook	https://www.facebook.com/ABoitchenko/
+LIB	Dan 	Boitchenko	Edmonton-Meadowlark	Twitter	https://twitter.com/DanBildhauer
+LIB	Dan 	Boldauer	Edmonton-Meadowlark	Facebook	https://www.facebook.com/danbildhauercampaign/
+LIB	Dan 	Boldauer	Edmonton-Meadowlark	Facebook	https://www.facebook.com/dan.bildhauer
+UCP	Eric	Boldauer	Calgary-Lougheed	Facebook	https://www.facebook.com/profile.php?id=100091499264398
+UCP	Eric	Bouchard	Calgary-Lougheed	Instagram	https://www.instagram.com/ericforlougheed/
+NDP	Rebecca	Bouchard	Calgary-Fish Creek	Twitter	https://twitter.com/rebeccabounsall
+NDP	Rebecca	Bounsall	Calgary-Fish Creek	Facebook	https://www.facebook.com/RebeccaBounsallNDP/
+NDP	Rebecca	Bounsall	Calgary-Fish Creek	Instagram	https://www.instagram.com/rebeccabounsall.ndp
+GPA	Regan	Bounsall	Banff-Kananaskis	Twitter	https://twitter.com/RKBtoo
+NDP	Gurinder	Boychuk	Calgary-North East	Twitter	https://twitter.com/GBrarNDP
+NDP	Gurinder	Brar	Calgary-North East	Facebook	https://www.facebook.com/BrarNDP
+NDP	Gurinder	Brar	Calgary-North East	Instagram	https://www.instagram.com/gurinderbrar_ndp/
+NDP	Richard	Brar	Camrose	Twitter	https://twitter.com/RichBruneau
+NDP	Richard	Bruneau	Camrose	Facebook	https://www.facebook.com/BruneauRichard
+NDP	Jodi	Bruneau	Edmonton-Rutherford	Twitter	https://twitter.com/jodi_stonehouse
+NDP	Jodi	Calahoo Stonehouse	Edmonton-Rutherford	Facebook	https://www.facebook.com/JCalahooStonehouse
+NDP	Jodi	Calahoo Stonehouse	Edmonton-Rutherford	Instagram	https://www.instagram.com/jodicalahoostonehouse/
+NDP	Oneil	Calahoo Stonehouse	Lac Ste Anne-Parkland	Twitter	https://twitter.com/oneilcarlier
+NDP	Oneil	Carlier	Lac Ste Anne-Parkland	Facebook	https://www.facebook.com/OneilCarlier4LSAP
+NDP	Oneil	Carlier	Lac Ste Anne-Parkland	Instagram	https://www.instagram.com/oneilcarlier/
+NDP	Joe	Carlier	Calgary-Buffalo	Twitter	https://twitter.com/joececiyyc
+NDP	Joe	Ceci	Calgary-Buffalo	Facebook	https://www.facebook.com/joe.ceci.ndp
+NDP	Joe	Ceci	Calgary-Buffalo	Instagram	https://www.instagram.com/joececindp/
+NDP	Joan	Ceci	Calgary-West	Twitter	https://mobile.twitter.com/joanyycwest
+NDP	Joan	Chand'oiseau	Calgary-West	Facebook	https://www.facebook.com/joanyycwest
+NDP	Joan	Chand'oiseau	Calgary-West	Instagram	https://www.instagram.com/joan.yyc/
+NDP	Amanda	Chand'oiseau	Calgary-Beddington	Twitter	https://twitter.com/AmandaChapman
+NDP	Amanda	Chapman	Calgary-Beddington	Facebook	https://www.facebook.com/AmandaChapmanNDP
+NDP	Amanda	Chapman	Calgary-Beddington	Instagram	https://www.instagram.com/amandachapmanndp/
+LIB	Pat	Chapman	Lethbridge-West	Facebook	https://www.facebook.com/VotePatChizek/
+AP	Myles	Chizek	Lacombe-Ponoka	Twitter	https://twitter.com/mchykerda
+AP	Myles	Chykerda	Lacombe-Ponoka	Facebook	https://www.facebook.com/myleschykerda
+NDP	Megan	Chykerda	Central Peace-Notley	Twitter	https://twitter.com/MeganCiurysek
+NDP	Megan	Ciurysek	Central Peace-Notley	Facebook	https://www.facebook.com/MeganCiurysekNDP
+NDP	Megan	Ciurysek	Central Peace-Notley	Instagram	https://www.instagram.com/meganciuysek/
+NDP	David	Ciurysek	Calgary-Shaw	Twitter	https://twitter.com/davidcloutier
+NDP	David	Cloutier	Calgary-Shaw	Facebook	https://www.facebook.com/DavidCloutierYYC
+UCP	Nathan	Cloutier	Olds-Didsbury-Three Hills	Facebook	https://www.facebook.com/nathancooperODT?mibextid=LQQJ4d
+UCP	Nathan	Cooper	Olds-Didsbury-Three Hills	Instagram	https://www.instagram.com/Nathancooperab
+UCP	Jason	Cooper	Calgary-Varsity	Facebook	https://www.facebook.com/jasoncoppingAB
+UCP	Jason	Copping	Calgary-Varsity	Instagram	https://www.instagram.com/jason_coppingab
+UCP	Slava	Copping	Edmonton-West Henday	Facebook	https://www.facebook.com/slavacravcenco
+UCP	Slava	Cravcenco	Edmonton-West Henday	Instagram	https://www.instagram.com/alberta_ucp/
+GPA	Jeff	Cravcenco	Edmonton-South West	Twitter	https://twitter.com/CullihallJeff
+GPA	Jeff	Cullihall	Edmonton-South West	Facebook	https://www.facebook.com/jeff.cullihall/
+AP	Kerry	Cullihall	Calgary-Bow	Facebook	https://www.facebook.com/kerrycundal
+AP	Kerry	Cundal	Calgary-Bow	Twitter	https://twitter.com/KCundal
+AP	Kerry	Cundal	Calgary-Bow	Instagram	https://www.instagram.com/kerrycundal/
+AP	Kerry	Cundal	Calgary-Bow	TikTok	https://www.tiktok.com/@kerrycundal8
+UCP	Scott	Cundal	Bonnyville-Cold Lake-St. Paul	Facebook	https://www.facebook.com/ElectScottCyr/
+UCP	Scott	Cyr	Bonnyville-Cold Lake-St. Paul	Wikipedia	https://en.wikipedia.org/wiki/Scott_Cyr
+NDP	Lorne	Cyr	Edmonton-McClung	Twitter	https://twitter.com/LorneDach
+NDP	Lorne	Dach	Edmonton-McClung	Facebook	https://www.facebook.com/LorneDach/
+NDP	Lorne	Dach	Edmonton-McClung	Instagram	https://www.instagram.com/lornedach
+NDP	Dave	Dach	Lacombe-Ponoka	Twitter	https://twitter.com/NDPDaveDale
+NDP	Dave	Dale	Lacombe-Ponoka	Facebook	https://www.facebook.com/DaveHDale
+NDP	Dave	Dale	Lacombe-Ponoka	Instagram	https://www.instagram.com/ndpdavedale/
+UCP	Chris	Dale	Calgary-Elbow	Facebook	https://www.facebook.com/chrisdavisyyc/
+UCP	Chris	Davis	Calgary-Elbow	Instagram	http://www.instagram.com/alberta_UCP
+UCP	Chantelle	Davis	Chestermere-Strathmore	Facebook	https://www.facebook.com/ChantelledeJongeAB/
+UCP	Chantelle	de Jonge	Chestermere-Strathmore	Instagram	https://www.instagram.com/alberta_ucp/
+NDP	Jasvir	de Jonge	Edmonton-Meadows	Twitter	https://twitter.com/JasvirDeol_
+NDP	Jasvir	Deol	Edmonton-Meadows	Facebook	https://www.facebook.com/JasvirDeolab
+NDP	Jasvir	Deol	Edmonton-Meadows	Instagram	https://www.instagram.com/jasvirdeolab
+NDP	Gwendoline	Deol	Brooks-Medicine Hat	Twitter	https://twitter.com/gwendoline_dirk
+NDP	Gwendolyn	Dirk	Brooks-Medicine Hat	Facebook	https://www.facebook.com/gwen.dirk
+UCP	Devin	Dirk	Innisfail-Sylvan Lake	Facebook	https://www.facebook.com/DevinDreeshen4AB/
+UCP	Devin	Dreeshen	Innisfail-Sylvan Lake	Instagram	https://www.instagram.com/devindreeshen/?hl=en
+UCP	Nolan	Dreeshen	Grande Prairie	Facebook	http://facebook.com/NolanDyckAB
+UCP	Nolan	Dyck	Grande Prairie	Instagram	http://www.instagram.com/nolandyckAB
+UCP	Jon	Dyck	Edmonton-Castle Downs	Facebook	https://www.facebook.com/Jon.Dziadyk
+UCP	Jon	Dziadyk	Edmonton-Castle Downs	Instagram	https://www.instagram.com/jondziadyk/
+NDP	David	Dziadyk	Edmonton-North West	Twitter	https://twitter.com/davideggenAB
+NDP	David	Eggen	Edmonton-North West	Facebook	https://www.facebook.com/DavidEggenAB
+NDP	David	Eggen	Edmonton-North West	Instagram	https://www.instagram.com/davideggenab/
+NDP	Court	Eggen	Calgary-Foothills	Twitter	https://twitter.com/CourtEllingson
+NDP	Court	Ellingson	Calgary-Foothills	Facebook	https://www.facebook.com/CourtEllingsonYYC
+NDP	Court	Ellingson	Calgary-Foothills	Instagram	https://www.instagram.com/courtellingson
+UCP	Mike	Ellingson	Calgary-West	Facebook	https://www.facebook.com/MikeEllisUCP/
+UCP	Mike	Ellis	Calgary-West	Instagram	https://www.instagram.com/mikey3782/
+NDP	Sarah	Ellis	Banff-Kananaskis	Twitter	https://twitter.com/ElmeligiSarah
+NDP	Sarah	Elmeligi	Banff-Kananaskis	Facebook	https://www.facebook.com/SarahElmeligiNDP
+UCP	Emad	Elmeligi	Edmonton-Strathcona	Facebook	https://www.facebook.com/UnitedConservativePartyAlberta
+UCP	Emad	El-Zein	Edmonton-Strathcona	Instagram	https://www.instagram.com/alberta_ucp/
+NDP	Janet	El-Zein	Calgary-Currie	Twitter	https://twitter.com/JanetEremenko
+NDP	Janet	Eremenko	Calgary-Currie	Facebook	https://www.facebook.com/JanetEremenko
+NDP	Janet	Eremenko	Calgary-Currie	Instagram	https://www.instagram.com/janeteremenko/
+NDP	Druh	Eremenko	Calgary-Bow	Twitter	https://twitter.com/DruhFarrell
+NDP	Druh	Farrell	Calgary-Bow	Facebook	https://www.facebook.com/DruhFarrellCalgary
+NDP	Druh	Farrell	Calgary-Bow	Instagram	https://www.instagram.com/druh.farrell/?hl=en
+NDP	Shaun	Farrell	Airdrie-Cochrane	Twitter	https://twitter.com/FlukerShaun
+NDP	Shaun	Fluker	Airdrie-Cochrane	Facebook	https://www.facebook.com/shaunflukerNDP
+NDP	Shaun	Fluker	Airdrie-Cochrane	LinkedIn	https://ca.linkedin.com/in/fluker-shaun-98627aa
+NDP	Juliet	Fluker	Drumheller-Stettler	Facebook	https://www.facebook.com/profile.php?id=100090875143774
+NDP	Kathleen	Franklin	Calgary-Mountain View	Twitter	http://twitter.com/intent/user?screen_name=KathleenGanley
+NDP	Kathleen	Ganley	Calgary-Mountain View	Facebook	http://www.facebook.com/KathleenGanley
+NDP	Kathleen	Ganley	Calgary-Mountain View	Instagram	https://www.instagram.com/kathleen_ganley/
+UCP	Shane	Ganley	Lac Ste. Anne-Parkland	Facebook	https://www.facebook.com/people/Shane-Clayton-Getson/100057806990494/
+UCP	Shane	Getson	Lac Ste. Anne-Parkland	Instagram	https://www.instagram.com/shaneclaytongetson/
+NDP	Nicole	Getson	Edmonton-Castle Downs	Twitter	http://twitter.com/intent/user?screen_name=nicolergoehring
+NDP	Nicole	Goehring	Edmonton-Castle Downs	Facebook	http://www.facebook.com/nicolegoehringndp
+NDP	Nicole	Goehring	Edmonton-Castle Downs	Instagram	https://www.instagram.com/nicolegoehringndp
+GPA	Robert	Goehring	Edmonton-Strathcona	Twitter	https://twitter.com/rjgoodin
+NDP	Christina	Gooding-Townsend	Edmonton-Mill Woods	Twitter	https://twitter.com/ChristinaNDP
+NDP	Christina	Gray	Edmonton-Mill Woods	Facebook	https://www.facebook.com/ChristinaNDP
+NDP	Christina	Gray	Edmonton-Mill Woods	Instagram	https://www.instagram.com/christinandp/
+UCP	Inder	Gray	Calgary-North East	Facebook	https://www.facebook.com/profile.php?id=100091564008044
+UCP	Inder	Grewal	Calgary-North East	Instagram	https://www.instagram.com/indergurpartap/?igshid=ZDdkNTZiNTM%3D
+UCP	Pete	Grewal	Airdrie-Cochrane	Facebook	https://www.facebook.com/peterguthrie99/
+UCP	Pete	Guthrie	Airdrie-Cochrane	Instagram	https://www.instagram.com/peterguthrie99/?hl=en
+UCP	Pete	Guthrie	Airdrie-Cochrane	LinkedIn	https://ca.linkedin.com/in/peter-guthrie-567199155
+NDP	Sharif	Guthrie	Edmonton-Decore	Twitter	https://twitter.com/SharifHaji
+NDP	Sharif	Haji	Edmonton-Decore	Facebook	https://www.facebook.com/sharifhajiyeg
+GPA	Ahmed	Haji	Calgary-Falconridge	Twitter	https://twitter.com/GPA_Ahmed
+LIB	Dylin	Hassan	Livingstone-Macleod	Facebook	https://www.facebook.com/dylin4livmac
+NDP	Julia	Hauser	Calgary-Edgemont	Twitter	https://twitter.com/NDPJulia
+NDP	Julia	Hayter	Calgary-Edgemont	Facebook	https://www.facebook.com/NDPJulia
+NDP	Julia	Hayter	Calgary-Edgemont	Instagram	https://www.instagram.com/ndpjulia/
+NDP	Cam	Hayter	Leduc-Beaumont	Twitter	https://twitter.com/camheenanNDP
+NDP	Cam	Heenan	Leduc-Beaumont	Facebook	https://www.facebook.com/camheenanNDP
+NDP	Cam	Heenan	Leduc-Beaumont	Instagram	https://www.instagram.com/camheenanndp
+UCP	Daniel	Heenan	Edmonton-McClung	Facebook	http://facebook.com/UnitedConservativePartyAlberta
+UCP	Daniel	Heikkinen	Edmonton-McClung	Instagram	http://instagram.com/dan4mcclung/
+NDP	Jason	Heikkinen	Innisfail-Sylvan Lake	Facebook	https://www.facebook.com/JasonNDPINSL
+NDP	Jason	Heistad	Innisfail-Sylvan Lake	Instagram	https://www.instagram.com/jason_heistad_ndp_candidate_/
+NDP	Sarah	Heistad	Edmonton-Glenora	Twitter	https://twitter.com/shoffmanAB
+NDP	Sarah	Hoffman	Edmonton-Glenora	Facebook	https://www.facebook.com/shoffmanAB
+NDP	Sarah	Hoffman	Edmonton-Glenora	Instagram	https://www.instagram.com/shoffman.ab/
+NDP	Sarah	Hoffman	Edmonton-Glenora	Wikipedia	https://en.wikipedia.org/wiki/Sarah_Hoffman
+UCP	Nate	Hoffman	Drumheller-Stettler	Facebook	https://www.facebook.com/natehorner.alberta/
+UCP	Nate	Horner	Drumheller-Stettler	Instagram	https://www.instagram.com/natehorner.alberta/
+IND	Tim	Horner	Rimbey-Rocky Mountain House-Sundre	Facebook	https://www.facebook.com/timhovenofficial
+IND	Tim	Hoven	Rimbey-Rocky Mountain House-Sundre	Twitter	https://twitter.com/timhoven/
+IND	Tim	Hoven	Rimbey-Rocky Mountain House-Sundre	Telegram	https://t.me/s/timhovenofficial
+IND	Tim	Hoven	Rimbey-Rocky Mountain House-Sundre	Instagram	https://www.instagram.com/tim_hoven_for_alberta/
+GPA	Kristina	Hoven	Edmonton-West Henday	Twitter	https://twitter.com/Kristina4Green
+NDP	Rhiannon	Howard	Edmonton-South	Twitter	https://twitter.com/rhihoyleyeg
+NDP	Rhiannon	Hoyle	Edmonton-South	Facebook	https://www.facebook.com/RhiHoyleYEG/
+NDP	Rhiannon	Hoyle	Edmonton-South	Instagram	https://www.instagram.com/rhihoyleyeg/
+GPA	Michael	Hoyle	Edmonton-Beverly-Clareview	Twitter	https://twitter.com/MikeHunter2023
+UCP	Grant	Hunter	Taber-Warner	Facebook	https://www.facebook.com/GrantHunterAB
+UCP	Grant	Hunter	Taber-Warner	Instagram	https://www.instagram.com/alberta_ucp/
+NDP	Cheryl	Hunter	Olds-Didsbury-Three Hills	Facebook	https://www.facebook.com/CherylHunterLoewenNDP
+NDP	Nathan	Hunter Loewen	Edmonton-South West	Twitter	https://twitter.com/NathanIpYEG
+NDP	Nathan	Ip	Edmonton-South West	Facebook	https://www.facebook.com/nathanipAB/
+NDP	Nathan	Ip	Edmonton-South West	Instagram	https://www.instagram.com/nathanipyeg/
+NDP	Janis	Ip	Edmonton-Highlands-Norwood	Twitter	https://twitter.com/JanisIrwin
+NDP	Janis	Irwin	Edmonton-Highlands-Norwood	Facebook	https://www.facebook.com/JanisIrwin
+NDP	Janis	Irwin	Edmonton-Highlands-Norwood	Instagram	https://www.instagram.com/janis.irwin
+UCP	Whitney	Irwin	Calgary-Glenmore	Facebook	http://www.facebook.com/10214779496497510
+UCP	Whitney	Issik	Calgary-Glenmore	Instagram	https://www.instagram.com/whitneyissik/
+UCP	Whitney	Issik	Calgary-Glenmore	Wikipedia	https://en.wikipedia.org/wiki/Whitney_Issik
+UCP	Brian	Issik	Fort McMurray-Lac La Biche	Facebook	https://www.facebook.com/BrianJeanAB
+UCP	Brian	Jean	Fort McMurray-Lac La Biche	Instagram	https://www.instagram.com/brianjeanab/
+NDP	Raj	Jean	Chestermere-Strathmore	Facebook	https://www.facebook.com/chestermerestrathmorendp/
+UCP	Jennifer	Jessel	Lacombe-Ponoka	Facebook	https://www.facebook.com/Jenniferjohnsonucp?mibextid=LQQJ4d
+UCP	Jennifer	Johnson	Lacombe-Ponoka	Instagram	https://www.instagram.com/alberta_ucp/
+UCP	Matt	Johnson	Calgary-South East	Facebook	https://www.facebook.com/MattJonesYYC/
+UCP	Matt	Jones	Calgary-South East	Instagram	https://www.instagram.com/mattjonesyyc/
+UCP	Nick	Jones	Edmonton-Highlands-Norwood	Facebook	https://www.facebook.com/profile.php?id=100091877924246
+NDP	Kyle	Kalynchuk	Sherwood Park	Twitter	https://twitter.com/kylekasawski
+NDP	Kyle	Kasawski	Sherwood Park	Facebook	https://www.facebook.com/NDPKyle
+NDP	Kyle	Kasawski	Sherwood Park	Instagram	https://www.instagram.com/kylekasawski/
+NDP	Samir	Kasawski	Calgary-Elbow	Twitter	https://twitter.com/SamirKayande
+NDP	Samir	Kayande	Calgary-Elbow	Facebook	https://www.facebook.com/samirkayande/
+NDP	Samir	Kayande	Calgary-Elbow	Instagram	https://www.instagram.com/kayande.samir/
+NDP	Samir	Kayande	Calgary-Elbow	YouTube	https://www.youtube.com/@samirkayande7165
+LIB	Leila	Kayande	Calgary-Currie	Twitter	https://twitter.com/Leila_Keith
+GPA	Kristine	Keith	Edmonton-Highlands-Norwood	Twitter	https://twitter.com/kkowalch
+UCP	Astrid	Kowalchuk	Calgary-Buffalo	Facebook	https://www.facebook.com/Astrid4Buffalo
+UCP	Astrid	Kuhn	Calgary-Buffalo	Instagram	https://www.instagram.com/astrid4buffalo/
+UCP	Adriana	Kuhn	Red Deer-North	Facebook	https://www.facebook.com/AdrianaLaGrangeRD
+UCP	Adriana	LaGrange	Red Deer-North	Instagram	https://www.instagram.com/AdrianaLaGrange
+UCP	Adriana	LaGrange	Red Deer-North	LeadingInfluence	https://leadinginfluence.com/hon-adrianna-lagrange-red-deer-north-9/
+NDP	Danielle	LaGrange	Lesser Slave Lake	Twitter	https://twitter.com/DanielleLarivee
+NDP	Danielle	Larivee	Lesser Slave Lake	Facebook	https://www.facebook.com/DanielleLariveeNDP
+NDP	Danielle	Larivee	Lesser Slave Lake	Instagram	https://www.instagram.com/dlarivee/
+UCP	Laine	Larivee	Edmonton-Rutherford	Facebook	http://facebook.com/profile.php?id=100090007997531
+UCP	Laine	Larson	Edmonton-Rutherford	Instagram	http://instagram.com/lainelarsonrutherford
+NDP	Michael	Larson	Calgary-North West	Twitter	https://twitter.com/LisboaYYC
+NDP	Michael	Lisboa-Smith	Calgary-North West	Facebook	https://www.facebook.com/LisboaYYC/
+NDP	Michael	Lisboa-Smith	Calgary-North West	Instagram	https://www.instagram.com/lisboayyc/?hl=en
+UCP	Todd	Lisboa-Smith	Central Peace-Notley	Facebook	https://www.facebook.com/ToddLoewenAB
+UCP	Todd	Loewen	Central Peace-Notley	Instagram	https://www.instagram.com/dtloewen
+UCP	Martin	Loewen	West Yellowhead	Facebook	https://www.facebook.com/MartinlongUCP
+UCP	Martin	Long	West Yellowhead	Instagram	https://www.instagram.com/martinlongucp/?hl=en
+WIPA	Mike	Long	Highwood	Instagram	https://www.instagram.com/mikelorusso_ab/
+WIPA	Mike	Lorusso	Highwood	TikTok	https://www.tiktok.com/@mikelorusso_ab
+WIPA	Mike	Lorusso	Highwood	Twitter	https://twitter.com/mikelorusso_ab
+UCP	Jackie	Lorusso	Camrose	Facebook	https://www.facebook.com/JackieLovelyMLA/
+UCP	Jackie	Lovely	Camrose	Instagram	https://www.instagram.com/alberta_ucp/
+NDP	Rod	Lovely	Edmonton-Ellerslie	Twitter	https://twitter.com/rod_loyola
+NDP	Rod	Loyola	Edmonton-Ellerslie	Facebook	https://www.facebook.com/rodloyolandp
+NDP	Rod	Loyola	Edmonton-Ellerslie	Instagram	https://www.instagram.com/rodloyola
+UCP	Jason	Loyola	Calgary-Foothills	Facebook	https://www.facebook.com/jasonluanAB/
+UCP	Jason	Luan	Calgary-Foothills	Instagram	http://instagram.com/alberta_UCP
+UCP	Brandon	Luan	Leduc-Beaumont	Facebook	https://www.facebook.com/brandonlunty.ca
+UCP	Brandon	Lunty	Leduc-Beaumont	Instagram	https://www.instagram.com/alberta_ucp/
+GPA	Ashley	Lunty	Red Deer-South	Twitter	https://twitter.com/macdonaldashley
+UCP	Kaycee	MacDonald	Edmonton-South West	Facebook	https://www.facebook.com/KayceeMaduYEG
+GPA	Steven	Madu	Calgary-Glenmore	Twitter	https://twitter.com/StevenisGreen
+UCP	Albert	Maffioli	Edmonton-Manning	Facebook	https://www.facebook.com/albertmazzocca
+UCP	Albert	Mazzocca	Edmonton-Manning	Instagram	https://www.instagram.com/albertmazzocca/
+UCP	Myles	Mazzocca	Calgary-Fish Creek	Facebook	https://www.facebook.com/profile.php?id=100091154487095
+UCP	Myles	McDougall	Calgary-Fish Creek	Instagram	https://www.instagram.com/mylesmcdougallucpyyc/
+UCP	Ric	McDougall	Calgary-Hays	Facebook	http://facebook.com/RicMcIver
+UCP	Ric	McIver	Calgary-Hays	Instagram	https://www.instagram.com/alberta_ucp/
+GPA	Jason	McIver	Calgary-West	Twitter	https://twitter.com/JTMcKee1983
+NDP	Luanne	McKee	Calgary-Varsity	Twitter	https://twitter.com/luanne_metz
+NDP	Luanne	Metz	Calgary-Varsity	Facebook	https://www.facebook.com/drmetzndp
+NDP	Luanne	Metz	Calgary-Varsity	Instagram	https://www.instagram.com/drmetzndp/
+UCP	Nicholas	Metz	Calgary-Currie	Facebook	https://www.facebook.com/nicholasmilliken
+UCP	Nicholas	Milliken	Calgary-Currie	Instagram	https://www.instagram.com/millikennicholas/
+NDP	Rob	Milliken	Lethbridge-East	Twitter	https://twitter.com/RobMiyashiro1
+NDP	Rob	Miyashiro	Lethbridge-East	Facebook	https://www.facebook.com/profile.php?id=100089109128827
+NDP	Rob	Miyashiro	Lethbridge-East	Instagram	https://www.instagram.com/robmiyashiro1/?hl=en
+GPA	Heather	Miyashiro	Red Deer-North	Twitter	https://twitter.com/HeatherMorigeau
+AP	Barry	Morigeau	Brooks-Medicine Har	Twitter	https://twitter.com/BarryMorishita
+UCP	Dale	Morishita	Morinville-St. Albert	Facebook	https://www.facebook.com/DaleNallyAB/
+NDP	Dan	Nally	Airdrie-East	Twitter	https://twitter.com/nellesndp?lang=en
+NDP	Dan	Nelles	Airdrie-East	Facebook	http://www.facebook.com/NellesNDP
+UCP	Nathan	Nelles	Lethbridge-East	Facebook	https://www.facebook.com/nathanneudorf/
+UCP	Nathan	Neudorf	Lethbridge-East	Instagram	https://www.instagram.com/nathanneudorf/?hl=en
+UCP	Demetrios	Neudorf	Calgary-Bow	Facebook	https://www.facebook.com/demetriosnicolaides
+UCP	Demetrios	Nicolaides	Calgary-Bow	Instagram	https://www.instagram.com/demetriosn/
+UCP	Jeremy	Nicolaides	Calgary-Klein	Facebook	https://www.facebook.com/JeremyNixon
+UCP	Jeremy	Nixon	Calgary-Klein	Instagram	https://www.instagram.com/jeremy.p.nixon/?hl=en
+UCP	Jason	Nixon	Rimbey-Rocky Mountain House-Sundre	Facebook	https://www.facebook.com/jason.j.nixon
+UCP	Jason	Nixon	Rimbey-Rocky Mountain House-Sundre	Instagram	https://www.instagram.com/jasonjnixon/
+NDP	Rachel	Nixon	Edmonton-Strathcona	Wikipedia	https://en.wikipedia.org/wiki/Rachel_Notley
+NDP	Rachel	Notley	Edmoton-Strathcona	TikTok	https://www.tiktok.com/@r.notley2023
+NDP	Liana	Notley	Peace River	Twitter	https://twitter.com/GandalfIf?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor
+NDP	Liana	Paiva	Peace River	Facebook	https://www.facebook.com/profile.php?id=100086055560122
+NDP	Rakhi	Paiva	Edmonton-Whitemud	Twitter	https://twitter.com/pancholi_rakhi
+NDP	Rakhi	Pancholi	Edmonton-Whitemud	Facebook	https://www.facebook.com/rakhipancholiedmontonwhitemud
+NDP	Rakhi	Pancholi	Edmonton-Whitemud	Instagram	https://www.instagram.com/pancholi_rakhi/
+UCP	Prasad	Pancholi	Calgary-Edgemont	Facebook	http://facebook.com/prasadpandayyc
+UCP	Prasad	Panda	Calgary-Edgemont	Instagram	http://instagram.com/prasadpandayyc
+GPA	Jonathan	Panda	Calgary-Buffalo	Facebook	https://www.facebook.com/profile.php?id=100087477901772
+GPA	Jonathan	Parks	Calgary-Buffalo	Twitter	https://twitter.com/JonathanParksAB
+UCP	Chelsea	Parks	Livingstone-Macleod	Facebook	http://facebook.com/ChelsaePetrovicForLivingstoneMcleod
+UCP	Chelsea	Petrovic	Livingstone-Macleod	Instagram	https://instagram.com/chelsae_for_ucp?igshid=YmMyMTA2M2Y=
+NDP	Shannon	Petrovic	Lethbridge-West	Twitter	https://twitter.com/SPhillipsAB
+NDP	Shannon	Phillips	Lethbridge-West	Facebook	https://www.facebook.com/ShannonPhillipsLethbridge
+NDP	Shannon	Phillips	Lethbridge-West	Instagram	https://www.instagram.com/sphillipsab
+UCP	Angela	Phillips	Airdrie-East	Facebook	https://www.facebook.com/AngelaPittAirdrie/
+UCP	Angela	Pitt	Airdrie-East	Instagram	https://www.instagram.com/angelapitt_ucp/?hl=en
+UCP	Josephine	Pitt	Calgary-Beddington	Facebook	https://www.facebook.com/yycjosephinepon2
+UCP	Josephine	Pon	Calgary-Beddington	Instagram	https://www.instagram.com/josephinepon/
+GPA	Shaun	Pon	Calgary-Peigan	Twitter	https://twitter.com/ShaunPulsifer
+GPA	Shaun	Pulsifer	Calgary-Peigan	Facebook	https://www.facebook.com/shaunpulsifer4mla
+GPA	Shaun	Pulsifer	Calgary-Peigan	Instagram	https://www.instagram.com/shaun_pulsifer/
+GPA	Shaun	Pulsifer	Calgary-Peigan	LinkedIn	https://www.linkedin.com/in/shaun-pulsifer
+NDP	Denis	Pulsifer	Calgary-Peigan	Twitter	https://mobile.twitter.com/dramyyc
+NDP	Denis	Ram	Calgary-Peigan	Facebook	https://www.facebook.com/DenisRam
+UCP	Pamela	Ram	Calgary-Mountain View	Facebook	https://www.facebook.com/UnitedConservativePartyAlberta
+UCP	Pamela	Rath	Calgary-Mountain View	Instagram	https://www.instagram.com/alberta_ucp/
+NDP	Marie	Rath	St. Albert	Twitter	https://twitter.com/MarieFrRenaud
+NDP	Marie	Renaud	St. Albert	Facebook	https://www.facebook.com/MarieRenaudMLA
+NDP	Marie	Renaud	St. Albert	Instagram	https://www.instagram.com/marierenaudmla/
+GPA	Lane	Renaud	Calgary-Currie	Twitter	https://twitter.com/DrLaneRobson
+LIB	John	Robson	Calgary-Lougheed	Facebook	https://www.facebook.com/John.P.Roggeveen
+LIB	John	Roggeveen	Calgary-Lougheed	LInkedIn	https://www.bing.com/ck/a?!&&p=59b56f235d803ae4JmltdHM9MTY4NDM2ODAwMCZpZ3VpZD0wNWU4MmQ3OS0xYmRkLTYyMTItMTk2YS0zZjdkMWE2OTYzN2ImaW5zaWQ9NTQ0Mg&ptn=3&hsh=3&fclid=05e82d79-1bdd-6212-196a-3f7d1a69637b&psq=John+Roggeveen&u=a1aHR0cHM6Ly9jYS5saW5rZWRpbi5jb20vaW4vYWxiZXJ0YWxpYmVyYWxwYXJ0eQ&ntb=1
+LIB	John	Roggeveen	Calgary-Lougheed	Wikipedia	https://en.wikipedia.org/wiki/John_Roggeveen
+UCP	Miranda	Roggeveen	Banff-Kananaskis	Facebook	https://www.facebook.com/mirandarosin/
+UCP	Garth	Rosin	Vermilion-Lloydminster-Wainwright	Facebook	https://www.facebook.com/GarthRowswellMLA
+UCP	Garth	Rowswell	Vermilion-Lloydminster-Wainwright	Instagram	https://www.instagram.com/alberta_ucp/
+NDP	Irfan	Rowswell	Calgary-Bhullar-McCall	Twitter	https://twitter.com/MLAIrfanSabir
+NDP	Irfan	Sabir	Calgary-Bhullar-McCall	Facebook	https://www.facebook.com/IrfanSabirMLA
+NDP	Irfan	Sabir	Calgary-Bhullar-McCall	Instagram	https://www.instagram.com/mlairfansabir/
+GPA	Aman	Sabir	Calgary-Cross	Facebook	https://www.facebook.com/amanpreetsingh.sandhu.3?mibextid=ZbWKwL
+NDP	Chantal	Sandhu	Spruce Grove-Stony Plain	Twitter	https://twitter.com/chantal_SMC
+NDP	Chantal	Saramaga-McKenzie	Spruce Grove-Stony Plain	Facebook	https://www.facebook.com/McKenzieForMayor/
+UCP	Rajan	Saramaga-McKenzie	Calgary-North West	Facebook	https://www.facebook.com/rajanjsawhney/
+UCP	Rajan	Sawhney	Calgary-North West	Instagram	http://instagram.com/alberta_ucp
+NDP	Marlin	Sawhney	Edmonton-Gold Bar	Twitter	https://twitter.com/marlinschmidtab?lang=en
+NDP	Marlin	Schmidt	Edmonton-Gold Bar	Facebook	https://www.facebook.com/marlinschmidtAB
+NDP	Marlin	Schmidt	Edmonton-Gold Bar	Instagram	https://www.instagram.com/mlamarlinschmidt/%20
+NDP	Marlin	Schmidt	Edmonton-Gold Bar	Wikipedia	https://en.wikipedia.org/wiki/Marlin_Schmidt
+UCP	Joseph	Schmidt	Cardston-Siksika	Facebook	https://www.facebook.com/josephschowucp/
+UCP	Rebecca	Schow	Calgary-Shaw	Facebook	http://facebook.com/rebeccaschulzyyc
+UCP	Rebecca	Schulz	Calgary-Shaw	Instagram	https://www.instagram.com/rebeccaschulzab
+GPA	Julian	Schulz	Edmonton-Glenora	Twitter	https://twitter.com/JSchulzGPA/
+UCP	Cheryl	Schulz	Lethbridge-West	Facebook	http://facebook.com/vote4cherylseabornUCPlethwest
+UCP	Cheryl	Seaborn	Lethbridge-West	Instagram	https://www.instagram.com/vote4cherylseabornucplethwest
+UCP	Tyler	Seaborn	Calgary-Acadia	Facebook	https://www.facebook.com/TylerSShandro/
+UCP	Tyler	Shandro	Calgary-Acadia	Instagram	https://www.instagram.com/tylershandro
+UCP	Tyler	Shandro	Calgary-Acadia	Wikipedia	https://en.wikipedia.org/wiki/Tyler_Shandro
+UCP	Tyler	Shandro	Calgary-Acadia	LeadingInfluence	https://leadinginfluence.com/hon-tyler-shandro-calgary-acadia-6/
+NDP	Karen	Shandro	Morinville-St. Albert	Twitter	https://twitter.com/KarenShaw_
+NDP	Karen	Shaw	Morinville-St. Albert	Facebook	https://www.facebook.com/KarenShawNDP/
+NDP	David	Shaw	Edmonton-City Centre	Twitter	https://twitter.com/DShepYEG
+NDP	David	Shepherd	Edmonton-City Centre	Facebook	https://www.facebook.com/dshepYEG
+NDP	David	Shepherd	Edmonton-City Centre	Instagram	https://www.instagram.com/dshepyeg
+UCP	Raj	Shepherd	Edmonton-Whitemud	Facebook	https://www.facebook.com/RajShermanAB/
+UCP	Raj	Sherman	Edmonton-Whitemud	Instagram	https://www.instagram.com/alberta_ucp/
+NDP	Lori	Sherman	Edmonton-Riverview	Twitter	https://twitter.com/LoriSigurdson
+NDP	Lori	Sigurdson	Edmonton-Riverview	Facebook	https://www.facebook.com/lorisigurdson.ndp
+NDP	Lori	Sigurdson	Edmonton-Riverview	Instagram	https://www.instagram.com/lorisigurdsonndp
+UCP	RJ	Sigurdson	Highwood	Facebook	https://www.facebook.com/rj.sigurdson/
+UCP	RJ	Sigurdson	Highwood	Instagram	https://www.instagram.com/rjsigurdson.highwood
+UCP	Scott	Sigurdson	Lesser Slave Lake	Facebook	https://www.facebook.com/scottsinclairucp
+UCP	Peter	Sinclair	Calgary-East	Facebook	http://www.facebook.com/petersinghcalgaryeast/
+UCP	Peter	Singh	Calgary-East	Instagram	https://www.instagram.com/petersi19146837
+NDP	Harry	Singh	Drayton Valley-Devon	Facebook	https://www.facebook.com/profile.php?id=100092330943002
+NDP	Harry	Singh	Drayton Valley-Devon	Instagram	https://www.instagram.com/harrysinghndp/
+NDP	Parmeet	Singh	Calgary-Falconridge	Twitter	https://twitter.com/Parmeetsinghyyc
+NDP	Parmeet	Singh Boparai	Calgary-Falconridge	Facebook	https://www.facebook.com/parmeetndp
+NDP	Parmeet	Singh Boparai	Calgary-Falconridge	Instagram	https://www.instagram.com/parmeetsinghyyc/
+UCP	Amanpreet	Singh Boparai	Calgary Bhullar-McCall	Facebook	https://www.facebook.com/profile.php?id=100090634448937&amp;mibextid=LQQJ4D
+UCP	Amanpreet	Singh Gill	Calgary Bhullar-McCall	Instagram	http://www.instagram.com/amanpreetgillab
+NDP	Gurinder Singh Gill	Singh Gill	Calgary-Cross	Twitter	https://twitter.com/gurinder_s_gill?lang=en
+NDP	Gurinder Singh Gill	SIngh Gill	Calgary-Cross	Facebook	https://www.facebook.com/gurindersinghgill.ndp
+UCP	Amritpal	SIngh Gill	Edmonton-Meadows	Facebook	https://www.facebook.com/profile.php?id=100090477062923&amp;mibextid=ZbWKwL
+UCP	Amritpal	Singh Matharu	Edmonton-Meadows	Instagram	http://instagram.com/Matharuformeadows
+LIB	Don	Singh Matharu	Edmonton-Decore	Twitter	https://twitter.com/DonSlater10
+UCP	Danielle	Slater	Brooks-Medicine Hat	Facebook	https://www.facebook.com/DanielleSmithAB/
+UCP	Danielle	Smith	Brooks-Medicine Hat	Instagram	https://www.instagram.com/abdaniellesmith/
+LIB	Jacob	Smith	Sherwood Park	Facebook	https://www.facebook.com/jacob.stacey.39/
+LIB	Jacob	Stacey	Sherwood Park	TikTok	https://www.tiktok.com/@jacobstaceyalp
+UCP	Jason	Stacey	Red Deer-South	Facebook	https://www.facebook.com/ElectJasonStephan
+NDP	Andrew	Stephan	Calgary-Hays	Twitter	https://twitter.com/AJYSyyc/
+NDP	Andrew	Stewart	Calgary-Hays	Facebook	https://www.facebook.com/profile.php?id=100085589277096
+NDP	Andrew	Stewart	Calgary-Hays	Instagram	https://www.instagram.com/ajysyyc
+AP	Patrick	Stewart	Edmonton-Castle Downs	Facebook	https://www.facebook.com/profile.php?id=100050095462520
+AP	Patrick	Stewart	Edmonton-Castle Downs	YouTube	https://www.youtube.com/@PolitcalPaddy
+UCP	Luke	Stewart	Edmonton Beverly-Clareview	Facebook	https://www.facebook.com/UnitedConservativePartyAlberta
+UCP	Luke	Suvanto	Edmonton Beverly-Clareview	Instagram	https://www.instagram.com/alberta_ucp/
+NDP	Heather	Suvanto	Edmonton-Manning	Twitter	https://twitter.com/heathersweetab
+NDP	Heather	Sweet	Edmonton-Manning	Facebook	https://www.facebook.com/heathersweetab
+NDP	Heather	Sweet	Edmonton-Manning	Instagram	https://www.instagram.com/sweetmla
+GPA	Evelyn	Sweet	Calgary-Hays	Facebook	https://www.facebook.com/EvTanakaGreenParty/
+GPA	Evelyn	Tanaka	Calgary-Hays	Twitter	https://twitter.com/EvTanaka
+NDP	Lizette	Tanaka	Calgary-Klein	Twitter	https://twitter.com/lizettendp
+NDP	Lizette	Tejada	Calgary-Klein	Facebook	https://www.facebook.com/lizettendp
+NDP	Lizette	Tejada	Calgary-Klein	Instagram	https://www.instagram.com/lizettendp/?fbclid=IwAR2o19E8vCemT7UJ0LqX5XoR5N4D10duJ-w_m8x0BVB71h4y5_WFGwLths0
+AP	Sue	Tejada	Sherwood Park	Twitter	https://twitter.com/ABPSherwoodPark
+AP	Sue	Timanson	Sherwood Park	Facebook	https://www.facebook.com/susantimanson
+AP	Kevin	Timanson	Livingstone-Macleod	Twitter	https://twitter.com/KevinTo03281347
+NDP	Bill	Todd	Strathcona-Sherwood Park	Twitter	https://twitter.com/btonita
+NDP	Bill	Tonita	Strathcona-Sherwood Park	Facebook	https://www.facebook.com/BillTonita4Council
+NDP	Bill	Tonita	Strathcona-Sherwood Park	Instagram	https://www.instagram.com/bill.tonita
+UCP	Devinder	Tonita	Calgary-Falconridge	Facebook	https://www.facebook.com/devindertoor68
+UCP	Devinder	Toor	Calgary-Falconridge	Instagram	https://www.instagram.com/devindertoormla
+UCP	Searle	Toor	Spruce Grove-Stony Plain	Facebook	https://www.facebook.com/searleturton
+UCP	Searle	Turton	Spruce Grove-Stony Plain	Instagram	https://www.instagram.com/searleturton
+NDP	Jaelene	Turton	Red Deer-North	Twitter	https://twitter.com/JTweedleRD
+NDP	Jaelene	Tweedle	Red Deer-North	Facebook	https://www.facebook.com/JTweedleRD
+NDP	Rosman	Tweedle	Calgary-East	Twitter	https://twitter.com/RosmanV4YYCEast
+NDP	Rosman	Valencia	Calgary-East	Facebook	https://www.facebook.com/RosmanValenciaYYCEast
+NDP	Rosman	Valencia	Calgary-East	Instagram	https://www.instagram.com/rosmanvalenciacalgaryeast/
+UCP	Glenn	Valencia	Athabasca-Barrhead-Westlock	Facebook	https://www.facebook.com/glenn.van.dijken
+NDP	Kevin	van Dijken	Livingstone-Macleod	Twitter	http://www.twitter.com/Kevin_VanTighem
+NDP	Kevin	Van Tighem	Livingstone-Macleod	Facebook	https://www.facebook.com/profile.php?id=100085531927396
+UCP	Terry	Van Tighem	Edmonton-Riverview	Facebook	https://www.facebook.com/terryvankka
+UCP	Terry	Vankka	Edmonton-Riverview	Instagram	https://www.instagram.com/vankka4riverview
+UCP	Jordan	Vankka	Sherwood Park	Facebook	http://www.facebook.com/JWALKERALBERTA
+UCP	Jordan	Walker	Sherwood Park	Instagram	https://www.instagram.com/jordanwalkermla/?hl=en
+UCP	Ron	Walker	Grande Prairie-Wapiti	Facebook	https://www.facebook.com/RobWiebeAB
+UCP	Ron	Wiebe	Grande Prairie-Wapiti	Instagram	http://instagram.com/alberta_UCP
+GPA	Jordan	Wiebe	Edmonton-Rutherford	Facebook	https://www.facebook.com/leaderGPA/
+GPA	Jordan	Wilkie	Edmonton-Rutherford	Instagram	https://www.instagram.com/jordan4mla/
+GPA	Jordan	Wilkie	Edmonton-Rutherford	Twitter	https://twitter.com/jordan4mla
+UCP	Dan	Wilkie	Peace River	Facebook	https://www.facebook.com/DanWilliamsPeaceCountry
+UCP	Dan	Williams	Peace River	Instagram	http://instagram.com/alberta_ucp
+UCP	Rick	Williams	Maskwacis-Wetaskiwin	Facebook	https://www.facebook.com/RickWilsonforAlberta
+UCP	Rick	Wilson	Maskwacis-Wetaskiwin	Instagram	https://www.instagram.com/alberta_ucp/
+LIB	Donna	Wilson	Maskwacis-Wetaskiwin	Twitter	https://twitter.com/ElectDrWilson
+UCP	Richard	Wilson	Edmonton-City Centre	Facebook	https://www.facebook.com/profile.php?id=100090478066232
+UCP	Richard	Wong	Edmonton-City Centre	Instagram	https://www.instagram.com/richardwongedmonton/
+UCP	Angela	Wong	St. Albert	Facebook	https://www.facebook.com/angelawood.stalbert/
+UCP	Angela	Wood	St. Albert	Instagram	http://instagram.com/alberta_UCP
+GPA	Catriona	Wood	Calgary-South East	Twitter	https://twitter.com/CatsWright1
+NDP	Peggy	Wright	Edmonton-Beverly-Clareview	Twitter	https://twitter.com/PeggyBevClare
+NDP	Peggy	Wright	Edmonton-Beverly-Clareview	Facebook	https://www.facebook.com/PeggyBevClare/
+NDP	Peggy	Wright	Edmonton-Beverly-Clareview	Instagram	https://www.instagram.com/peggybevclare/
+UCP	Tany	Wright	Fort McMurray-Wood Buffalo	Facebook	https://www.facebook.com/TanyYaoAB
+UCP	Tany	Yao	Fort McMurray-Wood Buffalo	Twitter	https://twitter.com/TanyYao
+UCP	Tany	Yao	Fort McMurray-Wood Buffalo	LInkedIn	https://ca.linkedin.com/in/tany-yao-125740123
+UCP	Tany	Yao	Fort McMurray-Wood Buffalo	LeadingInfluence	https://leadinginfluence.com/leadwell/
+UCP	Muhammad	Yao	Calgary-North	Facebook	http://www.facebook.com/MuhammadYaseenYYC
+UCP	Muhammad	Yaseen	Calgary-North	Instagram	https://www.instagram.com/alberta_ucp/
+UCP	Muhammad	Yaseen	Calgary-North	LeadingInfluence	https://leadinginfluence.com/mla-muhammad-yaseen-calgary-north-5/#
+UCP	Muhammad	Yaseen	Calgary-North	Wikipedia	https://en.wikipedia.org/wiki/Muhammad_Yaseen
+AP	Jennifer	Yaseen	Calgary-North West	Facebook	https://www.facebook.com/JenniferYeremiy
+AP	Jennifer	Yermiy	Calgary-North West	Twitter	https://twitter.com/JenniferYeremiy
+AP	Jennifer	Yermiy	Calgary-North West	LinkedIn	https://ca.linkedin.com/in/jenny-yeremiy-p-geoph-74a1278/pt?trk=public_post_comment-text
