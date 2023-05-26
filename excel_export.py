@@ -47,15 +47,14 @@ def export_ab_candidates(location=workbook_location, column_headers=True):
 
 def export_candidates_social(location=workbook_location, column_headers=True):
     wb = load_workbook(workbook_location)
-    sheet = wb.worksheets[5]
+    sheet = wb.worksheets[6]
     count = 0
     with open('ab_candidates_social.csv', 'wt') as csv_out:
         for row in range(2, 500):
             data = [sheet.cell(row=row, column=i).value for i in range(1, 10)]
-            # csv_out.write(f'{count}\t{data[2]}\t{data[3]}\t{data[4]}\t{data[5]}\t{data[7]}\t{data[8]}\n')
             if data[0] is not None:
                 count = count + 1
-                csv_out.write(f'{data[0]}\t{data[1]}\t{data[2]}\t{data[3]}\t{data[4]}\n')
+                csv_out.write(f'{data[0]}\t{data[1]}\t{data[2]}\t{data[3]}\t{data[4]}\t{data[5]}\n')
         csv_out.close()
     print(f'excel_export.py: There were {count} social media links exported.')
 
@@ -88,8 +87,8 @@ def export_ab_candidates_nominated_counts(location=workbook_location, column_hea
     print('excel_export.py: Exported candidate nominated counts summary')
 
 if __name__ == '__main__':
-    export_ab_ridings()
-    export_ab_parties();
-    export_ab_candidates()
+    # export_ab_ridings()
+    # export_ab_parties();
+    # export_ab_candidates()
     export_candidates_social()
-    export_ab_candidates_nominated_counts()
+    # export_ab_candidates_nominated_counts()

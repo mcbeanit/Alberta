@@ -3,7 +3,7 @@ from datetime import date
 
 ab_338_html_filename = 'ab_338_ridings.html'
 ab_338_csv_filename = 'ab_338_ridings.csv'
-tr_expr = r'^<tr>.*?<td.+?><a href=\"(https:.+?)\".+?>(.+?)<\/a><\/td><td.+?>(.+?)<\/td><td.+?>(.+?)<\/td>.*?<\/tr>$'
+tr_expr = r'^<tr>.*?<td.+?><a href=\"(https:.+?)\".+?>(.+?)<\/a><\/td><td.+?>(.+?)<\/td>.*?<td.+?>(.+?)<\/td>.*?<\/tr>$'
 
 
 def parse_riding_polls_html():
@@ -13,14 +13,13 @@ def parse_riding_polls_html():
         for tr in html.readlines():
             matches = re.match(tr_expr, tr)
             if matches:
-                csvfile.write(f'{matches[2]},{matches[1]},{matches[4]}\t{today}\n')
+                csvfile.write(f'{matches[2]},{matches[1]},{matches[4]},{today}\n')
                 count = count + 1
             else:
                 print(f'not matched: {tr}\n')
-    # html.close()
-    # csvfile.close()
+    html.close()
+    csvfile.close()
     print(f'ab_338_ridings.py: There were {count} ridings found with polls.')
-
 
 
 
