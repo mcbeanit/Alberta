@@ -2,7 +2,7 @@ import csv
 from openpyxl import load_workbook
 
 workbook_location = 'C:\\Users\\owner\\OneDrive\\Alberta.xlsx'
-model_workbook__location = 'C:\\Users\\owner\\OneDrive\\alberta-2023-model.xlsx'
+model_workbook_location = 'C:\\Users\\owner\\OneDrive\\alberta-2023-model.xlsx'
 official_candidates = 'official_candidates.csv'
 ab_338_ridings_csv = 'ab_338_ridings.csv'
 number_of_candidates = 394
@@ -51,13 +51,16 @@ def import_338_riding_info():
     assert data
     file.close()
 
-    wb = load_workbook(model_workbook__location)
+    wb = load_workbook(model_workbook_location)
     sheet = wb.worksheets[0]
     count = 0
 
     for row in range(2, 87):
         data = [sheet.cell(row=row, column=i).value for i in range(1, 12)]
         assert False  #todo  add csv fields to excel
+
+    print('excel_import.py: Saving the workbook')
+    wb,save(model_workbook_location)
 
 if __name__ == '__main__':
     # import_official_candidates()
