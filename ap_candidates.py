@@ -1,7 +1,6 @@
-import scrapy
-import json
 import re
 import csv
+import operator
 
 """
 After the spider gets the html for the Alberta Party candidates list, do some additional
@@ -61,6 +60,15 @@ def parse_candidates_html():
             count = count + 1
         html.close()
         out.close()
+
+    with open(csv_file, 'rt') as r:
+        reader = csv.reader(r, delimiter='\t')
+        list = sorted(reader, key=operator.itemgetter(2), reverse=False)
+
+        # rewrite the sorted file
+    with open(csv_file, 'wt') as s:
+        for p in list:
+            s.write(f'{p[0]},{p[1]},{p[2]}\t{p[3]}\t{p[4]}\n');
 
     print(f'ap_candidates.py: There were {count} candidates and {expected_count} expected.')
 

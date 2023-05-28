@@ -1,6 +1,6 @@
 import re
-import json
-
+import csv
+import operator
 
 def parse_candidates_html():
     """
@@ -11,20 +11,31 @@ def parse_candidates_html():
     expected_count = 86
     htmlfile = "ucp_candidates.html"
     csvfile = "ucp_candidates.csv"
+    short_name = 'UCP'
 
-    with open(htmlfile, "rt") as html, open(csvfile, 'wt') as csv:
+    with open(htmlfile, "rt") as html, open(csvfile, 'wt') as csvout:
         count = 0
         for c in html.readlines():
             count = count + 1
             c = parse_candidate(c)
-            csv.write(f'{c[1]}\t')
-            csv.write(f'{c[2]}\t')
-            csv.write(f'{c[3]}\t')
-            csv.write(f'{c[0]}\n')
-            csv.flush()
+            csvout.write(f'{short_name}\t')
+            csvout.write(f'{c[1]}\t')
+            csvout.write(f'{c[2]}\t')
+            csvout.write(f'{c[3]}\t')
+            csvout.write(f'{c[0]}\n')
         print(f"ucp_candidates.py: There were {count} candidates found and {expected_count} expected.")
     html.close()
-    csv.close()
+    csvout.close()
+
+    with open(csvfile, 'rt') as r:
+        reader = csv.reader(r, delimiter='\t')
+        list = sorted(reader, key=operator.itemgetter(2), reverse=False)
+
+    # rewrite the sorted file
+
+    with open(csvfile, 'wt') as s:
+        for p in list:
+            s.write(f'{p[0]},{p[1]},{p[2]}\t{p[3]}\n');
 
 
 def parse_candidate(c: str):

@@ -47,20 +47,28 @@ def import_official_candidates():
 def import_338_riding_info():
     file = open(ab_338_ridings_csv, newline='')
     reader = csv.reader(file, delimiter=',')
-    data = [row for row in reader]
-    assert data
+    csvdata = [row for row in reader]
+    assert csvdata
     file.close()
 
     wb = load_workbook(model_workbook_location)
     sheet = wb.worksheets[0]
-    count = 0
-
-    for row in range(2, 87):
-        data = [sheet.cell(row=row, column=i).value for i in range(1, 12)]
-        assert False  #todo  add csv fields to excel
+    count = 1
+    row = 1
+    for row in csvdata:
+        count = count + 1
+        riding_name = row[0]
+        url = row[1]
+        pred = row[2]
+        pred_date = row[3]
+        excel_data = [sheet.cell(row=count, column=i).value for i in range(1,12)]
+        # excel_data[3] = url
+        sheet.cell(row=count, column=3).value = url
+        sheet.cell(row=count, column=8).value = pred
+        sheet.cell(row=count, column=9).value = pred_date
 
     print('excel_import.py: Saving the workbook')
-    wb,save(model_workbook_location)
+    wb.save(model_workbook_location)
 
 if __name__ == '__main__':
     # import_official_candidates()

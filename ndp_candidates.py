@@ -1,4 +1,6 @@
 import re
+import csv
+import operator
 
 """
 Read the ndp candidate list html (ndp_candidates.html) and turn it into
@@ -16,20 +18,29 @@ def parse_candidates_html(htmlfile='ndp_candidates.html', csvfile='ndp_candidate
     """
     count = 0
     expected_count = 87
-    with open(htmlfile, "rt") as html, open(csvfile, 'wt') as csv:
+    with open(htmlfile, "rt") as html, open(csvfile, 'wt') as csvout:
         for c in html.readlines():
             count = count + 1
             c = clean_html(c)
             candidate = parse_candidate(c)
-            csv.write('NDP\t')
-            csv.write(f'{candidate[1]}\t')
-            csv.write(f'{candidate[2]}\t')
-            csv.write(f'{candidate[3]}\t')
-            csv.write(f'{candidate[0]}\t')
-            csv.write('\n')
+            csvout.write('NDP\t')
+            csvout.write(f'{candidate[1]}\t')
+            csvout.write(f'{candidate[2]}\t')
+            csvout.write(f'{candidate[3]}\t')
+            csvout.write(f'{candidate[0]}\t')
+            csvout.write('\n')
 
     html.close()
-    csv.close()
+    csvout.close()
+
+    with open(csvfile, 'rt') as r:
+        reader = csv.reader(r, delimiter='\t')
+        list = sorted(reader, key=operator.itemgetter(2), reverse=False)
+
+    # rewrite the sorted file
+    with open(csvfile, 'wt') as s:
+        for p in list:
+            s.write(f'{p[0]},{p[1]},{p[2]}\t{p[3]}\t{p[4]}\n');
 
     print(f'ndp_candidates.py: There are {count} candidates and {expected_count} expected. \n')
 
