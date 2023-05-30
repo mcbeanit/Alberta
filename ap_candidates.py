@@ -68,7 +68,7 @@ def parse_candidates_html():
         # rewrite the sorted file
     with open(csv_file, 'wt') as s:
         for p in list:
-            s.write(f'{p[0]},{p[1]},{p[2]}\t{p[3]}\t{p[4]}\n');
+            s.write(f'{p[0]}\t{p[1]}\t{p[2]}\t{p[3]}\t{p[4]}\n');
 
     print(f'ap_candidates.py: There were {count} candidates and {expected_count} expected.')
 

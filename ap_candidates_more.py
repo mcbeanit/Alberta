@@ -24,7 +24,7 @@ def parse_candidates_html():
             csv_out.flush()
             count = count + 1
         csv_out.close()
-    print(f'ap_candidated_more.py: there were {count} candidates found')
+    print(f'ap_candidates_more.py: there were {count} candidates found')
 
 
 # e.g.

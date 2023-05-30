@@ -37,6 +37,7 @@ class UCPCandidateSpiderMore(scrapy.Spider):
             p = p.replace('\n', '')
             p = p.replace('\r', '')
             p = p.replace('\t', '')
+            p = p.replace('\ufb01', '')
             bio = bio + p
             gender = gender_guesser.guess(bio)
 
@@ -83,7 +84,7 @@ class UCPCandidateSpiderMore(scrapy.Spider):
 
         for row in data:
             count = count + 1
-            url = str(row[2])
+            url = str(row[3])
             urls.append(url)
 
         return urls

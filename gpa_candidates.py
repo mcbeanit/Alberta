@@ -37,7 +37,7 @@ def parse_candidates_html():
             # rewrite the sorted file
         with open(csvfile, 'wt') as s:
             for p in list:
-                s.write(f'{p[0]},{p[1]},{p[2]}\t{p[3]}\t{p[4]}\n');
+                s.write(f'{p[0]}\t{p[1]}\t{p[2]}\t{p[3]}\t{p[4]}\n');
 
 
 if __name__ == '__main__':

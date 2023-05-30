@@ -72,6 +72,10 @@ class ALPCandidatesSpiderMore(scrapy.Spider):
                 bio_line = bio_line.replace('\n', '')
                 bio_line = bio_line.replace('\r', '')
                 bio_line = bio_line.replace('\t', '')
+                bio_line = bio_line.strip()
+                bio_line = bio_line.strip(u'\u200b')
+                bio_line = re.sub(u'\u200b', '', bio_line)
+
                 # bio = bio + bio_line
             with open(self.html_file, 'at') as f:  # will have to append here
                 # f.write(f'ALP\t{name}\t{riding}\t{bio}\t{headshot}\n')

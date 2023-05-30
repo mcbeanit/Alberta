@@ -40,7 +40,7 @@ def parse_candidates_html(htmlfile='ndp_candidates.html', csvfile='ndp_candidate
     # rewrite the sorted file
     with open(csvfile, 'wt') as s:
         for p in list:
-            s.write(f'{p[0]},{p[1]},{p[2]}\t{p[3]}\t{p[4]}\n');
+            s.write(f'{p[0]}\t{p[1]}\t{p[2]}\t{p[3]}\t{p[4]}\n');
 
     print(f'ndp_candidates.py: There are {count} candidates and {expected_count} expected. \n')
 
