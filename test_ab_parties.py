@@ -3,7 +3,6 @@ import re
 import json
 from openpyxl import load_workbook
 
-
 pattern = '^<li class="accordion-navigation".+?>(.+?)<\\/a><div class="content".+?<div.+?<\\/p><\\/div><div.+?<p>(.+?)<br>(.+?)<br>(.+?)<br>(.+?)<br>(.+?)<br><a href="(.+?)">(.+?)<\\/a>.+<\\/div><\\/div><\\/li>$'
 
 test1 = '<li class="accordion-navigation"><a href="#acc1" role="button" aria-controls="acc1" aria-expanded="false">Advantage Party of Alberta (APA)</a><div class="content" id="acc1"><div class="row collapse--sm"><div class="medium-4 large-4"><p><img width="250" height="90" src="https://www.elections.ab.ca/uploads/AlbertaAdvantageLogo-250x90.png" class="attachment-party-logo size-party-logo" alt="" decoding="async" loading="lazy" srcset="https://www.elections.ab.ca/uploads/./AlbertaAdvantageLogo-250x90.png 250w, https://www.elections.ab.ca/uploads/./AlbertaAdvantageLogo-400x144.png 400w, https://www.elections.ab.ca/uploads/./AlbertaAdvantageLogo-768x276.png 768w, https://www.elections.ab.ca/uploads/AlbertaAdvantageLogo.png 979w" sizes="(max-width: 250px) 100vw, 250px" /></p></div><div class="medium-8 large-8"><p>Marilyn Burns, Leader<br>Carol Nordlund Kinsey, President<br>Ron Malowany, Chief Financial Officer<br>559, 9768 170 Street<br>Edmonton, Alberta T5T 5L4<br><a href="https://albertaadvantageparty.ca" target="_blank" rel="noopener">https://albertaadvantageparty.ca</a></p><p><em>The Alberta Advantage Party made an application to the Chief Electoral Officer to change the party name to “Advantage Party of Alberta”. The request was received and approved, and the change was made effective February 9, 2022.</em></p></div></div></div></li>'
@@ -18,20 +17,21 @@ def test_should_match():
     matches = re.match(pattern, test1)
     if matches is not None:
         f1 = str(matches[1])
-        assert(f1 == 'Advantage Party of Alberta (APA)')
+        assert (f1 == 'Advantage Party of Alberta (APA)')
         f2 = str(matches[2])
-        assert(f2 == 'Marilyn Burns, Leader')
+        assert (f2 == 'Marilyn Burns, Leader')
         f3 = str(matches[3])
-        assert(f3 == 'Carol Nordlund Kinsey, President')
+        assert (f3 == 'Carol Nordlund Kinsey, President')
         f4 = str(matches[4])
-        assert(f4 == 'Ron Malowany, Chief Financial Officer')
+        assert (f4 == 'Ron Malowany, Chief Financial Officer')
         f5 = str(matches[5])
-        assert(f5 == '559, 9768 170 Street')
+        assert (f5 == '559, 9768 170 Street')
         f6 = str(matches[6])
-        assert(f6 == 'Edmonton, Alberta T5T 5L4')
+        assert (f6 == 'Edmonton, Alberta T5T 5L4')
 
     else:
         pytest.fail('Pattern 1 not matched')
+
 
 def test_read_json():
     """
@@ -43,8 +43,8 @@ def test_read_json():
     s = settings['settings']
     p1 = s[0]
     pattern = p1['pattern1']
-    assert(len(pattern) > 0)
-    assert(pattern.startswith('^'))
+    assert (len(pattern) > 0)
+    assert (pattern.startswith('^'))
 
 
 @pytest.mark.filterwarnings('ignore::UserWarning')
@@ -61,32 +61,39 @@ def test_read_excel():
     print(data)
 
 
-
 def test_short_name():
     exp = '\\s\\((.+?)\\)$'
     case = 'Alberta New Democratic Party (NDP)'
 
-    m = re.findall(exp,case)
-    assert(m is not None)
-    assert(str(m[0])=='NDP')
+    m = re.findall(exp, case)
+    assert (m is not None)
+    assert (str(m[0]) == 'NDP')
+
 
 def test_email():
     exp = r'^Email:.+<a href="mailto:(.+?)">(.+?)<\/a>$'
     case = 'Email:�<a href="mailto:info@albertaNDP.ca">info@albertaNDP.ca</a>'
 
     m = re.match(exp, case)
-    assert(m is not None)
+    assert (m is not None)
     addr = str(m[1])
-    assert(addr)
-    assert(len(addr) > 10)
+    assert (addr)
+    assert (len(addr) > 10)
     desc = str(m[2])
-    assert(desc)
-    assert(len(desc) > 10)
+    assert (desc)
+    assert (len(desc) > 10)
 
-def text_web_url():
+
+def test_web_url():
     web_exp = r'^<a href="(.+)">(.+)<\/a>$'
     case = '<a href="http://www.greenpartyofalberta.ca/">www.greenpartyofalberta.ca</a>'
     matches = re.match(web_exp, case)
     assert (matches is not None)
     url = str(matches[1])
-    assert(url == 'http://www.greenpartyofalberta.ca/')
+    assert (url == 'http://www.greenpartyofalberta.ca/')
+
+
+def test_pad_zeroes():
+    for i in range(1,88):
+        i = str(i)
+        print(i.zfill(2))

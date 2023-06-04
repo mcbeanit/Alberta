@@ -50,6 +50,7 @@ def parse_party_html(htmlfile='ab_parties.html', csvfile='ab_parties.csv'):
 
     print(f'There were {count} parties found. Expected {expected_count}\n')
 
+
 def parse_fields(li: str):
     name_exp = r'^<li><button>(.+?)<\/button>'
     short_name_exp = r'\s\((.+?)\)$'
@@ -135,7 +136,6 @@ def parse_fields(li: str):
     if (matches is not None):
         email_link = str(matches[1])
 
-
     return name, short_name, logo, address, city, prov, pc, email_link, web_link, people, phone
 
 
@@ -147,7 +147,6 @@ def clean_html(p: str):
     """
 
     return p
-
 
 
 if __name__ == '__main__':

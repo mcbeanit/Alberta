@@ -1,7 +1,6 @@
 import scrapy
 import re
 
-
 class ABRidingsSpider(scrapy.Spider):
     name = 'abridingsspider'
     pattern = '^<tr><td>([0-9]+?)<\/td><td>(.+?)<\/td><td>([0-9\*]{4,5})<\/td><td>(.+?)<\/td><td bgcolor=\"(' \
