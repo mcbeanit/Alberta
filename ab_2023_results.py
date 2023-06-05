@@ -1,3 +1,4 @@
+import operator
 import re
 
 html_filename = 'ab_2023_party_standings.html'
@@ -32,14 +33,22 @@ def import_results_html():
 
 
 def popular_vote_by_party():
+    parties = {'NDP': 0, 'UCP': 0, 'AP': 0, 'GPA': 0, 'SM': 0, 'WLC': 0, 'IND': 0, 'TIP': 0, 'LIB': 0, 'APA': 0,
+               'CP-A': 0, 'BPA': 0, 'PAPA': 0, 'REF': 0, 'WIPA': 0}
+    total_votes = 0
     with open(csv_filename, 'rt') as csvfile:
         for row in csvfile.readlines():
             flds = row.split('\t')
             party = flds[0].strip()
-            votes = flds[2].strip()
-            print(f'{party} got {votes} votes')
+            votes = int(flds[2].strip())
+            total_votes = total_votes + int(votes)
+            parties[party] = parties[party] + votes
+        sorted_parties = dict(sorted(parties.items(), key=operator.itemgetter(1), reverse=True))
+        with open("ab_2023_parties_rank.csv", 'wt') as r:
+            for key, value in sorted_parties.items():
+                r.write(f'{key}\t{value}\t{round((value / total_votes) * 100, 4)}\n')
 
 
 if __name__ == '__main__':
-    import_results_html()
+    # import_results_html()
     popular_vote_by_party()
