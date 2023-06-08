@@ -28,4 +28,5 @@ class AB2023PartyStandingsSpider(scrapy.Spider):
         h.close()
 
     def on_error(self, error):
-        assert false
+        print(error)
+        assert False
