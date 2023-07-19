@@ -7,6 +7,12 @@ def on_error(error):
     assert False
 
 
+def html_clean(tr):
+    tr = re.sub(r'<tr .+?>', '<tr>', tr)
+    tr = re.sub(r'<td.+?>', '<td>', tr)
+    return tr
+
+
 class AB2019PartyStandingsSpider(scrapy.Spider):
     name = 'AB2019PartyStandingsSpider'
 
@@ -24,10 +30,6 @@ class AB2019PartyStandingsSpider(scrapy.Spider):
                 tr = tr.replace('\t', '')
                 tr = re.sub('\u2003', '', tr)
                 tr = re.sub('\u2212', '', tr)
-                tr = self.html_clean(tr)
+                tr = html_clean(tr)
                 html.write(f'{tr}\n')
 
-    def html_clean(self, tr):
-        tr = re.sub(r'<tr .+?>', '<tr>', tr)
-        tr = re.sub(r'<td.+?>', '<td>', tr)
-        return tr
