@@ -11,7 +11,10 @@ def parse_party_html(htmlfile='ab_cabinet_2023.html', csvfile='ab_cabinet_2023.c
             count = count + 1
             matches = re.match(flds_expr, tr)
             if matches:
-                print(f'{matches[1]},{matches[2]},{matches[3]}\n')
+                td1 = matches[1]
+                td2 = matches[2]
+                td3 = matched[3]
+                print(f'{td1},{td2},{td3}\n')
 
 
 
